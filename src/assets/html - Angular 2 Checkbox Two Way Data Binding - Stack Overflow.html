@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<!-- saved from url=(0084)https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding -->
+<html itemscope="" itemtype="http://schema.org/QAPage"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow</title>
+    <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d">
+    <link rel="apple-touch-icon image_src" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="https://stackoverflow.com/opensearch.xml">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+        <meta name="twitter:domain" content="stackoverflow.com">
+
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="Angular 2 Checkbox Two Way Data Binding">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="I´m fairly new to Angular2 and i have a little problem:
+In my Login-Component-HTML I have two checkboxes, which i want to bind in two way data-binding to the Login-Component-TypeScript.
+This is the...">
+    <meta property="og:url" content="https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding">
+    <link rel="canonical" href="https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding">
+
+    
+    
+    <script type="text/javascript" async="" src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/ados"></script><script async="" src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/quant.js"></script><script async="" src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/beacon.js"></script><script async="" src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/analytics.js"></script><script type="text/javascript" async="" src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/ados.js"></script><script src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/jquery.min.js"></script>
+    <script src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/stub.en.js"></script>
+    <link rel="stylesheet" type="text/css" href="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/all.css">
+
+            <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;Angular 2 Checkbox Two Way Data Binding&#39;" href="https://stackoverflow.com/feeds/question/40214655">
+            <meta name="twitter:app:country" content="US">
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:iphone" content="871299723">
+            <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding">
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:ipad" content="871299723">
+            <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding">
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+        
+            StackExchange.ready(function () {
+                                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:0,shownCommentCount:0,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:40214655});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '40214655');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text', true); });
+
+            });
+        </script>
+
+
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1496067916,"routeName":"Questions/Show","site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"enableInsertDocLinkDialog":true,"childUrl":"https://meta.stackoverflow.com","enableSocialMediaInSharePopup":true,"protocol":"https"},"user":{"fkey":"65294c5bd7fd45c0d40cc4b60d15f0cc","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true,"canSeeNewHeaderDesign":true},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}},"story":{"minCompleteBodyLength":75,"likedTagsMaxLength":300,"dislikedTagsMaxLength":300}}, {"site":{"allowImageUploads":true,"enableUserHovercards":true,"styleCode":true,"enableNewLinkInsertDialog":true,"enableImgurHttps":true,"forceHttpsImages":true},"comments":{},"userProfile":{"openGraphAPIKey":"58740831ad23540e00c58987"},"tags":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true},"flags":{"allowRetractingFlags":true},"snippets":{"snippetsEnabled":true,"renderDomain":"stacksnippets.net"},"markdown":{"asteriskIntraWordEmphasis":true},"monitoring":{"clientTimingsAbsoluteTimeout":30000,"clientTimingsDebounceTimeout":1000}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"31251c9c0219","js/moderator.en.js":"cbd9a328c047","js/full-anon.en.js":"78fa05d29317","js/full.en.js":"fcedaef3b93d","js/wmd.en.js":"69288d70ad34","js/third-party/jquery.autocomplete.min.js":"d3b8fa7fdf74","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"834f9e606700","js/help.en.js":"af6d61ae5ea0","js/tageditor.en.js":"fae501f1255a","js/tageditornew.en.js":"58f1ecf5505c","js/inline-tag-editing.en.js":"ff9d6e1cd996","js/revisions.en.js":"834877a0c912","js/review.en.js":"766fe1f94513","js/tagsuggestions.en.js":"b278f9a0b23b","js/post-validation.en.js":"e68611e12bf6","js/explore-qlist.en.js":"e71f14781288","js/events.en.js":"164885a9ff58","js/keyboard-shortcuts.en.js":"7e7950188d30","js/external-editor.en.js":"8d2d531d73f0","js/adops.en.js":"9a6a7812a212","js/external-editor.en.js":"8d2d531d73f0","js/snippet-javascript.en.js":"9ba1796a308e","js/snippet-javascript-codemirror.en.js":"eb6e78fe9481"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+    <noscript id="noscript-css">&lt;style type="text/css"&gt;body,.so-header{margin-top:1.9em}&lt;/style&gt;</noscript>
+<script async="" src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/full-anon.en.js"></script><script async="" src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/snippet-javascript.en.js"></script><script async="" src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/post-validation.en.js"></script><script async="" src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/prettify-full.en.js"></script><script async="" src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/external-editor.en.js"></script><script type="text/javascript" src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/adFeedback.js"></script><link rel="stylesheet" href="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/adFeedback.css"><link rel="stylesheet" href="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/jobs-multi.min.css" type="text/css"></head>
+<body class="question-page new-topbar">
+            <script>(function () { var old = $.fn.contents; $.fn.contents = function () { try { return old.apply(this, arguments); } catch (e) { return $([]); } } })()</script>
+        
+
+    <div id="notify-container"></div>
+    <div id="custom-header"></div>
+
+
+<header class="so-header js-so-header _fixed _scrolling">
+    <div class="-container">
+        <div class="-main">            
+            <a href="https://stackoverflow.com/" class="-logo js-gps-track " data-gps-track="top_nav.click({is_current:false, location:2, destination:8})">
+
+                <span class="-img">Stack Overflow</span>
+            </a>
+
+            <nav class="navigation" role="navigation" aria-label="site navigation">
+                <ol class="-list">
+                        <li class="-item _current">
+        <a id="nav-questions" href="https://stackoverflow.com/questions" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:true, location:2, destination:1})">Questions</a>
+    </li>
+
+    <li class="-item">
+        <a id="nav-jobs" href="https://stackoverflow.com/jobs?med=site-ui&amp;ref=jobs-tab" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:6})">Jobs</a>
+    </li>
+                        <li class="-item">
+        <a id="nav-docs" href="https://stackoverflow.com/documentation" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:7})">Documentation <small class="beta-badge">beta</small></a>
+    </li>
+                        <li class="-item">
+        <a id="nav-tags" href="https://stackoverflow.com/tags" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:2})">Tags</a>
+    </li>
+
+                        <li class="-item">
+        <a id="nav-users" href="https://stackoverflow.com/users" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:3})">Users</a>
+    </li>
+
+                </ol>
+            </nav>
+
+                <form id="search" action="https://stackoverflow.com/search" method="get" class="searchbar" autocomplete="off" role="search">
+                    <svg role="icon" class="svg-icon iconSearch" width="18" height="18" viewBox="0 0 18 18"><path d="M12.864 11.321L18 16.5 16.5 18l-5.178-5.136v-.357a7 7 0 1 1 1.186-1.186h.356zM7 12A5 5 0 1 0 7 2a5 5 0 0 0 0 10z"></path></svg>
+                    <input name="q" type="text" placeholder="Search..." value="" tabindex="1" autocomplete="off" maxlength="240" class="f-input js-search-field">
+                    <button type="submit" class="btn js-search-submit">
+                        <svg role="icon" class="svg-icon iconSearch" width="18" height="18" viewBox="0 0 18 18"><path d="M12.864 11.321L18 16.5 16.5 18l-5.178-5.136v-.357a7 7 0 1 1 1.186-1.186h.356zM7 12A5 5 0 1 0 7 2a5 5 0 0 0 0 10z"></path></svg>
+                    </button>
+                </form>
+
+        </div>
+        
+
+
+    
+
+<div class="-actions">
+    <nav class="secondary-nav">
+        <div class="-dialog-container js-topbar-dialog-corral">
+
+
+    <div class="topbar-dialog siteSwitcher-dialog dno">
+        <div class="header">
+            <h3><a href="https://stackoverflow.com/">current community</a>
+            </h3>
+        </div>
+        <div class="modal-content current-site-container">
+            <ul class="current-site">
+                    <li>
+                            <div class="related-links">
+            <a href="https://stackoverflow.com/help" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:14 })">help</a>
+                    <a href="https://chat.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+            </div>
+
+    <a href="https://stackoverflow.com/" class="current-site-link site-link js-gps-track" data-id="1" data-gps-track="site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                    </li>
+                    <li class="related-site">
+                            <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                        
+    <a href="https://meta.stackoverflow.com/" class="site-link js-gps-track" data-id="552" data-gps-track="site.switch({ target_site:552, item_type:3 }),site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                    </li>
+            </ul>
+        </div>
+
+        <div class="header" id="your-communities-header">
+            <h3>
+your communities            </h3>
+
+        </div>
+        <div class="modal-content" id="your-communities-section">
+
+                <div class="call-to-login">
+<a href="https://stackoverflow.com/users/signup?ssrc=site_switcher&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;amp;utm_source=stackoverflow.com&amp;amp;utm_medium=dev-story&amp;amp;utm_campaign=signup-redirect" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or <a href="https://stackoverflow.com/users/login?ssrc=site_switcher&amp;returnurl=https%3a%2f%2fstackoverflow.com%2fquestions%2f40214655%2fangular-2-checkbox-two-way-data-binding" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list.
+                </div>
+        </div>
+
+        <div class="header">
+            <h3><a href="https://stackexchange.com/sites">more stack exchange communities</a>
+            </h3>
+            <a href="https://stackoverflow.blog/" class="fr">company blog</a>
+        </div>
+        <div class="modal-content">
+                <div class="child-content"></div>
+        </div>        
+    </div>
+                <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="https://stackoverflow.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="https://stackoverflow.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                        <li>
+                            <a href="https://meta.stackoverflow.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                                Meta
+                                <span class="item-summary">
+                                    Discuss the workings and policies of this site
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })">
+                                About Us
+                                <span class="item-summary">
+                                    Learn more about Stack Overflow the company
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.stackoverflowbusiness.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })">
+                                Business
+                                <span class="item-summary">
+                                    Learn more about hiring developers or posting ads with us
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+
+        </div>
+        <ol class="-list">
+
+
+    <li class="-item"><a href="https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding#" class="-link js-help-button" title="Help Center and other resources">
+        <svg role="icon" class="svg-icon iconHelp" width="18" height="18" viewBox="0 0 18 18"><path d="M9 1a8 8 0 1 0 0 16.001A8 8 0 0 0 9 1zm.812 12.126c-.02.716-.55 1.157-1.238 1.137-.659-.02-1.177-.49-1.157-1.209.02-.715.566-1.17 1.225-1.15.691.021 1.194.507 1.17 1.222zm1.956-5.114c-.168.237-.546.542-1.02.912l-.527.361c-.257.197-.417.43-.502.695-.044.141-.076.507-.084.752-.004.048-.032.156-.181.156H7.883c-.165 0-.185-.096-.18-.144.023-.667.12-1.218.397-1.66.374-.594 1.426-1.221 1.426-1.221.161-.12.286-.25.382-.39.177-.24.321-.51.321-.8 0-.333-.08-.65-.293-.915-.249-.31-.518-.458-1.036-.458-.51 0-.808.257-1.021.594-.213.338-.177.735-.177 1.097H5.746c0-1.366.357-2.238 1.112-2.752.51-.35 1.162-.502 1.921-.502.996 0 1.788.184 2.487.715.647.49.988 1.181.988 2.113 0 .575-.2 1.057-.486 1.447z"></path></svg>
+    </a></li>
+                <li class="-item">
+        <a href="https://stackexchange.com/" class="-link js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 167 Stack Exchange sites">
+            <svg role="icon" class="svg-icon iconStackExchange" width="18" height="18" viewBox="0 0 18 18"><path d="M1 13a2 2 0 0 0 2 2h8v3l3-3h1a2 2 0 0 0 2-2v-2H1v2zM15 1H3a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2zM1 6h16v4H1V6z"></path></svg>
+        </a>
+    </li>
+
+
+        </ol>
+    </nav>
+        <div class="-ctas">
+                <a href="https://stackoverflow.com/users/login?ssrc=head&amp;returnurl=https%3a%2f%2fstackoverflow.com%2fquestions%2f40214655%2fangular-2-checkbox-two-way-data-binding" class="login-link btn-clear" rel="nofollow">Log In</a>
+                    <a href="https://stackoverflow.com/users/signup?ssrc=head&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;utm_source=stackoverflow.com&amp;utm_medium=dev-story&amp;utm_campaign=signup-redirect" class="login-link btn" rel="nofollow">Sign Up</a>
+
+        </div>
+</div>
+    </div>
+</header>
+
+    <script>
+        StackExchange.ready(function () { StackExchange.topbar.init(); });
+            StackExchange.scrollPadding.setPaddingTop(60, 10);     </script>
+
+    <div class="container">
+        
+
+
+        <div id="content" class="snippet-hidden">
+
+
+
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+    <link itemprop="image" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+
+
+<div id="herobox" class="alternate">
+    <div class="test"></div>
+        <div id="close">
+            <a title="click to minimize"><span>x</span> Dismiss</a>
+        </div>
+    <div class="content">
+        <b>Faça parte da comunidade Stack Overflow</b>
+        <div class="separator"></div>
+        <div class="blurb">
+            O Stack Overflow é uma comunidade com 7.2 milhões de programadores como você, ajudando uns aos outros.
+                <br>
+Junte-se a nós; não demora nada:                <br>
+        </div>
+        <a href="https://pt.stackoverflow.com/users/signup?ssrc=en_hero&amp;returnurl=https%3a%2f%2fpt.stackoverflow.com" id="tell-me-more" class="button">Entrar</a>
+    </div>
+</div>
+<script>
+    StackExchange.ready(function () {
+
+        var location = 0;
+        if ($("body").hasClass("questions-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("question-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("faq-page")) {
+            location = 5;;
+        } else if ($("body").hasClass("home-page")) {
+            location = 3;;
+        }
+        
+        $('#tell-me-more').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+            });
+        });
+        
+        $('#herobox #close').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+            });
+            
+            $.cookie("hero", "mini", { path: "/", expires: 365 });
+            $.ajax({
+                url: "/hero-mini",
+                success: function (data) {
+                    $("#herobox").fadeOut("fast", function () {
+                        $("#herobox").replaceWith(data);
+                        $("#herobox-mini").fadeIn("fast");
+                    });
+                }
+            });
+            return false;
+        });
+    });
+
+</script>			<div id="question-header">
+                <h1 itemprop="name"><a href="https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding" class="question-hyperlink">Angular 2 Checkbox Two Way Data Binding</a></h1>
+
+            
+<div class="aside-cta" role="navigation" aria-label="ask new question">
+    <a href="https://stackoverflow.com/questions/ask" class="btn-outlined">Ask Question</a>
+</div>
+		</div>
+			<div id="mainbar" role="main" aria-label="question and answers">
+
+			
+
+<div class="question" data-questionid="40214655" id="question">
+
+    <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk1458160962",4).setZone(43); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk1458160962"><a href="https://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NCwiYnQiOjAsImNtIjo5MTgyOCwiY2giOjExNzgsImNrIjp7fSwiY3IiOjI0ODUyNSwiZGkiOiJmZWNkOWJhN2I5ZjI0M2FmYTIzMjkwYmYwNGJlNDU2YSIsImRtIjoxLCJmYyI6MzE5NTM5LCJmbCI6MTY1MjkzLCJpcCI6IjE5MS4yMDkuNTMuMTcyIiwia3ciOiJodG1sLGFuZ3VsYXIsdHlwZXNjcmlwdCxkYXRhLWJpbmRpbmciLCJudyI6MjIsInBjIjowLCJlYyI6MCwicHIiOjc2NSwicnQiOjEsInJmIjoiaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS5ici8iLCJzYiI6ImktMGMzMDIwOWVkNDQzNzQwYjUiLCJzcCI6ODQxNywic3QiOjgyNzcsInVrIjoidWUxLTM5OTc3MzJjOGFjYjQyNmY4YzhjYWU3Y2FiYjA1MWZlIiwiem4iOjQzLCJ0cyI6MTQ5NjA2NzkxODY3MywiYmYiOnRydWUsInBuIjoiYWR6ZXJrMTQ1ODE2MDk2MiIsInVyIjoiaHR0cDovL3B0LnN0YWNrb3ZlcmZsb3cuY29tLz91dG1fc291cmNlPXN0YWNrb3ZlcmZsb3cuY29tJnV0bV9tZWRpdW09YWQmdXRtX2NhbXBhaWduPXB0LnNvLXByb21vcy1mb3JldmEmdXRtX2NvbnRlbnQ9bGIyMCJ9&amp;s=o5KcdWGHz1utl7meY1Ily1Chxe4" rel="nofollow" target="_blank" title=""><img src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/57db291a8f9f48ebbb1108c25c8b7a8b.png" title="" alt="" border="0" width="728" height="90"></a><img height="0px" width="0px" border="0" style="position:absolute;" src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/i.gif"><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div></div>    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="40214655">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">12</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding#">favorite</a>
+        <div class="favoritecount"><b>3</b></div>
+
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+<p>I´m fairly new to Angular2 and i have a little problem:
+In my Login-Component-HTML I have two checkboxes, which i want to bind in two way data-binding to the Login-Component-TypeScript.
+This is the HTML:</p>
+
+<pre class="lang-js prettyprint prettyprinted"><code><span class="pun">&lt;</span><span class="pln">div </span><span class="kwd">class</span><span class="pun">=</span><span class="str">"checkbox"</span><span class="pun">&gt;</span><span class="pln">
+</span><span class="pun">&lt;</span><span class="pln">label</span><span class="pun">&gt;</span><span class="pln">
+</span><span class="pun">&lt;</span><span class="pln">input </span><span class="pun">#</span><span class="pln">saveUsername </span><span class="pun">[(</span><span class="pln">ngModel</span><span class="pun">)]=</span><span class="str">"saveUsername.selected"</span><span class="pln"> type</span><span class="pun">=</span><span class="str">"checkbox"</span><span class="pln"> data</span><span class="pun">-</span><span class="pln">toggle</span><span class="pun">=</span><span class="str">"toggle"</span><span class="pun">&gt;</span><span class="typ">Benutername</span><span class="pln"> speichern
+</span><span class="pun">&lt;/</span><span class="pln">label
+</span><span class="pun">&gt;&lt;/</span><span class="pln">div</span><span class="pun">&gt;</span></code></pre>
+
+<p>And this is the Component.ts:</p>
+
+<pre class="lang-js prettyprint prettyprinted"><code><span class="kwd">import</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="typ">Component</span><span class="pun">,</span><span class="pln"> </span><span class="typ">OnInit</span><span class="pln"> </span><span class="pun">}</span><span class="pln">    from </span><span class="str">'@angular/core'</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="typ">Router</span><span class="pln"> </span><span class="pun">}</span><span class="pln">               from </span><span class="str">'@angular/router'</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="typ">Variables</span><span class="pln"> </span><span class="pun">}</span><span class="pln">            from </span><span class="str">'../../services/variables'</span><span class="pun">;</span><span class="pln">
+
+</span><span class="lit">@Component</span><span class="pun">({</span><span class="pln">
+    selector</span><span class="pun">:</span><span class="pln"> </span><span class="str">'login'</span><span class="pun">,</span><span class="pln">
+    moduleId</span><span class="pun">:</span><span class="pln"> module</span><span class="pun">.</span><span class="pln">id</span><span class="pun">,</span><span class="pln">
+    templateUrl</span><span class="pun">:</span><span class="pln"> </span><span class="str">'login.component.html'</span><span class="pun">,</span><span class="pln">
+    styleUrls</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">'login.component.css'</span><span class="pun">]</span><span class="pln">
+</span><span class="pun">})</span><span class="pln">
+
+
+</span><span class="kwd">export</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">LoginComponent</span><span class="pln"> </span><span class="kwd">implements</span><span class="pln"> </span><span class="typ">OnInit</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+    </span><span class="kwd">private</span><span class="pln"> saveUsername</span><span class="pun">:</span><span class="pln"> boolean </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> autoLogin</span><span class="pun">:</span><span class="pln"> boolean </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">constructor</span><span class="pun">(</span><span class="kwd">private</span><span class="pln"> router</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Router</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">private</span><span class="pln"> variables</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Variables</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+
+    ngOnInit</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> 
+        </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">loginValid </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln">
+        </span><span class="com">// Hole Usernamen aus Local Storage falls gespeichert werden soll</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">window</span><span class="pun">.</span><span class="pln">localStorage</span><span class="pun">.</span><span class="pln">getItem</span><span class="pun">(</span><span class="str">"username"</span><span class="pun">)</span><span class="pln"> </span><span class="pun">===</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+           </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">saveUsername </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+           </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">autoLogin </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+           console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">saveUsername</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">autoLogin</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+           console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">"init"</span><span class="pun">,</span><span class="pln"> window</span><span class="pun">.</span><span class="pln">localStorage</span><span class="pun">.</span><span class="pln">getItem</span><span class="pun">(</span><span class="str">"username"</span><span class="pun">));</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    login</span><span class="pun">(</span><span class="pln">username</span><span class="pun">:</span><span class="pln"> string</span><span class="pun">,</span><span class="pln"> password</span><span class="pun">:</span><span class="pln"> string</span><span class="pun">,</span><span class="pln"> saveUsername</span><span class="pun">:</span><span class="pln"> boolean</span><span class="pun">,</span><span class="pln"> autoLogin</span><span class="pun">:</span><span class="pln"> boolean</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">variables</span><span class="pun">.</span><span class="pln">setUsername</span><span class="pun">(</span><span class="pln">username</span><span class="pun">);</span><span class="pln">
+        </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">variables</span><span class="pun">.</span><span class="pln">setPassword</span><span class="pun">(</span><span class="pln">password</span><span class="pun">);</span><span class="pln">
+        </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">variables</span><span class="pun">.</span><span class="pln">setIsLoggedIn</span><span class="pun">(</span><span class="kwd">true</span><span class="pun">);</span><span class="pln">
+        console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">saveUsername</span><span class="pun">,</span><span class="pln"> autoLogin</span><span class="pun">);</span><span class="pln">
+        </span><span class="com">//this.router.navigate(['dashboard']);</span><span class="pln">
+    </span><span class="pun">}</span></code></pre>
+
+<p>If I click an checkbox, i get the correct value in the controller (component).
+But if I change the value of for example <code>saveUsername</code> in the component, the checkbox didn´t "get" the new value.
+So i can´t manipulate the checkbox from the Component (like I want to do in the <code>ngOnInit</code> in the component.</p>
+
+<p>Thanks for your help!</p>
+    </div>
+    <div class="post-taglist">
+        <a href="https://stackoverflow.com/questions/tagged/html" class="post-tag js-gps-track" title="show questions tagged &#39;html&#39;" rel="tag">html</a> <a href="https://stackoverflow.com/questions/tagged/angular" class="post-tag js-gps-track" title="show questions tagged &#39;angular&#39;" rel="tag">angular</a> <a href="https://stackoverflow.com/questions/tagged/typescript" class="post-tag js-gps-track" title="show questions tagged &#39;typescript&#39;" rel="tag">typescript</a> <a href="https://stackoverflow.com/questions/tagged/data-binding" class="post-tag js-gps-track" title="" rel="tag">data-binding</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="https://stackoverflow.com/q/40214655" title="short permalink to this question" class="short-link" id="link-post-40214655">share</a><span class="lsep">|</span><a href="https://stackoverflow.com/posts/40214655/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td class="post-signature owner">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2016-10-24 09:12:53Z" class="relativetime">Oct 24 '16 at 9:12</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="https://stackoverflow.com/users/5974174/junias"><div class="gravatar-wrapper-32"><img src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/6866158fd2d937c151f16188e1bf1064" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="https://stackoverflow.com/users/5974174/junias">Junias</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">127</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="14 bronze badges"><span class="badge3"></span><span class="badgecount">14</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+                    
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-40214655" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-40214655" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding#" onclick=""></a>
+        </div>         
+    </td>
+</tr>        </tbody></table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								3 Answers
+                                <span style="display:none;" itemprop="answerCount">3</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active" data-shortcut="A">
+            active</a>
+        <a href="https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest" data-shortcut="O">
+            oldest</a>
+        <a class="youarehere" href="https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes" data-shortcut="V">
+            votes</a>
+</div>
+						</div>
+					</div>    
+
+
+<div class="question-status" id="mfnes-container">
+    <div class="g-row">
+        <div class="-content g-col">
+            <p style="font-size: 120%">
+                Não encontrou uma resposta? <a id="mfnes-link" class="js-dismiss mfnes-link" href="http://pt.stackoverflow.com/questions/ask?fromen=265a07f016189">Pergunte em Stack Overflow em Português.</a>
+            </p>
+        </div>
+        <div class="-actions g-col1">
+            <a id="mfnes-dismiss" href="https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding#" class="js-dismiss">✕</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document)
+        .ready(function () {
+            var notification = $('#mfnes-container'),
+                link = notification.find('#mfnes-link'),
+                dismiss = notification.find('#mfnes-dismiss');
+            dismiss.on('click',
+                function () {
+                    notification.slideUp();
+                    $.ajax("/mfnes/dismiss/40214655/pt/1");
+                    return false;
+                });
+            link.on('click',
+                function () {
+                    $.ajax("/mfnes/click/40214655/pt/1");
+                });
+        });
+</script>				</div>    
+
+
+
+
+  
+<a name="40214714"></a>
+<div id="answer-40214714" class="answer accepted-answer" data-answerid="40214714" itemscope="" itemtype="http://schema.org/Answer" itemprop="acceptedAnswer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="40214714">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">16</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+        <span class="vote-accepted-on load-accepted-answer-date" title="The question owner accepted this as the best answer Oct 24 &#39;16 at 11:46.">accepted</span>
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>you can remove <code>.selected</code> from <code>saveUsername</code> in your checkbox input since saveUsername is a boolean. instead of <code>[(ngModel)]</code> use  <code>[checked]="saveUsername" (change)="saveUsername&nbsp;=&nbsp;!saveUsername"</code></p>
+
+<p>Edit: Correct Solution:</p>
+
+<pre class="lang-js prettyprint prettyprinted"><code><span class="pun">&lt;</span><span class="pln">input type</span><span class="pun">=</span><span class="str">"checkbox"</span><span class="pln"> </span><span class="pun">[</span><span class="pln">checked</span><span class="pun">]=</span><span class="str">"saveUsername"</span><span class="pln"> </span><span class="pun">(</span><span class="pln">change</span><span class="pun">)=</span><span class="str">"saveUsername = !saveUsername"</span><span class="pln"> </span><span class="pun">/&gt;</span></code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="https://stackoverflow.com/a/40214714" title="short permalink to this answer" class="short-link" id="link-post-40214714">share</a><span class="lsep">|</span><a href="https://stackoverflow.com/posts/40214714/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="https://stackoverflow.com/posts/40214714/revisions" title="show all edits to this post">edited <span title="2016-10-24 11:51:44Z" class="relativetime">Oct 24 '16 at 11:51</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="https://stackoverflow.com/users/5974174/junias"><div class="gravatar-wrapper-32"><img src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/6866158fd2d937c151f16188e1bf1064" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="https://stackoverflow.com/users/5974174/junias">Junias</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">127</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="14 bronze badges"><span class="badge3"></span><span class="badgecount">14</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2016-10-24 09:16:00Z" class="relativetime">Oct 24 '16 at 9:16</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="https://stackoverflow.com/users/6930459/hakany"><div class="gravatar-wrapper-32"><img src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/4179da262252ff1fc9d9f7d1cd13e5a5" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="https://stackoverflow.com/users/6930459/hakany">hakany</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">1,229</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="15 bronze badges"><span class="badge3"></span><span class="badgecount">15</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-40214714" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-67694203" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">If i do this, then i get an error: Error: Cannot assign to a reference or variable!</span>
+                    –&nbsp;<a href="https://stackoverflow.com/users/5974174/junias" title="127 reputation" class="comment-user owner">Junias</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding#comment67694203_40214714"><span title="2016-10-24 09:38:58Z" class="relativetime-clean">Oct 24 '16 at 9:38</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-67697394" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">hm,I´m already getting this error: Unhandled Promise rejection: Cannot assign to a reference or variable! ; Zone: &lt;root&gt; ; Task: Promise.then ; Value: Error: Cannot assign to a reference or variable! And how does the checkbox knows, if it should be switched on / off?  In Angular 1 i could do it like this: <code>$scope.loginData = {}; $scope.loginData.username = window.localStorage.getItem("username");</code> and this in the template: <code>&lt;ion-toggle ng-model="saveUsername" ng-change="toggleSaveUsername()" toggle-class="toggle-energized"&gt;Benutzername speichern&lt;/ion-toggle&gt;</code></span>
+                    –&nbsp;<a href="https://stackoverflow.com/users/5974174/junias" title="127 reputation" class="comment-user owner">Junias</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding#comment67697394_40214714"><span title="2016-10-24 11:13:32Z" class="relativetime-clean">Oct 24 '16 at 11:13</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-67698176" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">could you remove #saveUsername and try again.  see also plunker: <a href="http://embed.plnkr.co/ffkrDzon1L3ZANiuGFsp/" rel="nofollow noreferrer">embed.plnkr.co/ffkrDzon1L3ZANiuGFsp</a></span>
+                    –&nbsp;<a href="https://stackoverflow.com/users/6930459/hakany" title="1,229 reputation" class="comment-user">hakany</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding#comment67698176_40214714"><span title="2016-10-24 11:34:48Z" class="relativetime-clean">Oct 24 '16 at 11:34</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-67698379" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">checkbox knows because of [checked], checked will be set if saveUsername == true, and (change) updates his value with his opposite, if saveUsername is true it would be !true which is equal to false.</span>
+                    –&nbsp;<a href="https://stackoverflow.com/users/6930459/hakany" title="1,229 reputation" class="comment-user">hakany</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding#comment67698379_40214714"><span title="2016-10-24 11:41:01Z" class="relativetime-clean">Oct 24 '16 at 11:41</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-67698494" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Hi, ok, so many thanks to you! Your last post was the solution! I edit your solution and mark it as answer ;) Thanks!</span>
+                    –&nbsp;<a href="https://stackoverflow.com/users/5974174/junias" title="127 reputation" class="comment-user owner">Junias</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding#comment67698494_40214714"><span title="2016-10-24 11:44:36Z" class="relativetime-clean">Oct 24 '16 at 11:44</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-40214714" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk701333913",4).setZone(44); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk701333913"><a href="https://engine.adzerk.net/r?e=eyJhdiI6NDIxMCwiYXQiOjQsImJ0IjowLCJjbSI6NTU0MDQxLCJjaCI6MTE3OCwiY2siOnt9LCJjciI6MjI1Nzk1MCwiZGkiOiJhZmI4ODJiMDI4NTA0YzMwYjkyZDI0NWQ2NmIyMzNmMSIsImRtIjoxLCJmYyI6MjgwMjA0NiwiZmwiOjMwNzYwODksImlwIjoiMTkxLjIwOS41My4xNzIiLCJrdyI6Imh0bWwsYW5ndWxhcix0eXBlc2NyaXB0LGRhdGEtYmluZGluZyIsIm1rIjoiZGF0YS1iaW5kaW5nIiwibnciOjIyLCJwYyI6NS4wNCwiZWMiOjUuMDQsInByIjo3NjUsInJ0IjoyLCJyZiI6Imh0dHBzOi8vd3d3Lmdvb2dsZS5jb20uYnIvIiwic2IiOiJpLTBjMzAyMDllZDQ0Mzc0MGI1Iiwic3AiOjg0MTcsInN0Ijo4Mjc3LCJ1ayI6InVlMS0zOTk3NzMyYzhhY2I0MjZmOGM4Y2FlN2NhYmIwNTFmZSIsInpuIjo0NCwidHMiOjE0OTYwNjc5MTg2NzUsImJmIjp0cnVlLCJwbiI6ImFkemVyazcwMTMzMzkxMyIsInVyIjoiaHR0cHM6Ly9zb2Z0d2FyZS5pbnRlbC5jb20vYWkvYWNhZGVteT9jaWQ9JnV0bV9jb250ZW50PU1hY2hpbmVfTGVhcm5pbmdfRW50aHVzaWFzdHMmdXRtX21lZGl1bT1iYW5uZXImdXRtX3NvdXJjZT1TdGFja092ZXJmbG93JnV0bV9jYW1wYWlnbj1TU0dfMTdfMDUifQ&amp;s=O48_wY_rZiKFlIO4pjWw18pA5nc" rel="nofollow" target="_blank" title=""><img src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/c08a34032c1d45799fde0a10e816de32.png" title="" alt="" border="0" width="728" height="90"></a><img height="0px" width="0px" border="0" style="position:absolute;" src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/i(1).gif"><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div></div>
+  
+<a name="42761794"></a>
+<div id="answer-42761794" class="answer" data-answerid="42761794" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="42761794">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">8</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Unfortunately solution provided by @hakani is not <strong>two-way binding</strong>. It just handles One-way changing model from UI/FrontEnd part.</p>
+
+<p>Instead the simple:</p>
+
+<pre class="lang-js prettyprint prettyprinted"><code><span class="pun">&lt;</span><span class="pln">input </span><span class="pun">[(</span><span class="pln">ngModel</span><span class="pun">)]=</span><span class="str">"checkboxFlag"</span><span class="pln"> type</span><span class="pun">=</span><span class="str">"checkbox"</span><span class="pun">/&gt;</span></code></pre>
+
+<p>will do two-way binding for checkbox. </p>
+
+<p>Afterwards, when Model <strong>checkboxFlag</strong> is changed from Backend or UI part - voila, checkboxFlag stores actual checkbox state.</p>
+
+<p>To be sure I've prepared Plunker code to present the result : <a href="https://plnkr.co/edit/OdEAPWRoqaj0T6Yp0Mfk" rel="noreferrer">https://plnkr.co/edit/OdEAPWRoqaj0T6Yp0Mfk</a></p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="https://stackoverflow.com/a/42761794" title="short permalink to this answer" class="short-link" id="link-post-42761794">share</a><span class="lsep">|</span><a href="https://stackoverflow.com/posts/42761794/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2017-03-13 10:51:29Z" class="relativetime">Mar 13 at 10:51</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="https://stackoverflow.com/users/4953065/ruslan-makrenko"><div class="gravatar-wrapper-32"><img src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/7XjrH.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="https://stackoverflow.com/users/4953065/ruslan-makrenko">Ruslan Makrenko</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">99</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-42761794" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-42761794" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="41961420"></a>
+<div id="answer-41961420" class="answer" data-answerid="41961420" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="41961420">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>You can just use something like this to have two way data binding:</p>
+
+<pre class="lang-js prettyprint prettyprinted"><code><span class="pun">&lt;</span><span class="pln">input type</span><span class="pun">=</span><span class="str">"checkbox"</span><span class="pln"> </span><span class="pun">[</span><span class="pln">checked</span><span class="pun">]=</span><span class="str">"model.propertie"</span><span class="pln"> </span><span class="pun">(</span><span class="pln">change</span><span class="pun">)=</span><span class="str">"model.propertie = !model.consent_obtained_ind"</span><span class="pun">&gt;</span></code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="https://stackoverflow.com/a/41961420" title="short permalink to this answer" class="short-link" id="link-post-41961420">share</a><span class="lsep">|</span><a href="https://stackoverflow.com/posts/41961420/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2017-01-31 15:34:04Z" class="relativetime">Jan 31 at 15:34</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="https://stackoverflow.com/users/998777/nuno-ferro"><div class="gravatar-wrapper-32"><img src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/bc1eda83b8be96963ef56c407b090fc4" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="https://stackoverflow.com/users/998777/nuno-ferro">Nuno Ferro</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">830</span><span title="9 silver badges"><span class="badge2"></span><span class="badgecount">9</span></span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-41961420" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-41961420" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+									<a name="new-answer"></a>
+						<form id="post-form" action="https://stackoverflow.com/questions/40214655/answer/submit" method="post" class="post-form">
+						    <input type="hidden" id="post-id" value="40214655">
+                            <input type="hidden" id="qualityBanWarningShown" name="qualityBanWarningShown" value="false">
+                            <input type="hidden" name="referrer" value="https://www.google.com.br/">
+							<h2 class="space">Your Answer</h2>
+
+
+            <script>
+            StackExchange.ifUsing("editor", function () {
+                StackExchange.using("externalEditor", function () {
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.init();
+                    });
+                });
+            }, "code-snippets");
+        </script>
+    
+
+<script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+       
+        StackExchange.using("externalEditor", function() {
+                // Have to fire editor after snippets, if snippets enabled
+                if (StackExchange.settings.snippets.snippetsEnabled) {
+                    StackExchange.using("snippets", function() {
+                        createEditor();
+                    });
+                }
+                else {
+                    createEditor();
+                }
+            });
+
+            function createEditor() {
+                StackExchange.prepareEditor({
+                    heartbeatType: 'answer',
+                convertImagesToLinks: true,
+                reputationToPostImages: 10,
+                bindNavPrevention: true,
+                postfix: "",
+                    onDemand: true,
+                    discardSelector: ".discard-answer"
+                    ,immediatelyShowMarkdownHelp:true
+                    });
+                
+
+        }
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor js-post-editor">
+
+    <div style="position: relative;">     
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li id="wmd-bold-button" class="wmd-button" style="left: 0px;"><span style="background-position: 0px -20px;"></span></li><li id="wmd-italic-button" class="wmd-button" style="left: 25px;"><span style="background-position: -20px -20px;"></span></li><li id="wmd-spacer1" class="wmd-spacer" style="left: 50px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-link-button" class="wmd-button" style="left: 75px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-quote-button" class="wmd-button" style="left: 100px;"><span style="background-position: -60px -20px;"></span></li><li id="wmd-code-button" class="wmd-button" style="left: 125px;"><span style="background-position: -80px -20px;"></span></li><li id="wmd-image-button" class="wmd-button" style="left: 150px;"><span style="background-position: -100px -20px;"></span></li><li id="wmd-spacer2" class="wmd-spacer" style="left: 175px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-olist-button" class="wmd-button" style="left: 200px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-ulist-button" class="wmd-button" style="left: 225px;"><span style="background-position: -140px -20px;"></span></li><li id="wmd-heading-button" class="wmd-button" style="left: 250px;"><span style="background-position: -160px -20px;"></span></li><li id="wmd-hr-button" class="wmd-button" style="left: 275px;"><span style="background-position: -180px -20px;"></span></li><li id="wmd-spacer3" class="wmd-spacer" style="left: 300px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-undo-button" class="wmd-button" style="left: 325px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-redo-button" class="wmd-button" style="left: 350px;"><span style="background-position: -220px -20px;"></span></li></ul></div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="65294c5bd7fd45c0d40cc4b60d15f0cc">
+        <input id="author" name="author" type="text">
+    </div>
+
+
+
+</div>
+							<div style="position: relative;">
+								
+								            <div class="form-item new-post-login">
+        
+                <div class="new-login-form">
+                    <div class="new-login-left">
+                        <h3>Sign up or <a id="login-link" href="https://stackoverflow.com/users/login?ssrc=question_page&amp;returnurl=https%3a%2f%2fstackoverflow.com%2fquestions%2f40214655%2fangular-2-checkbox-two-way-data-binding%23new-answer">log in</a></h3>
+                        <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                        </script>
+                        <div class="preferred-login google-login">
+                            <p><span class="icon"></span><span>Sign up using Google</span></p>
+                        </div>
+                        <div class="preferred-login facebook-login">
+                            <p><span class="icon"></span><span>Sign up using Facebook</span></p>
+                        </div>
+                        <div class="preferred-login stackexchange-login">
+                            <p><span class="icon"></span><span>Sign up using Email and Password</span></p>
+                        </div>
+                    </div>
+                    <input type="hidden" name="manual-openid" class="manual-openid">
+                    <input type="hidden" name="use-facebook" class="use-facebook" value="false">
+                    <input type="hidden" name="use-google" class="use-google" value="false">
+                    <input type="button" class="submit-openid" value="Submit" style="display:none">
+                    <div class="new-login-right">
+                                <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tbody><tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown">
+                </div>
+            </td>
+        </tr>
+        </tbody></table>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', 'https%3a%2f%2fstackoverflow.com%2fquestions%2f40214655%2fangular-2-checkbox-two-way-data-binding%23new-answer', 'question_page');
+                    }
+                );
+            </script>
+            <noscript>
+                        &lt;h3&gt;Post as a guest&lt;/h3&gt;
+    &lt;div class="form-item"&gt;
+        &lt;table&gt;
+        &lt;tr&gt;
+                    &lt;td class="vm"&gt;
+                &lt;div&gt;
+                    &lt;label for="display-name"&gt;Name&lt;/label&gt;
+                    &lt;input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105"&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label for="m-address"&gt;Email&lt;/label&gt;
+                    &lt;input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown" /&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+
+            </noscript>
+
+							</div>
+           
+															<div class="form-submit cbt">
+									<input id="submit-button" type="submit" value="Post Your Answer" tabindex="110">
+									<a href="https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding#" class="btn-clear discard-answer dno">discard</a>
+
+<p class="privacy-policy-agreement">
+By posting your answer, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" name="privacy" target="_blank">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" name="tos" target="_blank">terms of service</a>.</p>
+<input type="hidden" name="legalLinksShown" value="1">								</div>
+						</form>
+
+
+
+						<h2 class="bottom-notice" data-loc="1">
+Not the answer you're looking for?							Browse other questions tagged <a href="https://stackoverflow.com/questions/tagged/html" class="post-tag" title="show questions tagged &#39;html&#39;" rel="tag">html</a> <a href="https://stackoverflow.com/questions/tagged/angular" class="post-tag" title="show questions tagged &#39;angular&#39;" rel="tag">angular</a> <a href="https://stackoverflow.com/questions/tagged/typescript" class="post-tag" title="show questions tagged &#39;typescript&#39;" rel="tag">typescript</a> <a href="https://stackoverflow.com/questions/tagged/data-binding" class="post-tag" title="show questions tagged &#39;data-binding&#39;" rel="tag">data-binding</a>  or <a href="https://stackoverflow.com/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes" role="complementary" aria-label="sidebar">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2016-10-24 09:12:53Z"><b>7 months ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>14713 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding?lastactivity" class="lastactivity-link" title="2017-03-13 10:51:29Z">2 months ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+						
+			<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk1521859752",[5,17,2221,1129,43]).setZone(45); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk1521859752"><iframe id="ados_frame_adzerk1521859752_5536207" frameborder="0" scrolling="no" height="250" width="300" src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/saved_resource.html"></iframe><img height="0px" width="0px" border="0" style="position:absolute;" src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/i(2).gif"><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="https://stackoverflow.com/questions/40214655/angular-2-checkbox-two-way-data-binding#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div></div>
+            <div id="hireme" class="orange tagged tex2jax_ignore clc-jobs-multi"><a class="top " href="https://stackoverflow.com/jobs?location=S%C3%A3o%20Paulo%2C%20%2C%20" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=4xIvYO-ct-yKh-rDsiAnJiaB_wemCfdIFH2SF4kyy2b86Hcn4EQgAxNDzwYGhgZ7JkYgk0ma6cUB9qd_OFbNFmBnYmA-sNlXxKrRxMpemunaRPaXBzjWLOVnBYmv_nTDUvXQeTuG2uf-M5Lb_sjsmwYA&amp;cr=10440&amp;ct=1&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%3Flocation%3DS%25C3%25A3o%2520Paulo%252C%2520%252C%2520%26med=clc&amp;sig=OHWiR-ByTF0RdQ"><span>Jobs near you</span></a><div class="middle"><ul class="jobs"><li class="&quot;clc-dismissable&quot;"><div class="job-wrap"><a class="job" title="Frontend Engineer at Creditas. Click to learn more." href="https://stackoverflow.com/jobs/144167/frontend-engineer-creditas" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=4xIvYO-ct-yKh-rDsiAnJiaB_wemCfdIFH2SF4kyy2b86Hcn4EQgAxNDzwYGhgZ7JkYgk0ma6cUB9qd_OFbNFmBnYmA-sNlXxKrRxMpemunaRPaXBzjWLOVnBYmv_nTDUvXQeTuG2uf-M5Lb_sjsmwYA&amp;cr=265642&amp;ct=0&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%2F144167%2Ffrontend-engineer-creditas%3Fmed=clc&amp;sig=CweEBu52B99iMA"><div class="title">Frontend Engineer</div><div><span class="company">Creditas</span><span class="location">Itaim Bibi, Brazil</span></div><div class="opts"><span class="opt salary">$18k - $42k</span></div><span class="post-tag">javascript</span><span class="post-tag">ember.js</span></a></div><a class="clc-dismiss" data-clc-click="https://clc.stackoverflow.com/click?an=4xIvYO-ct-yKh-rDsiAnJiaB_wemCfdIFH2SF4kyy2b86Hcn4EQgAxNDzwYGhgZ7JkYgk0ma6cUB9qd_OFbNFmBnYmA-sNlXxKrRxMpemunaRPaXBzjWLOVnBYmv_nTDUvXQeTuG2uf-M5Lb_sjsmwYA&amp;cr=265642&amp;ct=-1&amp;sig=6DBnJlOqeoS7KQ" data-clc-meta-target="-1"><span class="clc-tooltip above-left">dismiss this job</span></a></li><li class="&quot;clc-dismissable&quot;"><div class="job-wrap"><a class="job" title="Software Engineer at Creditas. Click to learn more." href="https://stackoverflow.com/jobs/136913/software-engineer-creditas" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=4xIvYO-ct-yKh-rDsiAnJiaB_wemCfdIFH2SF4kyy2b86Hcn4EQgAxNDzwYGhgZ7JkYgk0ma6cUB9qd_OFbNFmBnYmA-sNlXxKrRxMpemunaRPaXBzjWLOVnBYmv_nTDUvXQeTuG2uf-M5Lb_sjsmwYA&amp;cr=250540&amp;ct=0&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%2F136913%2Fsoftware-engineer-creditas%3Fmed=clc&amp;sig=Med038zSVt-3yQ"><div class="title">Software Engineer</div><div><span class="company">Creditas</span><span class="location">Itaim Bibi, Brazil</span></div><div class="opts"><span class="opt salary">$18k - $42k</span></div><span class="post-tag">ruby</span><span class="post-tag">tdd</span></a></div><a class="clc-dismiss" data-clc-click="https://clc.stackoverflow.com/click?an=4xIvYO-ct-yKh-rDsiAnJiaB_wemCfdIFH2SF4kyy2b86Hcn4EQgAxNDzwYGhgZ7JkYgk0ma6cUB9qd_OFbNFmBnYmA-sNlXxKrRxMpemunaRPaXBzjWLOVnBYmv_nTDUvXQeTuG2uf-M5Lb_sjsmwYA&amp;cr=250540&amp;ct=-1&amp;sig=Whm1nO_X813ijA" data-clc-meta-target="-1"><span class="clc-tooltip above-left">dismiss this job</span></a></li></ul></div><div class="bottom"><a class="city" href="https://stackoverflow.com/jobs?location=S%C3%A3o%20Paulo%2C%20%2C%20" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=4xIvYO-ct-yKh-rDsiAnJiaB_wemCfdIFH2SF4kyy2b86Hcn4EQgAxNDzwYGhgZ7JkYgk0ma6cUB9qd_OFbNFmBnYmA-sNlXxKrRxMpemunaRPaXBzjWLOVnBYmv_nTDUvXQeTuG2uf-M5Lb_sjsmwYA&amp;cr=10440&amp;ct=2&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%3Flocation%3DS%25C3%25A3o%2520Paulo%252C%2520%252C%2520%26med=clc&amp;sig=CQqQCC0yoF2doA">More jobs near São Paulo…</a></div><img src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/impression.gif" class="impression" style="display: none;"></div>
+        <script>
+window.clc_request = 'ApwA1oaeptQIAAAAAH-gZQICAAAAAgAAAAAmAAAAfGh0bWx8YW5ndWxhcnx0eXBlc2NyaXB0fGRhdGEtYmluZGluZ3wAUaVxrI0OkNLg9A';;(function(n){var u={log:window.console.log.bind(window.console,"[clc]"),error:window.console.error.bind(window.console,"[clc]")},f,e,t,r,i;try{if(typeof[].indexOf!="function")return;if(window.attachEvent&&!window.addEventListener)return;if(f=n.allowed,!f)return;if(e=new RegExp(n.allowed),!e.test(location.hostname)){u.error("Invalid host: "+location.hostname);return}if(t=window,t.clc=t.clc||{},t.clc.init=t.clc.init||[],t.clc.init.push(function(n){return n.load()}),t.clc.options){for(r in t.clc.options)n[r]=t.clc.options[r];t.clc.options=n}else t.clc.options=n;i=document.createElement("script");i.async=!0;i.src=n.lib;document.body.appendChild(i)}catch(o){u.error("[clc] Error in loader:",o)}}).call(null, {"lib":"https://cdn.sstatic.net/clc/clc.min.js?v=436861d2e2c5","u":"https://clc.stackoverflow.com/markup.js","azw":true,"kt":2000,"tto":true,"d":{"sb":["hireme","clc-sb"],"tlb":["careers1","clc-tlb"],"mlb":["careers3","clc-mlb"]},"h":"clc.stackoverflow.com","autoload":true,"allowed":"^(((talent\\.)?stackoverflow)|(blog\\.codinghorror)|(serverfault|askubuntu)|([^\\.]+\\.stackexchange))\\.com$"});        </script>
+			
+
+            
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track"><a href="https://stackoverflow.com/q/901712?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">3312</div></a><a href="https://stackoverflow.com/questions/901712/how-to-check-whether-a-checkbox-is-checked-in-jquery?rq=1" class="question-hyperlink">How to check whether a checkbox is checked in jQuery?</a></div><div class="spacer js-gps-track"><a href="https://stackoverflow.com/q/9682092?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">1573</div></a><a href="https://stackoverflow.com/questions/9682092/how-does-data-binding-work-in-angularjs?rq=1" class="question-hyperlink">How does data binding work in AngularJS?</a></div><div class="spacer js-gps-track"><a href="https://stackoverflow.com/q/31548311?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">200</div></a><a href="https://stackoverflow.com/questions/31548311/angular-2-html-binding?rq=1" class="question-hyperlink">angular 2 html binding</a></div><div class="spacer js-gps-track"><a href="https://stackoverflow.com/q/31623879?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">38</div></a><a href="https://stackoverflow.com/questions/31623879/angular-2-two-way-binding-using-ngmodel-is-not-working?rq=1" class="question-hyperlink">Angular 2 two way binding using ngModel is not working</a></div><div class="spacer js-gps-track"><a href="https://stackoverflow.com/q/36715918?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">1</div></a><a href="https://stackoverflow.com/questions/36715918/how-to-define-global-variables-in-angular-2-in-a-way-that-i-can-use-them-for-pro?rq=1" class="question-hyperlink">How to define global variables in Angular 2 in a way that I can use them for property binding in templates?</a></div><div class="spacer js-gps-track"><a href="https://stackoverflow.com/q/40410112?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">0</div></a><a href="https://stackoverflow.com/questions/40410112/angular-2-service-two-way-data-binding?rq=1" class="question-hyperlink">Angular 2 Service Two-Way Data Binding</a></div><div class="spacer js-gps-track"><a href="https://stackoverflow.com/q/40755798?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">0</div></a><a href="https://stackoverflow.com/questions/40755798/angular-2-data-binding-not-working?rq=1" class="question-hyperlink">Angular 2 - data binding not working</a></div><div class="spacer js-gps-track"><a href="https://stackoverflow.com/q/42608724?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">0</div></a><a href="https://stackoverflow.com/questions/42608724/how-to-add-interpolation-properly-on-a-print-component-in-angular-2?rq=1" class="question-hyperlink">How to add interpolation properly on a print component in Angular 2?</a></div><div class="spacer js-gps-track"><a href="https://stackoverflow.com/q/42814978?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">0</div></a><a href="https://stackoverflow.com/questions/42814978/two-way-data-binding-between-multiple-components-in-angular2?rq=1" class="question-hyperlink">Two way data binding between multiple components in angular2?</a></div><div class="spacer js-gps-track"><a href="https://stackoverflow.com/q/42816156?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">1</div></a><a href="https://stackoverflow.com/questions/42816156/angular-angular2-data-binding-not-working-after-catching-javascript-error-using?rq=1" class="question-hyperlink">Angular/Angular2 data binding not working after catching Javascript error using custom errorhandler</a></div>
+                    </div>
+				</div>
+            
+
+<div id="hot-network-questions" class="module tex2jax_ignore">
+    <h4>
+        <a href="https://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="https://scifi.stackexchange.com/questions/160214/how-valuable-are-c-3po-and-r2-d2" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How valuable are C-3PO and R2-D2?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-chemistry" title="Chemistry Stack Exchange"></div><a href="https://chemistry.stackexchange.com/questions/75312/a-basic-solution-of-hcl" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:431 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    A basic solution of HCl
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="https://math.stackexchange.com/questions/2301001/why-are-we-solving-the-limits-in-this-way" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why are we solving the limits in this way?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="https://codegolf.stackexchange.com/questions/123251/is-it-a-cyclic-number" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is it a Cyclic number?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="https://math.stackexchange.com/questions/2300647/why-cant-the-quadratic-formula-be-simplified" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why can't the quadratic formula be simplified?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="https://travel.stackexchange.com/questions/94078/will-my-7yo-be-seated-with-me-on-united-basic-economy" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Will my 7yo be seated with me on United Basic Economy?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="https://academia.stackexchange.com/questions/90121/pursuing-a-research-career-in-a-university-without-teaching-duties-is-it-possib" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Pursuing a research career in a university without teaching duties, is it possible?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="https://unix.stackexchange.com/questions/367890/get-the-device-name-of-connected-usb-disk" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:106 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Get the device name of connected USB disk
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-hinduism" title="Hinduism Stack Exchange"></div><a href="https://hinduism.stackexchange.com/questions/18503/what-does-hindu-scripture-say-about-world-turtle-world-elephant-theory" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:567 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What does Hindu scripture say about World Turtle/World Elephant theory?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="https://scifi.stackexchange.com/questions/160519/trying-to-find-a-book-or-series" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Trying to find a book or series
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="https://electronics.stackexchange.com/questions/307868/led-in-a-circuit-with-alternating-polarities" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:135 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    LED in a circuit with alternating polarities
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-islam" title="Islam Stack Exchange"></div><a href="https://islam.stackexchange.com/questions/40133/allah-is-not-omnipresent" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:455 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Allah is not omnipresent?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="https://travel.stackexchange.com/questions/94095/can-i-travel-with-a-geneva-convention-1951-travel-document-to-australia-without" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can I travel with a Geneva convention 1951 travel document to Australia without visa?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-askubuntu" title="Ask Ubuntu"></div><a href="https://askubuntu.com/questions/919952/what-does-the-s-in-srwxr-xr-x-in-the-ls-output-mean" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:89 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What does the 's' in srwxr-xr-x in the 'ls' output mean?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-computergraphics" title="Computer Graphics Stack Exchange"></div><a href="https://computergraphics.stackexchange.com/questions/5169/why-is-the-back-of-a-perspective-frustrum-larger-than-the-front" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:633 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why is the back of a perspective frustrum larger than the front?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="https://mathoverflow.net/questions/270919/precise-relationship-between-elementary-and-grothendieck-toposes" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:504 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Precise relationship between elementary and Grothendieck toposes?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-mathematica" title="Mathematica Stack Exchange"></div><a href="https://mathematica.stackexchange.com/questions/147132/combining-pure-functions-with-post-fix-notation" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:387 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Combining # &amp; pure functions with post-fix notation
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-chemistry" title="Chemistry Stack Exchange"></div><a href="https://chemistry.stackexchange.com/questions/75315/carbene-mesomeric-structure-of-vinyl-carbocation" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:431 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Carbene mesomeric structure of vinyl carbocation?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-parenting" title="Parenting Stack Exchange"></div><a href="https://parenting.stackexchange.com/questions/30234/how-to-encourage-my-7-year-old-to-move-on-from-her-preschool-friend" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:228 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to encourage my 7 year old to move on from her preschool friend?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-gamedev" title="Game Development Stack Exchange"></div><a href="https://gamedev.stackexchange.com/questions/141399/why-is-it-so-bad-to-optimize-too-early" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:53 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why is it so bad to optimize too early?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-history" title="History Stack Exchange"></div><a href="https://history.stackexchange.com/questions/38297/why-did-the-romans-change-europes-language-but-the-barbarians-didnt" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:324 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why did the Romans change Europe's language, but the barbarians didn't?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="https://electronics.stackexchange.com/questions/307728/power-rating-on-0-%ce%a9-resistor" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:135 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Power rating on 0 Ω resistor
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-askubuntu" title="Ask Ubuntu"></div><a href="https://askubuntu.com/questions/920017/how-do-i-move-fonts-without-disrupting-features" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:89 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How do I move ~/.fonts without disrupting features?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="https://english.stackexchange.com/questions/391268/whats-an-adjective-for-alone-but-not-lonely" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What's an adjective for "alone but not lonely"?
+                </a>
+
+            </li>
+    </ul>
+
+        
+</div>
+		</div>
+	
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="https://stackoverflow.com/feeds/question/40214655" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>	<script>
+StackExchange.ready(function(){$.get('/posts/40214655/ivc/2330');});
+</script>
+<noscript>
+    &lt;div&gt;&lt;img src="/posts/40214655/ivc/2330" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;
+</noscript><div style="display:none" id="prettify-lang">lang-js</div></div>
+
+
+        </div>
+    </div><script async="" src="./html - Angular 2 Checkbox Two Way Data Binding - Stack Overflow_files/clc.min.js"></script>
+    <div id="footer" class="categories" role="contentinfo">
+        <div class="footerwrap">            
+            <div id="footer-menu">
+                <div class="top-footer-links">
+
+                    <a class="js-gps-track" data-gps-track="footer.click({ location: 2, link:1 })" href="https://stackoverflow.com/company/about">about us</a>
+                        <a class="js-gps-track" data-gps-track="footer.click({ location: 2, link:2 })" href="https://stackoverflow.com/tour">tour</a>
+                    <a class="js-gps-track" data-gps-track="footer.click({ location: 2, link:3 })" href="https://stackoverflow.com/help">help</a>
+                    <a class="js-gps-track" data-gps-track="footer.click({ location: 2, link:4 })" href="https://stackoverflow.blog/?blb=1">blog</a>
+                        <a class="js-gps-track" data-gps-track="footer.click({ location: 2, link:5 })" href="https://chat.stackoverflow.com/">chat</a>
+                    <a class="js-gps-track" data-gps-track="footer.click({ location: 2, link:6 })" href="https://data.stackexchange.com/">data</a>
+                    <a class="js-gps-track" data-gps-track="footer.click({ location: 2, link:7 })" href="https://stackexchange.com/legal">legal</a>
+                    <a class="js-gps-track" data-gps-track="footer.click({ location: 2, link:8 })" href="https://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a class="js-gps-track" data-gps-track="footer.click({ location: 2, link:9 })" href="https://stackoverflow.com/company/work-here">work here</a>
+                    <a class="js-gps-track" data-gps-track="footer.click({ location: 2, link:10 })" href="https://www.stackoverflowbusiness.com/advertise">advertising info</a>
+                        <a class="js-gps-track" data-gps-track="footer.click({ location: 2, link:11 })" href="https://stackoverflow.com/jobs/directory/developer-jobs">developer jobs directory</a>
+
+                    <a class="js-gps-track" data-gps-track="footer.click({ location: 2, link:12 })" onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a>
+                    <b><a class="js-gps-track" data-gps-track="footer.click({ location: 2, link:13 })" href="https://stackoverflow.com/contact">contact us</a></b>
+                        <b><a class="js-gps-track" data-gps-track="footer.click({ location: 2, link:14 })" href="https://meta.stackoverflow.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="3">
+                Technology
+            </th>
+            <th>
+                Life / Arts
+            </th>
+            <th>
+                Culture / Recreation
+            </th>
+            <th>
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="https://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="https://serverfault.com/" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="https://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="https://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="https://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="https://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="https://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="https://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                        <li><a href="https://softwareengineering.stackexchange.com/" title="professionals, academics, and students working within the systems development life cycle">Software Engineering</a></li>
+                        <li><a href="https://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                        <li><a href="https://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="https://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="https://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="https://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="https://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="https://security.stackexchange.com/" title="information security professionals">Information Security</a></li>
+                        <li><a href="https://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="https://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="https://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="https://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="https://mathematica.stackexchange.com/" title="users of Wolfram Mathematica">Mathematica</a></li>
+                        <li><a href="https://salesforce.stackexchange.com/" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                        <li><a href="https://expressionengine.stackexchange.com/" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li>
+                        <li><a href="https://crypto.stackexchange.com/" title="software developers, mathematicians and others interested in cryptography">Cryptography</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="https://codereview.stackexchange.com/" title="peer programmer code reviews">Code Review</a></li>
+                        <li><a href="https://magento.stackexchange.com/" title="users of the Magento e-Commerce platform">Magento</a></li>
+                        <li><a href="https://dsp.stackexchange.com/" title="practitioners of the art and science of signal, image and video processing">Signal Processing</a></li>
+                        <li><a href="https://raspberrypi.stackexchange.com/" title="users and developers of hardware and software for Raspberry Pi">Raspberry Pi</a></li>
+                        <li><a href="https://codegolf.stackexchange.com/" title="programming puzzle enthusiasts and code golfers">Programming Puzzles &amp; Code Golf</a></li>
+                    
+                        <li>
+                            <a href="https://stackexchange.com/sites#technology" class="more">
+                                more (7)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="https://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="https://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="https://graphicdesign.stackexchange.com/" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="https://movies.stackexchange.com/" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                        <li><a href="https://music.stackexchange.com/" title="musicians, students, and enthusiasts">Music: Practice &amp; Theory</a></li>
+                        <li><a href="https://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="https://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="https://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                        <li><a href="https://academia.stackexchange.com/" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="https://stackexchange.com/sites#lifearts" class="more">
+                                more (8)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="https://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="https://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="https://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="https://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="https://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="https://ell.stackexchange.com/" title="speakers of other languages learning English">English Language Learners</a></li>
+                        <li><a href="https://japanese.stackexchange.com/" title="students, teachers, and linguists wanting to discuss the finer points of the Japanese language">Japanese Language</a></li>
+                        <li><a href="https://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="https://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="https://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                        <li><a href="https://anime.stackexchange.com/" title="anime and manga fans">Anime &amp; Manga</a></li>
+                        <li><a href="https://mechanics.stackexchange.com/" title="mechanics and DIY enthusiast owners of cars, trucks, and motorcycles">Motor Vehicle Maintenance &amp; Repair</a></li>
+                    
+                        <li>
+                            <a href="https://stackexchange.com/sites#culturerecreation" class="more">
+                                more (17)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="https://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                        <li><a href="https://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="https://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="https://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="https://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="https://chemistry.stackexchange.com/" title="scientists, academics, teachers and students">Chemistry</a></li>
+                        <li><a href="https://biology.stackexchange.com/" title="biology researchers, academics, and students">Biology</a></li>
+                        <li><a href="https://cs.stackexchange.com/" title="students, researchers and practitioners of computer science">Computer Science</a></li>
+                        <li><a href="https://philosophy.stackexchange.com/" title="those interested in the study of the fundamental nature of knowledge, reality, and existence">Philosophy</a></li>
+                    
+                        <li>
+                            <a href="https://stackexchange.com/sites#science" class="more">
+                                more (3)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="https://meta.stackexchange.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="https://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="https://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="https://www.stackoverflowbusiness.com/talent">Stack Overflow Talent</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+            <div id="copyright">
+                site design / logo © 2017 Stack Exchange Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="https://stackoverflow.blog/2009/06/25/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2017.5.29.26075
+            </div>
+                </div>
+    </div>
+    <noscript>
+        &lt;div id="noscript-warning"&gt;Stack Overflow works best with JavaScript enabled
+            &lt;img src="https://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;
+        &lt;/div&gt;
+    </noscript>
+<script>var z=document.createElement("script");z.type="text/javascript",z.async=!0,z.src="https://static.adzerk.net/ados.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(z,s);</script>
+<script>
+var ados = ados || {};
+ados.run = ados.run || [];
+
+
+ados.run.push(function () {
+    setTimeout(function () { $("#adzerk-user-match").remove(); }, window.AUMIframeDone ? 0 : 2000);
+    ados_setKeywords('html,angular,typescript,data-binding');; ados_load();
+});   
+
+</script>
+
+    <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+                ga('create', 'UA-5620270-1');
+                ga('create', 'UA-5620270-59', {name: 'pageData', sampleRate: 5 });
+                ga('set', 'dimension2', '|html|angular|typescript|data-binding|');
+                ga('pageData.set', 'dimension2', '|html|angular|typescript|data-binding|');
+                ga('send', 'pageview');
+                ga('pageData.send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+                qc.async = true;
+                qc.src = (ssl ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+                s.parentNode.insertBefore(qc, s);
+                _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+                            var sc=document.createElement('script');
+                sc.async=true;
+                sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+                s.parentNode.insertBefore(sc, s);
+                _comscore.push({ c1: "2", c2: "17440561" });
+        })();
+
+    </script>
+        
+    
+            <script type="text/javascript">
+                
+                (function(appendChild) {
+                    Node.prototype.appendChild = function() {
+                        var parent = this;
+                        var newNode = arguments[0];
+                        if (parent.nodeName === 'HEAD'
+                            && newNode
+                            && newNode.nodeName === 'SCRIPT'
+                            && newNode.src) {
+                            
+                            window.setTimeout(function() {
+                                var result = newNode.src.match(/^https:\/\/maps\.googleapis\.com\/maps\/api\/place\/js\/(\w+)Service\./i) || [];
+                                var service = result[1];
+                                if (service) {
+                                    if (service === 'Autocompletion') service =  2;
+                                    else if (service === 'Place') service = 1;
+                                    else service = 0;
+                                    StackExchange.using('gps', function() {
+                                        StackExchange.gps.track('google_maps_places_api.call', { service: service });
+                                    });
+                                }
+                            }, 0);
+                        }
+                        return appendChild.apply(this, arguments);
+                    };
+                })(Node.prototype.appendChild);
+            </script>
+    
+</body></html>

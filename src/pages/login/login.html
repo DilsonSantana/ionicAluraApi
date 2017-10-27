@@ -1,0 +1,31 @@
+<ion-content class="background">
+  <ion-card>
+    <ion-card-header>
+      Login Form
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-list no-line>
+
+        <form (submit)="efetuaLogin()">
+          <ion-item>
+            <ion-input [(ngModel)]="email" name="email" type="text" placeholder="Email"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input [(ngModel)]="senha" name="senha" type="password" placeholder="Senha"></ion-input>
+          </ion-item>
+
+          <a>Forgot your login detail? <b>Get help signing in</b></a>
+          <button ion-button block outline type="submit" color="light">Acessar</button>
+
+          <p>OU</p>
+          <button ion-button block color="facebook">
+					<ion-icon name="logo-facebook"></ion-icon> Logar com facebook
+				</button>
+        </form>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <button class="bottom" ion-button clear full color="light">Don't have an account? Sign up</button>
+</ion-content>

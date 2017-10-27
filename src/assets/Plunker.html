@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://plnkr.co/edit/L8g6p9?p=preview -->
+<html id="ng-app" ng-app="plunker.editorPage" lang="en" xmlns:ng="http://angularjs.org" class="ng-app:plunker.editorPage ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" src="./Plunker_files/azcarbon_2_1_0_HORIZ"></script><script type="text/javascript" src="./Plunker_files/300lo.json"></script><script type="text/javascript" src="./Plunker_files/_ate.track.config_resp"></script><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Plunker is an online community for creating, collaborating on and sharing your web development ideas."><meta name="keywords" content="jquery,angular.js,editor,online,jsfiddle,codepen,pastebin,testing,javascript testing,css testing,javascript,css,coffeescript,preview,live preview"><meta name="fragment" content="!"><!--<base href="/edit/">--><base href="."><title>Plunker</title><link rel="stylesheet" href="./Plunker_files/editor-1.0.6.css"><!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><!--[if lte IE 8]><script>document.createElement('ng-include');
+document.createElement('ng-pluralize');
+document.createElement('ng-view');
+document.createElement('ng:include');
+document.createElement('ng:pluralize');
+document.createElement('ng:view');</script><![endif]--><!--[if lt IE 8]><script src="/vendor/json2/json2.js"></script><![endif]--><script src="./Plunker_files/417778941754366" async=""></script><script async="" src="./Plunker_files/fbevents.js"></script><script type="text/javascript" async="" src="./Plunker_files/conversion_async.js"></script><script async="" src="./Plunker_files/gtm.js"></script><script async="" src="./Plunker_files/analytics.js"></script><script type="text/javascript" async="" src="./Plunker_files/ga.js"></script><script src="./Plunker_files/xdomain.min.js"></script><script>xdomain.slaves({
+  'http://api.plnkr.co': "/proxy.html",
+  'http://collab.plnkr.co': "/proxy.html",
+  'https://api.plnkr.co': "/proxy.html",
+  'https://collab.plnkr.co': "/proxy.html",
+})</script><script src="./Plunker_files/jquery.min.js"></script><!-- script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.js")--><script><!--
+
+(function (root) {
+/* -- Data -- */
+root._plunker || (root._plunker = {});
+root._plunker.url = {"www":"\u002F\u002Fplnkr.co","collab":"\u002F\u002Fcollab.plnkr.co","api":"\u002F\u002Fapi.plnkr.co","embed":"\u002F\u002Fembed.plnkr.co","run":"\u002F\u002Frun.plnkr.co","shot":"\u002F\u002Fshot.plnkr.co","carbonadsH":"\u002F\u002Fengine.carbonads.com\u002Fz\u002F32595\u002Fazcarbon_2_1_0_HORIZ","carbonadsV":"\u002F\u002Fengine.carbonads.com\u002Fz\u002F32595\u002Fazcarbon_2_1_0_VERT"};
+root._plunker.package = {"name":"plunker-legacy-www","subdomain":"plunker-legacy-www","domains":["plnkr.co","plunker.co"],"scripts":{"docker:build":"gcloud docker -- build -t gcr.io\u002F$(gcloud config list project --format 'value(core.project)' 2\u003E \u002Fdev\u002Fnull)\u002F$(node -e 'var p=require(\".\u002Fpackage.json\");console.log(`${p.name}:${p.version}`)') .","docker:push":"gcloud docker -- push gcr.io\u002F$(gcloud config list project --format 'value(core.project)' 2\u003E \u002Fdev\u002Fnull)\u002F$(node -e 'var p=require(\".\u002Fpackage.json\");console.log(`${p.name}:${p.version}`)')","start":"node server.js","build":"NODE_ENV=production grunt build","release":"grunt release","version":"npm run build","postversion":"npm run docker:build && npm run docker:push"},"engines":{"node":"4.8.x","npm":"2.x"},"version":"1.0.6","private":true,"description":"The code powering the public facing component of http:\u002F\u002Fplnkr.co","main":"server.js","dependencies":{"JSONStream":"0.4.x","ace":"git:\u002F\u002Fgithub.com\u002Fajaxorg\u002Face#v1.2.2","amd-loader":"0.0.5","authom":"^0.4.36","bluebird":"^2.2.2","bluebird-lru-cache":"^0.1.0","body-parser":"^1.5.2","coffee-script":"^1.10.0","compression":"^1.0.9","concat-stream":"^1.4.6","connect-assets":"^5.2.1","cookie-parser":"^1.3.2","errorhandler":"^1.1.1","event-stream":"3.0.x","express":"^4.7.2","express-state":"^1.2.0","forever-monitor":"^1.2.3","fs-extra":"^0.30.0","hbs":"~2.4.0","jade":"~0.27.6","less":"^1.7.5","mime":"~1.2.7","morgan":"^1.2.2","morph":"^0.2.0","nconf":"~0.6.4","prerender-node":"~1.0.0","request":"~2.11.4","secure-filters":"~1.0.4","serve-static":"^1.10.0","xmlbuilder":"0.4.x"},"devDependencies":{"brfs":"0.0.8","browserify":"~2.35.4","caching-coffeeify":"~0.3.0","coffee-script":"~1.6.3","csswring":"^5.0.0","grunt":"~0.4.2","grunt-browserify":"~1.2.11","grunt-bump":"0.0.11","grunt-cli":"^0.1.13","grunt-contrib-less":"^1.1.0","grunt-contrib-uglify":"^1.0.1","grunt-contrib-watch":"~0.5.3","grunt-exec":"~0.4.5","grunt-lib-contrib":"~0.6.1","less":"~1.3.3","postcss":"^5.0.21","rimraf":"~2.2.2","uglify-js":"^2.6.2"},"repository":{"type":"git","url":"https:\u002F\u002Fgithub.com\u002Ffilearts\u002Fplunker_www.git"},"keywords":["plunker","plnkr"],"author":"Geoff Goodman","license":"MIT"};
+root._plunker.session = {"keychain":[{}],"public_id":"csuckf3k2gsd7am5mCfuofhqJuGonmh4","last_access":"2017-05-27T22:49:12.163Z","age":628406,"user_url":"\u002F\u002Fapi.plnkr.co\u002Fsessions\u002F5929af9ebf7c0c000a5dcf11\u002Fuser","url":"\u002F\u002Fapi.plnkr.co\u002Fsessions\u002F5929af9ebf7c0c000a5dcf11","id":"5929af9ebf7c0c000a5dcf11"};
+root._plunker.bootstrap = {"description":"undefined","tags":["angular2","long2know"],"files":{"index.html":{"filename":"index.html","content":"\u003C!DOCTYPE html\u003E\r\n\u003Chtml\u003E\r\n  \u003Chead\u003E\r\n    \u003Ctitle\u003EAngular Demo\u003C\u002Ftitle\u003E\r\n    \u003Cmeta charset=\"UTF-8\"\u003E\r\n    \u003Cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1\"\u003E\r\n    \r\n    \u003Clink rel=\"stylesheet\" href=\"https:\u002F\u002Fv4-alpha.getbootstrap.com\u002Fdist\u002Fcss\u002Fbootstrap.min.css\" \u002F\u003E\r\n    \u003Clink rel=\"stylesheet\" href=\"https:\u002F\u002Fmaxcdn.bootstrapcdn.com\u002Ffont-awesome\u002F4.4.0\u002Fcss\u002Ffont-awesome.min.css\"\u003E\r\n    \u003Clink rel=\"stylesheet\" href=\"styles.css\" \u002F\u003E\r\n    \r\n  \r\n    \u003C!-- 1. Load libraries --\u003E\r\n    \u003Cscript src=\"lorem-ipsum.js\"\u003E\u003C\u002Fscript\u003E\r\n    \r\n     \u003C!-- Polyfill(s) for older browsers --\u003E\r\n    \u003Cscript src=\"https:\u002F\u002Funpkg.com\u002Fcore-js\u002Fclient\u002Fshim.min.js\"\u003E\u003C\u002Fscript\u003E\r\n\r\n    \u003Cscript src=\"https:\u002F\u002Funpkg.com\u002Fzone.js@0.6.25?main=browser\"\u003E\u003C\u002Fscript\u003E\r\n    \u003Cscript src=\"https:\u002F\u002Funpkg.com\u002Freflect-metadata@0.1.3\"\u003E\u003C\u002Fscript\u003E\r\n    \u003Cscript src=\"https:\u002F\u002Funpkg.com\u002Fsystemjs@0.19.27\u002Fdist\u002Fsystem.src.js\"\u003E\u003C\u002Fscript\u003E\r\n\r\n    \u003C!-- 2. Configure SystemJS --\u003E\r\n    \u003Cscript src=\"systemjs.config.js\"\u003E\u003C\u002Fscript\u003E\r\n    \u003Cscript\u003E\r\n      System.import('app').catch(function(err){ console.error(err); });\r\n    \u003C\u002Fscript\u003E\r\n  \u003C\u002Fhead\u003E\r\n\r\n  \u003C!-- 3. Display the application --\u003E\r\n  \u003Cbody\u003E\r\n    \u003Cmy-app\u003ELoading...\u003C\u002Fmy-app\u003E\r\n  \u003C\u002Fbody\u003E\r\n\u003C\u002Fhtml\u003E\r\n"},"style.css":{"filename":"style.css","content":"\u002F* Master Styles *\u002F\r\nh1 {\r\n  color: #369;\r\n  font-family: Arial, Helvetica, sans-serif;\r\n  font-size: 250%;\r\n}\r\nh2, h3 {\r\n  color: #444;\r\n  font-family: Arial, Helvetica, sans-serif;\r\n  font-weight: lighter;\r\n}\r\nbody {\r\n  margin: 2em;\r\n}\r\nbody, input[text], button {\r\n  color: #888;\r\n  font-family: Cambria, Georgia;\r\n}\r\na {\r\n  cursor: pointer;\r\n  cursor: hand;\r\n}\r\nbutton {\r\n  font-family: Arial;\r\n  background-color: #eee;\r\n  border: none;\r\n  padding: 5px 10px;\r\n  border-radius: 4px;\r\n  cursor: pointer;\r\n  cursor: hand;\r\n}\r\nbutton:hover {\r\n  background-color: #cfd8dc;\r\n}\r\nbutton:disabled {\r\n  background-color: #eee;\r\n  color: #aaa;\r\n  cursor: auto;\r\n}\r\n\r\n\u002F* Navigation link styles *\u002F\r\nnav a {\r\n  padding: 5px 10px;\r\n  text-decoration: none;\r\n  margin-top: 10px;\r\n  display: inline-block;\r\n  background-color: #eee;\r\n  border-radius: 4px;\r\n}\r\nnav a:visited, a:link {\r\n  color: #607D8B;\r\n}\r\nnav a:hover {\r\n  color: #039be5;\r\n  background-color: #CFD8DC;\r\n}\r\nnav a.active {\r\n  color: #039be5;\r\n}\r\n\r\n\u002F* items class *\u002F\r\n.items {\r\n  margin: 0 0 2em 0;\r\n  list-style-type: none;\r\n  padding: 0;\r\n  width: 24em;\r\n}\r\n.items li {\r\n  cursor: pointer;\r\n  position: relative;\r\n  left: 0;\r\n  background-color: #EEE;\r\n  margin: .5em;\r\n  padding: .3em 0;\r\n  height: 1.6em;\r\n  border-radius: 4px;\r\n}\r\n.items li:hover {\r\n  color: #607D8B;\r\n  background-color: #DDD;\r\n  left: .1em;\r\n}\r\n.items li.selected:hover {\r\n  background-color: #BBD8DC;\r\n  color: white;\r\n}\r\n.items .text {\r\n  position: relative;\r\n  top: -3px;\r\n}\r\n.items {\r\n  margin: 0 0 2em 0;\r\n  list-style-type: none;\r\n  padding: 0;\r\n  width: 24em;\r\n}\r\n.items li {\r\n  cursor: pointer;\r\n  position: relative;\r\n  left: 0;\r\n  background-color: #EEE;\r\n  margin: .5em;\r\n  padding: .3em 0;\r\n  height: 1.6em;\r\n  border-radius: 4px;\r\n}\r\n.items li:hover {\r\n  color: #607D8B;\r\n  background-color: #DDD;\r\n  left: .1em;\r\n}\r\n.items li.selected {\r\n  background-color: #CFD8DC;\r\n  color: white;\r\n}\r\n\r\n.items li.selected:hover {\r\n  background-color: #BBD8DC;\r\n}\r\n.items .text {\r\n  position: relative;\r\n  top: -3px;\r\n}\r\n.items .badge {\r\n  display: inline-block;\r\n  font-size: small;\r\n  color: white;\r\n  padding: 0.8em 0.7em 0 0.7em;\r\n  background-color: #607D8B;\r\n  line-height: 1em;\r\n  position: relative;\r\n  left: -1px;\r\n  top: -4px;\r\n  height: 1.8em;\r\n  margin-right: .8em;\r\n  border-radius: 4px 0 0 4px;\r\n}\r\n\u002F* everywhere else *\u002F\r\n* {\r\n  font-family: Arial, Helvetica, sans-serif;\r\n}\r\n\r\nmultiselect {\r\n    display: block;\r\n}\r\n\r\n    multiselect \u003E .btn-group {\r\n        min-width: 180px;\r\n    }\r\n\r\n    multiselect .btn {\r\n        width: 100%;\r\n        background-color: #FFF;\r\n    }\r\n\r\n        multiselect .btn.has-error {\r\n            border: 1px solid #a94442 !important;\r\n            color: #db524b;\r\n        }\r\n\r\n    multiselect .dropdown-menu {\r\n        max-height: 300px;\r\n        min-width: 200px;\r\n        overflow-y: auto;\r\n    }\r\n\r\n        multiselect .dropdown-menu .filter \u003E input {\r\n            width: 99%;\r\n        }\r\n\r\n        multiselect .dropdown-menu .filter .glyphicon {\r\n            cursor: pointer;\r\n            pointer-events: all;\r\n        }\r\n\r\n    multiselect .dropdown-menu {\r\n        width: 100%;\r\n        box-sizing: border-box;\r\n        padding: 2px;\r\n    }\r\n\r\n    multiselect \u003E .btn-group \u003E button {\r\n        padding-right: 20px;\r\n    }\r\n\r\n        multiselect \u003E .btn-group \u003E button \u003E .caret {\r\n            border-left: 4px solid transparent;\r\n            border-right: 4px solid transparent;\r\n            border-top: 4px solid black;\r\n            right: 5px;\r\n            top: 45%;\r\n            position: absolute;\r\n        }\r\n\r\n    multiselect .dropdown-menu \u003E li \u003E a {\r\n        padding: 3px 10px;\r\n        cursor: pointer;\r\n    }\r\n\r\n        multiselect .dropdown-menu \u003E li \u003E a i {\r\n            margin-right: 4px;\r\n        }\r\n\r\n.glyphicon-none:before {\r\n    content: \"\\e013\";\r\n    color: transparent !important;\r\n}"},"README.md":{"filename":"README.md","content":"This demo plnkr illustrates custom filter pipes uses checkbox inputs\r\n\r\nVisit my site for more demos and discussion.\r\n\r\n[Links]\r\nhttps:\u002F\u002Flong2know.com for more demos and discussion.."},"app\u002Fapp.component.ts":{"filename":"app\u002Fapp.component.ts","content":"import { Component,Input, Injectable, ApplicationRef, ChangeDetectorRef } from '@angular\u002Fcore';\r\nimport { NgbModule } from '@ng-bootstrap\u002Fng-bootstrap';\r\nimport { FilteredList } from '.\u002Ffilteredlist.component';\r\nimport {Observable} from 'rxjs\u002FRx';\r\nimport {Pipe, PipeTransform} from '@angular\u002Fcore';\r\n\r\n@Pipe({\r\n    name: 'filter'\r\n})\r\nexport class FilterPipe implements PipeTransform {\r\n  transform(items: any, filter: any, filterItems: Array\u003Cany\u003E, isAnd: bool): any {\r\n    console.log('Filtering ..');\r\n    if (filter && Array.isArray(items) && filterItems) {\r\n      let filterKeys = Object.keys(filter);\r\n      let checkedItems = filterItems.filter(item =\u003E { return item.checked; });\r\n      if (!checkedItems || checkedItems.length === 0) { return items; }\r\n      if (isAnd) {\r\n        return items.filter(item =\u003E\r\n            filterKeys.reduce((acc1, keyName) =\u003E\r\n                (acc1 && checkedItems.reduce((acc2, checkedItem) =\u003E acc2 && new RegExp(item[keyName], 'gi').test(checkedItem.value) || checkedItem.value === \"\", true))\r\n              , true)\r\n              );\r\n      } else {\r\n        return items.filter(item =\u003E {\r\n          return filterKeys.some((keyName) =\u003E {\r\n            return checkedItems.some((checkedItem) =\u003E {\r\n              return new RegExp(item[keyName], 'gi').test(checkedItem.value) || checkedItem.value === \"\";\r\n            });\r\n          });\r\n        });\r\n      }\r\n    } else {\r\n      return items;\r\n    }\r\n  }\r\n}\r\n\r\n\r\n@Component({\r\n    selector: 'my-app',\r\n    templateUrl: 'templates\u002Fapp.html'\r\n})\r\n\r\nexport class AppComponent implements OnInit {\r\n    public items: Array\u003Cany\u003E;\r\n    public filterItems: Array\u003Cany\u003E;\r\n    private _lipsum: any;\r\n  \r\n    constructor(private changeRef: ChangeDetectorRef, private appRef: ApplicationRef) {\r\n        declare var LoremIpsum: any;\r\n        this._lipsum = new LoremIpsum();\r\n        this.items = [];\r\n    }\r\n    \r\n    checked() {\r\n      return this.filterItems.filter(item =\u003E { return item.checked; });\r\n    }\r\n    \r\n    createItems() {\r\n      this.items.length = 0;\r\n      var numItems: int = Math.random() * (200 - 10) + 10;\r\n      console.log(\"Adding \" + numItems.toString() + \" items\");\r\n      var i: int;\r\n      for (i =0; i \u003C numItems; i++) {\r\n        var label: string = this._lipsum.singleWord();\r\n        var val = 'val' + (Math.floor(Math.random() * 3) + 1);\r\n        this.items.push({ name: i.toString() + ' ' + label, property: val });\r\n      }\r\n      \r\n      this.filterItems = [\r\n        {\r\n          value: 'val1',\r\n          checked: false\r\n        },\r\n        {\r\n          value: 'val2',\r\n          checked: false\r\n        },\r\n        {\r\n          value: 'val3',\r\n          checked: false\r\n        },\r\n      ];\r\n    }\r\n    \r\n    ngOnInit() {\r\n      this.createItems();\r\n    }\r\n}\r\n"},"app\u002Fapp.module.ts":{"filename":"app\u002Fapp.module.ts","content":"import { Component, NgModule } from '@angular\u002Fcore';\r\nimport { BrowserModule } from '@angular\u002Fplatform-browser';\r\nimport { FormsModule, ReactiveFormsModule } from '@angular\u002Fforms';\r\nimport { JsonpModule } from '@angular\u002Fhttp';\r\nimport { NgbModule } from '@ng-bootstrap\u002Fng-bootstrap';\r\nimport { AppComponent, FilterPipe } from '.\u002Fapp.component';\r\n\r\n@NgModule({\r\n  imports: [BrowserModule, FormsModule, ReactiveFormsModule, JsonpModule, NgbModule.forRoot()], \r\n  declarations: [ AppComponent, FilterPipe ],\r\n  bootstrap:    [ AppComponent ]\r\n})\r\n\r\nexport class AppModule { }\r\n"},"app\u002Fmain.ts":{"filename":"app\u002Fmain.ts","content":"import { platformBrowserDynamic } from '@angular\u002Fplatform-browser-dynamic';\r\n\r\nimport { AppModule } from '.\u002Fapp.module';\r\n\r\nconst platform = platformBrowserDynamic();\r\nplatform.bootstrapModule(AppModule);\r\n"},"lorem-ipsum.js":{"filename":"lorem-ipsum.js","content":"\u002F**\r\n * @fileOverview Generates \"Lorem ipsum\" style text.\r\n * @author rviscomi@gmail.com Rick Viscomi,\r\n * \t\ttinsley@tinsology.net Mathew Tinsley\r\n * @version 1.0\r\n *\u002F\r\n\r\n\u002F**\r\n *\tCopyright (c) 2009, Mathew Tinsley (tinsley@tinsology.net)\r\n *\tAll rights reserved.\r\n *\r\n *\tRedistribution and use in source and binary forms, with or without\r\n *\tmodification, are permitted provided that the following conditions are met:\r\n *\t\t* Redistributions of source code must retain the above copyright\r\n *\t\t  notice, this list of conditions and the following disclaimer.\r\n *\t\t* Redistributions in binary form must reproduce the above copyright\r\n *\t\t  notice, this list of conditions and the following disclaimer in the\r\n *\t\t  documentation and\u002For other materials provided with the distribution.\r\n *\t\t* Neither the name of the organization nor the\r\n *\t\t  names of its contributors may be used to endorse or promote products\r\n *\t\t  derived from this software without specific prior written permission.\r\n *\r\n *\tTHIS SOFTWARE IS PROVIDED BY MATHEW TINSLEY ''AS IS'' AND ANY\r\n *\tEXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\r\n *\tWARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\r\n *\tDISCLAIMED. IN NO EVENT SHALL \u003Ccopyright holder\u003E BE LIABLE FOR ANY\r\n *\tDIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\r\n *\t(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\r\n *\tLOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND\r\n *\tON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\r\n *\t(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\r\n *\tSOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\r\n *\u002F\r\n\r\n\u002F**\r\n * @class Jibborish generator.\r\n *\u002F\r\nvar LoremIpsum = function () {\r\n};\r\n\r\n\u002F**\r\n * Average number of words per sentence.\r\n * @constant {number}\r\n *\u002F\r\nLoremIpsum.WORDS_PER_SENTENCE_AVG = 24.460;\r\n\r\n\u002F**\r\n * Standard deviation of the number of words per sentence.\r\n * @constant {number}\r\n *\u002F\r\nLoremIpsum.WORDS_PER_SENTENCE_STD = 5.080;\r\n\r\n\u002F**\r\n * List of possible words.\r\n * @constant {Array.string}\r\n *\u002F\r\nLoremIpsum.WORDS = [\r\n\t\t'lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur',\r\n\t\t'adipiscing', 'elit', 'curabitur', 'vel', 'hendrerit', 'libero',\r\n\t\t'eleifend', 'blandit', 'nunc', 'ornare', 'odio', 'ut',\r\n\t\t'orci', 'gravida', 'imperdiet', 'nullam', 'purus', 'lacinia',\r\n\t\t'a', 'pretium', 'quis', 'congue', 'praesent', 'sagittis', \r\n\t\t'laoreet', 'auctor', 'mauris', 'non', 'velit', 'eros',\r\n\t\t'dictum', 'proin', 'accumsan', 'sapien', 'nec', 'massa',\r\n\t\t'volutpat', 'venenatis', 'sed', 'eu', 'molestie', 'lacus',\r\n\t\t'quisque', 'porttitor', 'ligula', 'dui', 'mollis', 'tempus',\r\n\t\t'at', 'magna', 'vestibulum', 'turpis', 'ac', 'diam',\r\n\t\t'tincidunt', 'id', 'condimentum', 'enim', 'sodales', 'in',\r\n\t\t'hac', 'habitasse', 'platea', 'dictumst', 'aenean', 'neque',\r\n\t\t'fusce', 'augue', 'leo', 'eget', 'semper', 'mattis', \r\n\t\t'tortor', 'scelerisque', 'nulla', 'interdum', 'tellus', 'malesuada',\r\n\t\t'rhoncus', 'porta', 'sem', 'aliquet', 'et', 'nam',\r\n\t\t'suspendisse', 'potenti', 'vivamus', 'luctus', 'fringilla', 'erat',\r\n\t\t'donec', 'justo', 'vehicula', 'ultricies', 'varius', 'ante',\r\n\t\t'primis', 'faucibus', 'ultrices', 'posuere', 'cubilia', 'curae',\r\n\t\t'etiam', 'cursus', 'aliquam', 'quam', 'dapibus', 'nisl',\r\n\t\t'feugiat', 'egestas', 'class', 'aptent', 'taciti', 'sociosqu',\r\n\t\t'ad', 'litora', 'torquent', 'per', 'conubia', 'nostra',\r\n\t\t'inceptos', 'himenaeos', 'phasellus', 'nibh', 'pulvinar', 'vitae',\r\n\t\t'urna', 'iaculis', 'lobortis', 'nisi', 'viverra', 'arcu',\r\n\t\t'morbi', 'pellentesque', 'metus', 'commodo', 'ut', 'facilisis',\r\n\t\t'felis', 'tristique', 'ullamcorper', 'placerat', 'aenean', 'convallis',\r\n\t\t'sollicitudin', 'integer', 'rutrum', 'duis', 'est', 'etiam',\r\n\t\t'bibendum', 'donec', 'pharetra', 'vulputate', 'maecenas', 'mi',\r\n\t\t'fermentum', 'consequat', 'suscipit', 'aliquam', 'habitant', 'senectus',\r\n\t\t'netus', 'fames', 'quisque', 'euismod', 'curabitur', 'lectus',\r\n\t\t'elementum', 'tempor', 'risus', 'cras'\r\n];\r\n\r\nLoremIpsum.prototype.singleWord = function () {\r\n  var position = Math.floor(Math.random() * LoremIpsum.WORDS.length);\r\n  var word = LoremIpsum.WORDS[position];\r\n  return word.charAt(0).toUpperCase() + word.slice(1);\r\n}\r\n\r\n\u002F**\r\n * Generate \"Lorem ipsum\" style words.\r\n * @param num_words {number} Number of words to generate.\r\n * @return {string} \"Lorem ipsum...\"\r\n *\u002F\r\nLoremIpsum.prototype.generate = function (num_words) {\r\n\tvar words, ii, position, word, current, sentences, sentence_length, sentence;\r\n\t\r\n\t\u002F**\r\n\t * @default 100\r\n\t *\u002F\r\n\tnum_words = num_words || 100;\r\n\t\r\n\twords = [LoremIpsum.WORDS[0], LoremIpsum.WORDS[1]];\r\n\tnum_words -= 2;\r\n\t\r\n\tfor (ii = 0; ii \u003C num_words; ii++) {\r\n\t\tposition = Math.floor(Math.random() * LoremIpsum.WORDS.length);\r\n\t\tword = LoremIpsum.WORDS[position];\r\n\t\t\r\n\t\tif (ii \u003E 0 && words[ii - 1] === word) {\r\n\t\t\tii -= 1;\r\n\t\t\t\r\n\t\t} else {\r\n\t\t\twords[ii] = word;\r\n\t\t}\r\n\t}\r\n\t\r\n\tsentences = [];\r\n\tcurrent = 0;\r\n\t\r\n\twhile (num_words \u003E 0) {\r\n\t\tsentence_length = this.getRandomSentenceLength();\r\n\t\t\r\n\t\tif (num_words - sentence_length \u003C 4) {\r\n\t\t\tsentence_length = num_words;\r\n\t\t}\r\n\t\t\r\n\t\tnum_words -= sentence_length;\r\n\t\t\r\n\t\tsentence = [];\r\n\t\t\r\n\t\tfor (ii = current; ii \u003C (current + sentence_length); ii++) {\r\n\t\t\tsentence.push(words[ii]);\r\n\t\t}\r\n\t\t\r\n\t\tsentence = this.punctuate(sentence);\r\n\t\tcurrent += sentence_length;\r\n\t\tsentences.push(sentence.join(' '));\r\n\t}\r\n\t\r\n\treturn sentences.join(' ');\r\n};\r\n\r\n\u002F**\r\n * Insert commas and periods in the given sentence.\r\n * @param {Array.string} sentence List of words in the sentence.\r\n * @return {Array.string} Sentence with punctuation added.\r\n *\u002F\r\nLoremIpsum.prototype.punctuate = function (sentence) {\r\n\tvar word_length, num_commas, ii, position;\r\n\t\r\n\tword_length = sentence.length;\r\n\t\r\n\t\u002F* End the sentence with a period. *\u002F\r\n\tsentence[word_length - 1] += '.';\r\n\t\r\n\tif (word_length \u003C 4) {\r\n\t\treturn sentence;\r\n\t}\r\n\t\r\n\tnum_commas = this.getRandomCommaCount(word_length);\r\n\t\r\n\tfor (ii = 0; ii \u003C= num_commas; ii++) {\r\n\t\tposition = Math.round(ii * word_length \u002F (num_commas + 1));\r\n\t\t\r\n\t\tif (position \u003C (word_length - 1) && position \u003E 0) {\r\n\t\t\t\u002F* Add the comma. *\u002F\r\n\t\t\tsentence[position] += ',';\r\n\t\t}\r\n\t}\r\n\t\r\n\t\u002F* Capitalize the first word in the sentence. *\u002F\r\n\tsentence[0] = sentence[0].charAt(0).toUpperCase() + sentence[0].slice(1);\r\n\t\r\n\treturn sentence;\r\n};\r\n\r\n\u002F**\r\n * Produces a random number of commas.\r\n * @param {number} word_length Number of words in the sentence.\r\n * @return {number} Random number of commas\r\n *\u002F\r\nLoremIpsum.prototype.getRandomCommaCount = function (word_length) {\r\n\tvar base, average, standard_deviation;\r\n\t\r\n\t\u002F* Arbitrary. *\u002F\r\n\tbase = 6;\r\n\t\r\n\taverage = Math.log(word_length) \u002F Math.log(base);\r\n\tstandard_deviation = average \u002F base;\r\n\t\r\n\treturn Math.round(this.gaussMS(average, standard_deviation));\r\n};\r\n\r\n\u002F**\r\n * Produces a random sentence length based on the average word length\r\n * of an English sentence.\r\n * @return {number} Random sentence length\r\n *\u002F\r\nLoremIpsum.prototype.getRandomSentenceLength = function () {\r\n\treturn Math.round(\r\n\t\t\tthis.gaussMS(\r\n\t\t\t\t\tLoremIpsum.WORDS_PER_SENTENCE_AVG,\r\n\t\t\t\t\tLoremIpsum.WORDS_PER_SENTENCE_STD\r\n\t\t\t)\r\n\t);\r\n};\r\n\r\n\u002F**\r\n * Produces a random number.\r\n * @return {number} Random number\r\n *\u002F\r\nLoremIpsum.prototype.gauss = function () {\r\n\treturn (Math.random() * 2 - 1) +\r\n\t\t\t(Math.random() * 2 - 1) +\r\n\t\t\t(Math.random() * 2 - 1);\r\n};\r\n\r\n\u002F**\r\n * Produces a random number with Gaussian distribution.\r\n * @param {number} mean\r\n * @param {number} standard_deviation\r\n * @return {number} Random number\r\n *\u002F\r\nLoremIpsum.prototype.gaussMS = function (mean, standard_deviation) {\r\n\treturn Math.round(this.gauss() * standard_deviation + mean);\r\n};"},"systemjs.config.js":{"filename":"systemjs.config.js","content":"\u002F**\r\n * PLUNKER VERSION\r\n * (based on systemjs.config.js in angular.io)\r\n * System configuration for Angular samples\r\n * Adjust as necessary for your application needs.\r\n *\u002F\r\n(function (global) {\r\n  System.config({\r\n    \u002F\u002F DEMO ONLY! REAL CODE SHOULD NOT TRANSPILE IN THE BROWSER\r\n    transpiler: 'ts',\r\n    typescriptOptions: {\r\n      tsconfig: true\r\n    },\r\n    meta: {\r\n      'typescript': {\r\n        \"exports\": \"ts\"\r\n      }\r\n    },\r\n    paths: {\r\n      \u002F\u002F paths serve as alias\r\n      'npm:': 'https:\u002F\u002Funpkg.com\u002F'\r\n    },\r\n    \u002F\u002F map tells the System loader where to look for things\r\n    map: {\r\n      \u002F\u002F our app is within the app folder\r\n      app: 'app',\r\n\r\n      \u002F\u002F angular bundles\r\n      '@angular\u002Fcore': 'npm:@angular\u002Fcore\u002Fbundles\u002Fcore.umd.js',\r\n      '@angular\u002Fcommon': 'npm:@angular\u002Fcommon\u002Fbundles\u002Fcommon.umd.js',\r\n      '@angular\u002Fcompiler': 'npm:@angular\u002Fcompiler\u002Fbundles\u002Fcompiler.umd.js',\r\n      '@angular\u002Fplatform-browser': 'npm:@angular\u002Fplatform-browser\u002Fbundles\u002Fplatform-browser.umd.js',\r\n      '@angular\u002Fplatform-browser-dynamic': 'npm:@angular\u002Fplatform-browser-dynamic\u002Fbundles\u002Fplatform-browser-dynamic.umd.js',\r\n      '@angular\u002Fhttp': 'npm:@angular\u002Fhttp\u002Fbundles\u002Fhttp.umd.js',\r\n      '@angular\u002Frouter': 'npm:@angular\u002Frouter\u002Fbundles\u002Frouter.umd.js',\r\n      '@angular\u002Fforms': 'npm:@angular\u002Fforms\u002Fbundles\u002Fforms.umd.js',\r\n      '@angular\u002Fupgrade': 'npm:@angular\u002Fupgrade\u002Fbundles\u002Fupgrade.umd.js',\r\n\r\n      \u002F\u002F other libraries\r\n      'rxjs':                      'npm:rxjs',\r\n      'angular-in-memory-web-api': 'npm:angular-in-memory-web-api',\r\n      'ts':                        'npm:plugin-typescript@4.0.10\u002Flib\u002Fplugin.js',\r\n      'typescript':                'npm:typescript@2.0.2\u002Flib\u002Ftypescript.js',\r\n      \r\n      '@ng-bootstrap\u002Fng-bootstrap': 'npm:@ng-bootstrap\u002Fng-bootstrap\u002Fbundles\u002Fng-bootstrap.js'\r\n\r\n    },\r\n    \u002F\u002F packages tells the System loader how to load when no filename and\u002For no extension\r\n    packages: {\r\n      app: {\r\n        main: '.\u002Fmain.ts',\r\n        defaultExtension: 'ts'\r\n      },\r\n      rxjs: {\r\n        defaultExtension: 'js'\r\n      },\r\n      'angular-in-memory-web-api': {\r\n        main: '.\u002Findex.js',\r\n        defaultExtension: 'js'\r\n      }\r\n    }\r\n  });\r\n})(this);\r\n\r\n\r\n\u002F*\r\nCopyright 2016 Google Inc. All Rights Reserved.\r\nUse of this source code is governed by an MIT-style license that\r\ncan be found in the LICENSE file at http:\u002F\u002Fangular.io\u002Flicense\r\n*\u002F"},"templates\u002Fapp.html":{"filename":"templates\u002Fapp.html","content":"\u003Cdiv class=\"container-fluid\"\u003E\r\n  \u003Chr\u003E\r\n  \u003Cp\u003E\r\n    This demo plnkr illustrates custom filter pipes in Angular filtering on multiple properies with and\u002For conditions. Visit \u003Ca href=\"https:\u002F\u002Flong2know.com\u002F\" target=\"_blank\"\u003Ehttps:\u002F\u002Flong2know.com\u003C\u002Fa\u003E for more demos and discussion..\r\n  \u003C\u002Fp\u003E\r\n  \u003Chr\u003E\r\n\r\n  \u003Cdiv class=\"form form-inline\"\u003E\r\n    \u003Cdiv *ngFor=\"let filterItem of filterItems; let i = index;\" class=\"form-check\" style=\"padding-right:20px;\"\u003E\r\n      \u003Clabel class=\"form-check-label\"\u003E\r\n        \u003Cinput type=\"checkbox\" class=\"form-check-input\" [(ngModel)]=\"filterItem.checked\" [value]=\"filterItem.value\"\u003E Value {{ i + 1 }}\r\n      \u003C\u002Flabel\u003E\r\n    \u003C\u002Fdiv\u003E\r\n  \u003C\u002Fdiv\u003E\r\n\r\n  \u003Cpre\u003ESelected items: \u003Cspan *ngFor=\"let filterItem of checked()\" style=\"padding-right:10px;\"\u003E{{ filterItem.value }}\u003C\u002Fspan\u003E\u003C\u002Fpre\u003E\r\n\r\n  \u003Cul\u003E\r\n    \u003Cli *ngFor=\"let item of items | filter: { property: ''} : checked() : false\"\u003E{{ item.name }} - {{ item.property }}\u003C\u002Fli\u003E\r\n  \u003C\u002Ful\u003E\r\n\u003C\u002Fdiv\u003E"},"tsconfig.json":{"filename":"tsconfig.json","content":"{\r\n  \"compilerOptions\": {\r\n    \"target\": \"es5\",\r\n    \"module\": \"commonjs\",\r\n    \"moduleResolution\": \"node\",\r\n    \"sourceMap\": true,\r\n    \"emitDecoratorMetadata\": true,\r\n    \"experimentalDecorators\": true,\r\n    \"removeComments\": false,\r\n    \"noImplicitAny\": true,\r\n    \"suppressImplicitAnyIndexErrors\": true,\r\n    \"types\": []\r\n  },\r\n  \"exclude\": [\r\n    \"node_modules\u002F*\",\r\n    \"**\u002F*-aot.ts\"\r\n  ]\r\n}\r\n"}},"private":true};
+}(this));
+
+-->
+</script><script src="./Plunker_files/editor-1.0.6.js"></script><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{display:none !important;}ng\:form{display:block;}</style><style id="ace_editor.css">.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;min-width: 100%;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;}.ace_text-input.ace_composition {background: inherit;color: inherit;z-index: 1000;opacity: 1;text-indent: 0;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-left: 2px solid}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {-webkit-transition: opacity 0.18s;transition: opacity 0.18s;}.ace_editor.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}.ace_line .ace_fold {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled > .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {-webkit-transition: opacity 0.4s ease 0.05s;transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {-webkit-transition: opacity 0.05s ease 0.05s;transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;border-radius: 2px;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style><style>.ace_snippet-marker {    -moz-box-sizing: border-box;    box-sizing: border-box;    background: rgba(194, 193, 208, 0.09);    border: 1px dotted rgba(211, 208, 235, 0.62);    position: absolute;}</style><style>.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {    background-color: #CAD6FA;    z-index: 1;}.ace_editor.ace_autocomplete .ace_line-hover {    border: 1px solid #abbffe;    margin-top: -1px;    background: rgba(233,233,253,0.4);}.ace_editor.ace_autocomplete .ace_line-hover {    position: absolute;    z-index: 2;}.ace_editor.ace_autocomplete .ace_scroller {   background: none;   border: none;   box-shadow: none;}.ace_rightAlignedText {    color: gray;    display: inline-block;    position: absolute;    right: 4px;    text-align: right;    z-index: -1;}.ace_editor.ace_autocomplete .ace_completion-highlight{    color: #000;    text-shadow: 0 0 0.01em;}.ace_editor.ace_autocomplete {    width: 280px;    z-index: 200000;    background: #fbfbfb;    color: #444;    border: 1px lightgray solid;    position: fixed;    box-shadow: 2px 3px 5px rgba(0,0,0,.2);    line-height: 1.4;}</style><style id="ace_searchbox">.ace_search {background-color: #ddd;border: 1px solid #cbcbcb;border-top: 0 none;max-width: 325px;overflow: hidden;margin: 0;padding: 4px;padding-right: 6px;padding-bottom: 0;position: absolute;top: 0px;z-index: 99;white-space: normal;}.ace_search.left {border-left: 0 none;border-radius: 0px 0px 5px 0px;left: 0;}.ace_search.right {border-radius: 0px 0px 0px 5px;border-right: 0 none;right: 0;}.ace_search_form, .ace_replace_form {border-radius: 3px;border: 1px solid #cbcbcb;float: left;margin-bottom: 4px;overflow: hidden;}.ace_search_form.ace_nomatch {outline: 1px solid red;}.ace_search_field {background-color: white;border-right: 1px solid #cbcbcb;border: 0 none;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;float: left;height: 22px;outline: 0;padding: 0 7px;width: 214px;margin: 0;}.ace_searchbtn,.ace_replacebtn {background: #fff;border: 0 none;border-left: 1px solid #dcdcdc;cursor: pointer;float: left;height: 22px;margin: 0;padding: 0;position: relative;}.ace_searchbtn:last-child,.ace_replacebtn:last-child {border-top-right-radius: 3px;border-bottom-right-radius: 3px;}.ace_searchbtn:disabled {background: none;cursor: default;}.ace_searchbtn {background-position: 50% 50%;background-repeat: no-repeat;width: 27px;}.ace_searchbtn.prev {background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADFJREFUeNpiSU1NZUAC/6E0I0yACYskCpsJiySKIiY0SUZk40FyTEgCjGgKwTRAgAEAQJUIPCE+qfkAAAAASUVORK5CYII=);    }.ace_searchbtn.next {background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADRJREFUeNpiTE1NZQCC/0DMyIAKwGJMUAYDEo3M/s+EpvM/mkKwCQxYjIeLMaELoLMBAgwAU7UJObTKsvAAAAAASUVORK5CYII=);    }.ace_searchbtn_close {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABRVo5BAAAAZ0lEQVR42u2SUQrAMAhDvazn8OjZBilCkYVVxiis8H4CT0VrAJb4WHT3C5xU2a2IQZXJjiQIRMdkEoJ5Q2yMqpfDIo+XY4k6h+YXOyKqTIj5REaxloNAd0xiKmAtsTHqW8sR2W5f7gCu5nWFUpVjZwAAAABJRU5ErkJggg==) no-repeat 50% 0;border-radius: 50%;border: 0 none;color: #656565;cursor: pointer;float: right;font: 16px/16px Arial;height: 14px;margin: 5px 1px 9px 5px;padding: 0;text-align: center;width: 14px;}.ace_searchbtn_close:hover {background-color: #656565;background-position: 50% 100%;color: white;}.ace_replacebtn.prev {width: 54px}.ace_replacebtn.next {width: 27px}.ace_button {margin-left: 2px;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-o-user-select: none;-ms-user-select: none;user-select: none;overflow: hidden;opacity: 0.7;border: 1px solid rgba(100,100,100,0.23);padding: 1px;-moz-box-sizing: border-box;box-sizing:    border-box;color: black;}.ace_button:hover {background-color: #eee;opacity:1;}.ace_button:active {background-color: #ddd;}.ace_button.checked {border-color: #3399ff;opacity:1;}.ace_search_options{margin-bottom: 3px;text-align: right;-webkit-user-select: none;-moz-user-select: none;-o-user-select: none;-ms-user-select: none;user-select: none;}</style><script>var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-28928507-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-28928507-5', 'plnkr.co');
+</script><script type="text/javascript" src="./Plunker_files/addthis_widget.js" async="async"></script><script src="./Plunker_files/ext-emmet.js"></script><script src="./Plunker_files/emmet.js"></script><script src="./Plunker_files/text.js"></script><script src="./Plunker_files/mode-html.js"></script><style type="text/css">.at-icon{fill:#fff;border:0}.at-icon-wrapper{display:inline-block;overflow:hidden}a .at-icon-wrapper{cursor:pointer}.at-rounded,.at-rounded-element .at-icon-wrapper{border-radius:12%}.at-circular,.at-circular-element .at-icon-wrapper{border-radius:50%}.addthis_32x32_style .at-icon{width:2pc;height:2pc}.addthis_24x24_style .at-icon{width:24px;height:24px}.addthis_20x20_style .at-icon{width:20px;height:20px}.addthis_16x16_style .at-icon{width:1pc;height:1pc}#at16lb{display:none;position:absolute;top:0;left:0;width:100%;height:100%;z-index:1001;background-color:#000;opacity:.001}#at_complete,#at_error,#at_share,#at_success{position:static!important}.at15dn{display:none}#at15s,#at16p,#at16p form input,#at16p label,#at16p textarea,#at_share .at_item{font-family:arial,helvetica,tahoma,verdana,sans-serif!important;font-size:9pt!important;outline-style:none;outline-width:0;line-height:1em}* html #at15s.mmborder{position:absolute!important}#at15s.mmborder{position:fixed!important;width:250px!important}#at15s{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);float:none;line-height:1em;margin:0;overflow:visible;padding:5px;text-align:left;position:absolute}#at15s a,#at15s span{outline:0;direction:ltr;text-transform:none}#at15s .at-label{margin-left:5px}#at15s .at-icon-wrapper{width:1pc;height:1pc;vertical-align:middle}#at15s .at-icon{width:1pc;height:1pc}.at4-icon{display:inline-block;background-repeat:no-repeat;background-position:top left;margin:0;overflow:hidden;cursor:pointer}.addthis_16x16_style .at4-icon,.addthis_default_style .at4-icon,.at4-icon,.at-16x16{width:1pc;height:1pc;line-height:1pc;background-size:1pc!important}.addthis_32x32_style .at4-icon,.at-32x32{width:2pc;height:2pc;line-height:2pc;background-size:2pc!important}.addthis_24x24_style .at4-icon,.at-24x24{width:24px;height:24px;line-height:24px;background-size:24px!important}.addthis_20x20_style .at4-icon,.at-20x20{width:20px;height:20px;line-height:20px;background-size:20px!important}.at4-icon.circular,.circular .at4-icon,.circular.aticon{border-radius:50%}.at4-icon.rounded,.rounded .at4-icon{border-radius:4px}.at4-icon-left{float:left}#at15s .at4-icon{text-indent:20px;padding:0;overflow:visible;white-space:nowrap;background-size:1pc;width:1pc;height:1pc;background-position:top left;display:inline-block;line-height:1pc}.addthis_vertical_style .at4-icon,.at4-follow-container .at4-icon{margin-right:5px}html>body #at15s{width:250px!important}#at15s.atm{background:none!important;padding:0!important;width:10pc!important}#at15s_inner{background:#fff;border:1px solid #fff;margin:0}#at15s_head{position:relative;background:#f2f2f2;padding:4px;cursor:default;border-bottom:1px solid #e5e5e5}.at15s_head_success{background:#cafd99!important;border-bottom:1px solid #a9d582!important}.at15s_head_success a,.at15s_head_success span{color:#000!important;text-decoration:none}#at15s_brand,#at15sptx,#at16_brand{position:absolute}#at15s_brand{top:4px;right:4px}.at15s_brandx{right:20px!important}a#at15sptx{top:4px;right:4px;text-decoration:none;color:#4c4c4c;font-weight:700}#at15sptx:hover{text-decoration:underline}#at16_brand{top:5px;right:30px;cursor:default}#at_hover{padding:4px}#at_hover .at_item,#at_share .at_item{background:#fff!important;float:left!important;color:#4c4c4c!important}#at_share .at_item .at-icon-wrapper{margin-right:5px}#at_hover .at_bold{font-weight:700;color:#000!important}#at_hover .at_item{width:7pc!important;padding:2px 3px!important;margin:1px;text-decoration:none!important}#at_hover .at_item.athov,#at_hover .at_item:focus,#at_hover .at_item:hover{margin:0!important}#at_hover .at_item.athov,#at_hover .at_item:focus,#at_hover .at_item:hover,#at_share .at_item.athov,#at_share .at_item:hover{background:#f2f2f2!important;border:1px solid #e5e5e5;color:#000!important;text-decoration:none}.ipad #at_hover .at_item:focus{background:#fff!important;border:1px solid #fff}.at15t{display:block!important;height:1pc!important;line-height:1pc!important;padding-left:20px!important;background-position:0 0;text-align:left}.addthis_button,.at15t{cursor:pointer}.addthis_toolbox a.at300b,.addthis_toolbox a.at300m{width:auto}.addthis_toolbox a{margin-bottom:5px;line-height:initial}.addthis_toolbox.addthis_vertical_style{width:200px}.addthis_button_facebook_like .fb_iframe_widget{line-height:100%}.addthis_button_facebook_like iframe.fb_iframe_widget_lift{max-width:none}.addthis_toolbox a.addthis_button_counter,.addthis_toolbox a.addthis_button_facebook_like,.addthis_toolbox a.addthis_button_facebook_send,.addthis_toolbox a.addthis_button_facebook_share,.addthis_toolbox a.addthis_button_foursquare,.addthis_toolbox a.addthis_button_google_plusone,.addthis_toolbox a.addthis_button_linkedin_counter,.addthis_toolbox a.addthis_button_pinterest_pinit,.addthis_toolbox a.addthis_button_stumbleupon_badge,.addthis_toolbox a.addthis_button_tweet{display:inline-block}.at-share-tbx-element .google_plusone_iframe_widget>span>div{vertical-align:top!important}.addthis_toolbox span.addthis_follow_label{display:none}.addthis_toolbox.addthis_vertical_style span.addthis_follow_label{display:block;white-space:nowrap}.addthis_toolbox.addthis_vertical_style a{display:block}.addthis_toolbox.addthis_vertical_style.addthis_32x32_style a{line-height:2pc;height:2pc}.addthis_toolbox.addthis_vertical_style .at300bs{margin-right:4px;float:left}.addthis_toolbox.addthis_20x20_style span{line-height:20px}.addthis_toolbox.addthis_32x32_style span{line-height:2pc}.addthis_toolbox.addthis_pill_combo_style .addthis_button_compact .at15t_compact,.addthis_toolbox.addthis_pill_combo_style a{float:left}.addthis_toolbox.addthis_pill_combo_style a.addthis_button_tweet{margin-top:-2px}.addthis_toolbox.addthis_pill_combo_style .addthis_button_compact .at15t_compact{margin-right:4px}.addthis_default_style .addthis_separator{margin:0 5px;display:inline}div.atclear{clear:both}.addthis_default_style .addthis_separator,.addthis_default_style .at4-icon,.addthis_default_style .at300b,.addthis_default_style .at300bo,.addthis_default_style .at300bs,.addthis_default_style .at300m{float:left}.at300b img,.at300bo img{border:0}a.at300b .at4-icon,a.at300m .at4-icon{display:block}.addthis_default_style .at300b,.addthis_default_style .at300bo,.addthis_default_style .at300m{padding:0 2px}.at300b,.at300bo,.at300bs,.at300m{cursor:pointer}.addthis_button_facebook_like.at300b:hover,.addthis_button_facebook_like.at300bs:hover,.addthis_button_facebook_send.at300b:hover,.addthis_button_facebook_send.at300bs:hover{opacity:1}.addthis_20x20_style .at15t,.addthis_20x20_style .at300bs{overflow:hidden;display:block;height:20px!important;width:20px!important;line-height:20px!important}.addthis_32x32_style .at15t,.addthis_32x32_style .at300bs{overflow:hidden;display:block;height:2pc!important;width:2pc!important;line-height:2pc!important}.at300bs{overflow:hidden;display:block;background-position:0 0;height:1pc;width:1pc;line-height:1pc!important}.addthis_default_style .at15t_compact,.addthis_default_style .at15t_expanded{margin-right:4px}#at_share .at_item{width:123px!important;padding:4px;margin-right:2px;border:1px solid #fff}#at16p{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);z-index:10000001;position:absolute;top:50%;left:50%;width:300px;padding:10px;margin:0 auto;margin-top:-185px;margin-left:-155px;font-family:arial,helvetica,tahoma,verdana,sans-serif;font-size:9pt;color:#5e5e5e}#at_share{margin:0;padding:0}#at16pt{position:relative;background:#f2f2f2;height:13px;padding:5px 10px}#at16pt a,#at16pt h4{font-weight:700}#at16pt h4{display:inline;margin:0;padding:0;font-size:9pt;color:#4c4c4c;cursor:default}#at16pt a{position:absolute;top:5px;right:10px;color:#4c4c4c;text-decoration:none;padding:2px}#at15sptx:focus,#at16pt a:focus{outline:thin dotted}#at15s #at16pf a{top:1px}#_atssh{width:1px!important;height:1px!important;border:0!important}.atm{width:10pc!important;padding:0;margin:0;line-height:9pt;letter-spacing:normal;font-family:arial,helvetica,tahoma,verdana,sans-serif;font-size:9pt;color:#444;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);padding:4px}.atm-f{text-align:right;border-top:1px solid #ddd;padding:5px 8px}.atm-i{background:#fff;border:1px solid #d5d6d6;padding:0;margin:0;box-shadow:1px 1px 5px rgba(0,0,0,.15)}.atm-s{margin:0!important;padding:0!important}.atm-s a:focus{border:transparent;outline:0;transition:none}#at_hover.atm-s a,.atm-s a{display:block;text-decoration:none;padding:4px 10px;color:#235dab!important;font-weight:400;font-style:normal;transition:none}#at_hover.atm-s .at_bold{color:#235dab!important}#at_hover.atm-s a:hover,.atm-s a:hover{background:#2095f0;text-decoration:none;color:#fff!important}#at_hover.atm-s .at_bold{font-weight:700}#at_hover.atm-s a:hover .at_bold{color:#fff!important}.atm-s a .at-label{vertical-align:middle;margin-left:5px;direction:ltr}.at_PinItButton{display:block;width:40px;height:20px;padding:0;margin:0;background-image:url(//s7.addthis.com/static/t00/pinit00.png);background-repeat:no-repeat}.at_PinItButton:hover{background-position:0 -20px}.addthis_toolbox .addthis_button_pinterest_pinit{position:relative}.at-share-tbx-element .fb_iframe_widget span{vertical-align:baseline!important}#at16pf{height:auto;text-align:right;padding:4px 8px}.at-privacy-info{position:absolute;left:7px;bottom:7px;cursor:pointer;text-decoration:none;font-family:helvetica,arial,sans-serif;font-size:10px;line-height:9pt;letter-spacing:.2px;color:#666}.at-privacy-info:hover{color:#000}.body .wsb-social-share .wsb-social-share-button-vert{padding-top:0;padding-bottom:0}.body .wsb-social-share.addthis_counter_style .addthis_button_tweet.wsb-social-share-button{padding-top:40px}.body .wsb-social-share.addthis_counter_style .addthis_button_google_plusone.wsb-social-share-button{padding-top:0}.body .wsb-social-share.addthis_counter_style .addthis_button_facebook_like.wsb-social-share-button{padding-top:21px}@media print{#at4-follow,#at4-share,#at4-thankyou,#at4-whatsnext,#at4m-mobile,#at15s,.at4,.at4-recommended{display:none!important}}@media screen and (max-width:400px){.at4win{width:100%}}@media screen and (max-height:700px) and (max-width:400px){.at4-thankyou-inner .at4-recommended-container{height:122px;overflow:hidden}.at4-thankyou-inner .at4-recommended .at4-recommended-item:first-child{border-bottom:1px solid #c5c5c5}}</style><style type="text/css">.at-branding-logo{font-family:helvetica,arial,sans-serif;text-decoration:none;font-size:10px;display:inline-block;margin:2px 0;letter-spacing:.2px}.at-branding-logo .at-branding-icon{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////+GlNUkcc1QAAAB1JREFUeNpiYIQDBjQmAwMmkwEM0JnY1WIxFyDAABGeAFEudiZsAAAAAElFTkSuQmCC")}.at-branding-logo .at-branding-icon,.at-branding-logo .at-privacy-icon{display:inline-block;height:10px;width:10px;margin-left:4px;margin-right:3px;margin-bottom:-1px;background-repeat:no-repeat}.at-branding-logo .at-privacy-icon{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAMAAABR24SMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhQTFRF8fr9ot/xXcfn2/P5AKva////////AKTWodjhjAAAAAd0Uk5T////////ABpLA0YAAAA6SURBVHjaJMzBDQAwCAJAQaj7b9xifV0kUKJ9ciWxlzWEWI5gMF65KUTv0VKkjVeTerqE/x7+9BVgAEXbAWI8QDcfAAAAAElFTkSuQmCC")}.at-branding-logo span{text-decoration:none}.at-branding-logo .at-branding-addthis,.at-branding-logo .at-branding-powered-by{color:#666}.at-branding-logo .at-branding-addthis:hover{color:#333}.at-cv-with-image .at-branding-addthis,.at-cv-with-image .at-branding-addthis:hover{color:#fff}a.at-branding-logo:visited{color:initial}.at-branding-info{display:inline-block;padding:0 5px;color:#666;border:1px solid #666;border-radius:50%;font-size:10px;line-height:9pt;opacity:.7;transition:all .3s ease;text-decoration:none}.at-branding-info span{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.at-branding-info:before{content:'i';font-family:Times New Roman}.at-branding-info:hover{color:#0780df;border-color:#0780df}</style><script src="./Plunker_files/html.js"></script><script src="./Plunker_files/mode-typescript.js"></script><script src="./Plunker_files/mode-json.js"></script><script src="./Plunker_files/mode-markdown.js"></script><script type="text/javascript" charset="utf-8" async="" src="./Plunker_files/menu.48ed5039a4afbc8f10b1.js"></script><script type="text/javascript" charset="utf-8" async="" src="./Plunker_files/136.ecccad5195ab7e3df5b7.js"></script><script id="_carbonads_projs" type="text/javascript" src="./Plunker_files/C6AILKT.json"></script><style>.carbonad{display:block;background:#fdfdfd;background-image:-moz-linear-gradient(top,#f8f8f8,#fdfdfd);background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,#f8f8f8),color-stop(1,#fdfdfd));border:1px solid #d5d5d5;font-family:Lucida Grande,Arial,Helvetica,sans-serif;font-size:11px;height:118px;line-height:15px;overflow:hidden;width:300px}.carbonad-img{border:none;display:inline;float:left;height:100px;margin:9px;width:130px}.carbonad-text{display:inline;float:left;width:142px;padding-top:13px}.carbonad-text a{color:#000;text-decoration:none;text-transform:none;}.carbonad-tag{float:left;margin-top:9px;text-align:center;width:142px;color:#999}.carbonad-tag a{color:#999;text-decoration:none}</style><script src="./Plunker_files/typescript.js"></script></head><body><div ng-show="overlay.message" class="overlay" style="display: none;">
+  <p class="message ng-binding" ng-bind="overlay.message"></p>
+</div><nav class="navbar navbar-fixed-top"><div class="navbar-inner"><div class="container-fluid"><a href="https://plnkr.co/" class="brand"><span class="brandname">Plunker<sub ng-bind-template="v1.0.6" class="version ng-binding">v1.0.6</sub></span></a><div class="plunker-userpanel pull-right" ng-switch="" on="visitor.logged_in">
+  <!-- ngSwitchWhen: true -->
+  <!-- ngSwitchWhen: false -->
+<button ng-switch-when="false" ng-disabled="visitor.isLoading()" class="user-login btn btn-primary ng-scope" tooltip="Sign in to get full access" tooltip-placement="bottom" ng-click="visitor.login()">
+    <i class="icon-github"></i>
+    <span class="text shrink">Sign in with Github</span>
+  </button></div>
+<div class="plunker-toolbar btn-toolbar">
+  <div class="btn-group" ng-show="session.isPlunkDirty() &amp;&amp; (!session.plunk || session.plunk.isWritable())" style="display: none;">
+    <button ng-click="session.save() | trackEvent:&#39;Plunk&#39;:&#39;Save&#39;:&#39;Toolbar&#39;" class="btn btn-primary ng-scope" tooltip-placement="bottom" tooltip="Save your work as a new Plunk">
+      <i class="icon-save"></i><span class="shrink"> Save</span>
+    </button>
+  </div>
+  <div class="btn-group" ng-show="!session.isPlunkDirty() &amp;&amp; (!session.plunk || session.plunk.isWritable())" style="display: none;">
+    <button ng-hide="session.plunk.frozen_version==session.plunk.history.length - 1 &amp;&amp; !session.currentRevisionIndex" ng-click="session.freeze() | trackEvent:&#39;Plunk&#39;:&#39;Freeze&#39;:&#39;Toolbar&#39;" class="btn btn-default ng-scope" tooltip-placement="bottom" tooltip="Set this version as the version other users will see. You can then keep saving new versions that only you can see." style="display: none;">
+      <i class="icon-lock"></i><span class="shrink"> Freeze</span>
+    </button>
+    <button ng-show="session.plunk.frozen_version==session.plunk.history.length - 1 &amp;&amp; !session.currentRevisionIndex" ng-click="session.unfreeze() | trackEvent:&#39;Plunk&#39;:&#39;Unfreeze&#39;:&#39;Toolbar&#39;" class="btn btn-default ng-scope" tooltip-placement="bottom" tooltip="Unfreeze this plunk so that no revisions are hidden from other users.">
+      <i class="icon-unlock"></i><span class="shrink"> Unfreeze</span>
+    </button>
+  </div>
+  <div class="btn-group" ng-show="session.isSaved()">
+    <button ng-click="session.fork() | trackEvent:&#39;Plunk&#39;:&#39;Fork&#39;:&#39;Toolbar&#39;" class="btn ng-scope" tooltip-placement="bottom" tooltip="Save your changes as a fork of this Plunk">
+      <i class="icon-git-fork"></i><span class="shrink"> Fork</span>
+    </button>
+    <button ng-if="visitor.isMember()" data-toggle="dropdown" class="btn dropdown-toggle ng-scope" tooltip-placement="bottom" tooltip="Fork and toggle the privacy of this Plunk"><span class="caret"></span></button>
+    <ul ng-if="visitor.isMember()" class="dropdown-menu" ng-switch="" on="session.private">
+      <!-- ngSwitchWhen: false -->
+      <!-- ngSwitchWhen: true -->
+    <li ng-switch-when="true" class="ng-scope"><a ng-click="session.fork({private: false}) | trackEvent:&#39;Plunk&#39;:&#39;Fork Public&#39;:&#39;Toolbar&#39;">Fork to public plunk</a></li></ul>
+  </div>
+  <div ng-show="session.plunk.isWritable() &amp;&amp; session.plunk.isSaved()" class="btn-group" style="display: none;">
+    <button ng-click="promptDestroy() | trackEvent:&#39;Plunk&#39;:&#39;Destroy&#39;:&#39;Toolbar&#39;" class="btn btn-danger ng-scope" tooltip-placement="bottom" tooltip="Delete the current plunk">
+      <i class="icon-trash"></i>
+    </button>
+  </div>
+  <div class="btn-group">
+    <button ng-click="promptReset() | trackEvent:&#39;Plunk&#39;:&#39;Reset&#39;:&#39;Toolbar&#39;" class="btn btn-success ng-scope" tooltip-placement="bottom" tooltip="Create a new Plunk">
+      <i class="icon-file"></i><span class="shrink"> New</span>
+    </button>
+    <button data-toggle="dropdown" class="btn btn-success dropdown-toggle ng-scope" tooltip-placement="bottom" tooltip="Create a new Plunk from a template"><span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="https://plnkr.co/edit/gist:1986619">jQuery</a><a href="https://plnkr.co/edit/gist:1992850" class="coffee" title="In coffee-script"><img src="./Plunker_files/coffeescript-logo-small_med.png"></a></li>
+      <li><a href="https://plnkr.co/edit/gist:2006604">jQuery UI</a></li>
+      <li class="divider"></li>
+      <li class="dropdown-submenu">
+        <a tabindex="-1" href="https://plnkr.co/edit/#" title="Angular 1.x">AngularJS</a>
+        <ul class="dropdown-menu">
+          <li><a href="https://plnkr.co/edit/gist:3510140">1.0.x</a><a href="https://plnkr.co/edit/gist:3189582" class="coffee" title="In coffee-script"><img src="./Plunker_files/coffeescript-logo-small_med.png"></a></li>
+          <li><a href="https://plnkr.co/edit/gist:5301635">1.0.x + Jasmine</a></li>
+          <li class="divider"></li>
+          <li><a href="https://plnkr.co/edit/gist:3662702">1.1.x (unstable)</a><a href="https://plnkr.co/edit/gist:3662696" class="coffee" title="In coffee-script"><img src="./Plunker_files/coffeescript-logo-small_med.png"></a></li>
+          <li class="divider"></li>
+          <li><a href="https://plnkr.co/edit/tpl:FrTqqTNoY8BEfHs9bB0f">1.2.x</a><a href="https://plnkr.co/edit/tpl:9dz4TT6og6hHx9QAOBT3" class="coffee" title="In coffee-script"><img src="./Plunker_files/coffeescript-logo-small_med.png"></a></li>
+          <li class="divider"></li>
+          <li><a href="https://plnkr.co/edit/tpl:rfqcl9AHEoJZEEJxyNn2">1.3.x</a><a href="https://plnkr.co/edit/tpl:RJc8D4Z6KMf74ffWOTn5" class="coffee" title="In coffee-script"><img src="./Plunker_files/coffeescript-logo-small_med.png"></a></li>
+          <li class="divider"></li>
+          <li><a href="https://plnkr.co/edit/tpl:8rFfZljYNl3z1A4LKSL2">1.4.x</a><a href="https://plnkr.co/edit/tpl:zxQbqlOd9vSmkCLQm5ke" class="coffee" title="In coffee-script"><img src="./Plunker_files/coffeescript-logo-small_med.png"></a></li>
+          <li class="divider"></li>
+          <li><a href="https://plnkr.co/edit/tpl:CR2TtS1zz9wFGgsl5z2c">1.5.x</a></li>
+          <li><a href="https://plnkr.co/edit/tpl:qvZ8Iri6jRUioBEDsa32">1.5.x + Typescript</a></li>
+        </ul>
+      </li>
+      <li><a href="https://plnkr.co/edit/tpl:AvJOMERrnz94ekVua0u5" title="Just Angular">Angular</a></li>
+      <li class="divider"></li>
+      <li class="dropdown-submenu">
+        <a tabindex="-1" href="https://plnkr.co/edit/#">React.js</a>
+        <ul class="dropdown-menu">
+          <li><a href="https://plnkr.co/edit/tpl:a3vkhunC1Na5BG6GY2Gf">React.js</a></li>
+          <li><a href="https://plnkr.co/edit/tpl:wxQVHKHmyJVjcBJQsk6q">React.js with addons</a></li>
+        </ul>
+      </li>
+      <li class="divider"></li>
+      <li><a href="https://plnkr.co/edit/gist:2016721">Bootstrap</a><a href="https://plnkr.co/edit/gist:2016721" class="coffee" title="In coffee-script"><img src="./Plunker_files/coffeescript-logo-small_med.png"></a></li>
+      <li class="divider"></li>
+      <li><a href="https://plnkr.co/edit/gist:2050713">Backbone.js</a><a href="https://plnkr.co/edit/gist:2050746" class="coffee" title="In coffee-script"><img src="./Plunker_files/coffeescript-logo-small_med.png"></a></li>
+      <li class="divider"></li>
+      <li><a href="https://plnkr.co/edit/gist:3510115">YUI</a></li>
+      <li class="divider"></li>
+      <li><a href="https://plnkr.co/edit/tpl:ajm0hzObeid6Kb1aE1Ih">KendoUI</a></li>
+    </ul>
+  </div>
+  <div class="btn-group">
+    <button ng-click="togglePreview() | trackEvent:&#39;Multipane&#39;:panes.active.id==&#39;preview&#39;&amp;&amp;&#39;Show Preview&#39;||&#39;Hide Preview&#39;:&#39;Toolbar&#39;" class="btn btn-inverse ng-scope active" ng-class="{active: panes.active.id==&#39;preview&#39;}" ng-switch="" on="panes.active.id==&#39;preview&#39;" tooltip-placement="bottom" tooltip="Preview your work">
+      <!-- ngSwitchWhen: false -->
+      <!-- ngSwitchWhen: true -->
+    <div ng-switch-when="true" class="ng-scope">
+        <i class="icon-stop"></i>
+        <span class="shrink">Stop</span>
+      </div></button>
+  </div>
+  <div class="btn-group pull-right" ng-show="session.isSaved()">
+    <a ng-href="//embed.plnkr.co/L8g6p9/" target="_blank" class="btn ng-scope" tooltip-placement="bottom" tooltip="Open the embedded view" href="https://embed.plnkr.co/L8g6p9/">
+      <i class="icon-external-link"></i>
+    </a>
+  </div>
+  <div class="btn-group pull-right">
+    <button ng-click="triggerDownload() | trackEvent:&#39;Plunk&#39;:&#39;Download Zip&#39;:&#39;Toolbar&#39;" class="btn ng-scope" tooltip-placement="bottom" tooltip="Download your Plunk as a zip file">
+      <i class="icon-download-alt"></i>
+    </button>
+  </div>
+  <div class="btn-group pull-right" ng-show="session.isSaved() &amp;&amp; visitor.isMember()" style="display: none;">
+    <button ng-click="toggleFavorite() | trackEvent:&#39;Plunk&#39;:&#39;Star&#39;:&#39;Toolbar&#39;" class="btn ng-scope" ng-class="{activated: session.plunk.thumbed, &#39;active&#39;: session.plunk.thumbed}" tooltip-placement="bottom" tooltip="Save this Plunk to your favorites">
+      <i class="icon-star"></i>
+    </button>
+  </div>
+  <div class="btn-group pull-right" ng-show="session.isSaved() &amp;&amp; visitor.isMember()" style="display: none;">
+    <button ng-click="toggleRemembered() | trackEvent:&#39;Plunk&#39;:session.plunk.remembered &amp;&amp; &#39;Remember&#39; || &#39;Forget&#39;:&#39;Toolbar&#39;" class="btn ng-scope" ng-class="{activated: session.plunk.remembered, &#39;active&#39;: session.plunk.remembered}" tooltip-placement="bottom" tooltip="Save this Plunk to your list of templates">
+      <i class="icon-briefcase"></i>
+    </button>
+  </div>
+  <div class="btn-group pull-right">
+    <button ng-click="beautifier.beautify() | trackEvent:&#39;Plunk&#39;:&#39;Beautify&#39;:&#39;Toolbar&#39;" class="btn ng-scope" ng-class="{disabled: !beautifier.isBeautifiable()}" tooltip-placement="bottom" tooltip="Beautify your code">
+      <i class="icon-ok"></i>
+    </button>
+  </div>
+</div><!-- Top nav bar--><div class="nav"><ul id="navbar" class="nav"><!-- ngRepeat: (name, item) in menu.items --></ul></div></div></div></nav><div class="plunker-editor-layout ui-layout-container" style="overflow: hidden;">
+  <div class="ui-layout-west ui-layout-pane ui-layout-pane-west" style="position: absolute; margin: 0px; left: 0px; right: auto; top: 0px; bottom: 0px; height: 601px; z-index: 0; width: 200px; display: block; visibility: visible;">
+    <div class="plunker-sidebar">
+  <div class="alert alert-info plunker-restorer" ng-show="savedState" style="display: none;">
+  <p><strong>Unsaved session</strong> Restore your previous session?</p>
+  <button class="btn btn-success btn-mini" ng-click="restoreSession() | trackEvent:&#39;Plunk&#39;:&#39;Restore&#39;:&#39;Sidebar&#39;">Restore</button>
+  <button class="btn btn-danger btn-mini" data-dismiss="alert">Discard</button>
+</div>
+  <div class="share" ng-switch="session.isSaved()">
+    <!-- ngSwitchWhen: true -->
+  <div ng-switch-when="true" addthis-toolbox="" class="addthis_default_style addthis_20x20_style ng-scope addthis_sharing_toolbox" addthis-description="undefined">
+      <a target="_self" class="addthis_button_twitter at300b" title="Twitter" href="https://plnkr.co/edit/#"><span class="at-icon-wrapper" style="background-color: rgb(29, 161, 242); line-height: 16px; height: 16px; width: 16px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" title="Twitter" alt="Twitter" class="at-icon at-icon-twitter" style="width: 16px; height: 16px;"><g><path d="M27.996 10.116c-.81.36-1.68.602-2.592.71a4.526 4.526 0 0 0 1.984-2.496 9.037 9.037 0 0 1-2.866 1.095 4.513 4.513 0 0 0-7.69 4.116 12.81 12.81 0 0 1-9.3-4.715 4.49 4.49 0 0 0-.612 2.27 4.51 4.51 0 0 0 2.008 3.755 4.495 4.495 0 0 1-2.044-.564v.057a4.515 4.515 0 0 0 3.62 4.425 4.52 4.52 0 0 1-2.04.077 4.517 4.517 0 0 0 4.217 3.134 9.055 9.055 0 0 1-5.604 1.93A9.18 9.18 0 0 1 6 23.85a12.773 12.773 0 0 0 6.918 2.027c8.3 0 12.84-6.876 12.84-12.84 0-.195-.005-.39-.014-.583a9.172 9.172 0 0 0 2.252-2.336" fill-rule="evenodd"></path></g></svg></span></a>
+      <a target="_self" class="addthis_button_facebook at300b" title="Facebook" href="https://plnkr.co/edit/#"><span class="at-icon-wrapper" style="background-color: rgb(59, 89, 152); line-height: 16px; height: 16px; width: 16px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" title="Facebook" alt="Facebook" class="at-icon at-icon-facebook" style="width: 16px; height: 16px;"><g><path d="M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.823l.587-3.913h-4.41v-2.5c0-1.123.347-1.903 2.198-1.903H22V5.16z" fill-rule="evenodd"></path></g></svg></span></a>
+      <a target="_self" class="addthis_button_google_plusone_share at300b" title="Google+" href="https://plnkr.co/edit/#"><span class="at-icon-wrapper" style="background-color: rgb(220, 78, 65); line-height: 16px; height: 16px; width: 16px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" title="Google+" alt="Google+" class="at-icon at-icon-google_plusone_share" style="width: 16px; height: 16px;"><g><path d="M12 15v2.4h3.97c-.16 1.03-1.2 3.02-3.97 3.02-2.39 0-4.34-1.98-4.34-4.42s1.95-4.42 4.34-4.42c1.36 0 2.27.58 2.79 1.08l1.9-1.83C15.47 9.69 13.89 9 12 9c-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.72-2.84 6.72-6.84 0-.46-.05-.81-.11-1.16H12zm15 0h-2v-2h-2v2h-2v2h2v2h2v-2h2v-2z" fill-rule="evenodd"></path></g></svg></span></a>
+      <a target="_self" class="addthis_button_linkedin at300b" title="LinkedIn" href="https://plnkr.co/edit/#"><span class="at-icon-wrapper" style="background-color: rgb(0, 119, 181); line-height: 16px; height: 16px; width: 16px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" title="LinkedIn" alt="LinkedIn" class="at-icon at-icon-linkedin" style="width: 16px; height: 16px;"><g><path d="M26 25.963h-4.185v-6.55c0-1.56-.027-3.57-2.175-3.57-2.18 0-2.51 1.7-2.51 3.46v6.66h-4.182V12.495h4.012v1.84h.058c.558-1.058 1.924-2.174 3.96-2.174 4.24 0 5.022 2.79 5.022 6.417v7.386zM8.23 10.655a2.426 2.426 0 0 1 0-4.855 2.427 2.427 0 0 1 0 4.855zm-2.098 1.84h4.19v13.468h-4.19V12.495z" fill-rule="evenodd"></path></g></svg></span></a>
+      <a target="_self" class="addthis_button_compact at300m" href="https://plnkr.co/edit/#"><span class="at-icon-wrapper" style="background-color: rgb(255, 101, 80); line-height: 16px; height: 16px; width: 16px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" title="More" alt="More" class="at-icon at-icon-addthis" style="width: 16px; height: 16px;"><g><path d="M18 14V8h-4v6H8v4h6v6h4v-6h6v-4h-6z" fill-rule="evenodd"></path></g></svg></span></a>
+    <div class="atclear"></div></div></div>
+  <details open="">
+    <summary class="header">Files</summary>
+    <ul class="plunker-filelist nav nav-list">
+      <!-- ngRepeat: buffer in session.getBufferArray() | orderBy:'filename' --><li class="file ng-scope" ng-class="{active: active, dirty: dirty, changed: changed}" buffer="buffer" ng-repeat="buffer in session.getBufferArray() | orderBy:&#39;filename&#39;">
+  <ul class="participants">
+    <!-- ngRepeat: (id, participant) in buffer.participants -->
+  </ul>
+  <a class="filename ng-binding" ng-click="activateBuffer(buffer)" ng-dblclick="promptFileRename(buffer) | trackEvent:&#39;File&#39;:&#39;Rename&#39;:&#39;Sidebar&#39;">app/app.component.ts</a>
+  <ul class="file-ops">
+    <li class="delete">
+      <button ng-click="promptFileDelete(buffer) | trackEvent:&#39;File&#39;:&#39;Delete&#39;:&#39;Sidebar&#39;" class="btn btn-mini ng-scope" tooltip="Delete this file" tooltip-placement="right">
+        <i class="icon-remove"></i>
+      </button>
+    </li>
+  </ul>
+</li><li class="file ng-scope" ng-class="{active: active, dirty: dirty, changed: changed}" buffer="buffer" ng-repeat="buffer in session.getBufferArray() | orderBy:&#39;filename&#39;">
+  <ul class="participants">
+    <!-- ngRepeat: (id, participant) in buffer.participants -->
+  </ul>
+  <a class="filename ng-binding" ng-click="activateBuffer(buffer)" ng-dblclick="promptFileRename(buffer) | trackEvent:&#39;File&#39;:&#39;Rename&#39;:&#39;Sidebar&#39;">app/app.module.ts</a>
+  <ul class="file-ops">
+    <li class="delete">
+      <button ng-click="promptFileDelete(buffer) | trackEvent:&#39;File&#39;:&#39;Delete&#39;:&#39;Sidebar&#39;" class="btn btn-mini ng-scope" tooltip="Delete this file" tooltip-placement="right">
+        <i class="icon-remove"></i>
+      </button>
+    </li>
+  </ul>
+</li><li class="file ng-scope" ng-class="{active: active, dirty: dirty, changed: changed}" buffer="buffer" ng-repeat="buffer in session.getBufferArray() | orderBy:&#39;filename&#39;">
+  <ul class="participants">
+    <!-- ngRepeat: (id, participant) in buffer.participants -->
+  </ul>
+  <a class="filename ng-binding" ng-click="activateBuffer(buffer)" ng-dblclick="promptFileRename(buffer) | trackEvent:&#39;File&#39;:&#39;Rename&#39;:&#39;Sidebar&#39;">app/main.ts</a>
+  <ul class="file-ops">
+    <li class="delete">
+      <button ng-click="promptFileDelete(buffer) | trackEvent:&#39;File&#39;:&#39;Delete&#39;:&#39;Sidebar&#39;" class="btn btn-mini ng-scope" tooltip="Delete this file" tooltip-placement="right">
+        <i class="icon-remove"></i>
+      </button>
+    </li>
+  </ul>
+</li><li class="file ng-scope" ng-class="{active: active, dirty: dirty, changed: changed}" buffer="buffer" ng-repeat="buffer in session.getBufferArray() | orderBy:&#39;filename&#39;">
+  <ul class="participants">
+    <!-- ngRepeat: (id, participant) in buffer.participants -->
+  </ul>
+  <a class="filename ng-binding" ng-click="activateBuffer(buffer)" ng-dblclick="promptFileRename(buffer) | trackEvent:&#39;File&#39;:&#39;Rename&#39;:&#39;Sidebar&#39;">index.html</a>
+  <ul class="file-ops">
+    <li class="delete">
+      <button ng-click="promptFileDelete(buffer) | trackEvent:&#39;File&#39;:&#39;Delete&#39;:&#39;Sidebar&#39;" class="btn btn-mini ng-scope" tooltip="Delete this file" tooltip-placement="right">
+        <i class="icon-remove"></i>
+      </button>
+    </li>
+  </ul>
+</li><li class="file ng-scope" ng-class="{active: active, dirty: dirty, changed: changed}" buffer="buffer" ng-repeat="buffer in session.getBufferArray() | orderBy:&#39;filename&#39;">
+  <ul class="participants">
+    <!-- ngRepeat: (id, participant) in buffer.participants -->
+  </ul>
+  <a class="filename ng-binding" ng-click="activateBuffer(buffer)" ng-dblclick="promptFileRename(buffer) | trackEvent:&#39;File&#39;:&#39;Rename&#39;:&#39;Sidebar&#39;">lorem-ipsum.js</a>
+  <ul class="file-ops">
+    <li class="delete">
+      <button ng-click="promptFileDelete(buffer) | trackEvent:&#39;File&#39;:&#39;Delete&#39;:&#39;Sidebar&#39;" class="btn btn-mini ng-scope" tooltip="Delete this file" tooltip-placement="right">
+        <i class="icon-remove"></i>
+      </button>
+    </li>
+  </ul>
+</li><li class="file ng-scope" ng-class="{active: active, dirty: dirty, changed: changed}" buffer="buffer" ng-repeat="buffer in session.getBufferArray() | orderBy:&#39;filename&#39;">
+  <ul class="participants">
+    <!-- ngRepeat: (id, participant) in buffer.participants -->
+  </ul>
+  <a class="filename ng-binding" ng-click="activateBuffer(buffer)" ng-dblclick="promptFileRename(buffer) | trackEvent:&#39;File&#39;:&#39;Rename&#39;:&#39;Sidebar&#39;">README.md</a>
+  <ul class="file-ops">
+    <li class="delete">
+      <button ng-click="promptFileDelete(buffer) | trackEvent:&#39;File&#39;:&#39;Delete&#39;:&#39;Sidebar&#39;" class="btn btn-mini ng-scope" tooltip="Delete this file" tooltip-placement="right">
+        <i class="icon-remove"></i>
+      </button>
+    </li>
+  </ul>
+</li><li class="file ng-scope" ng-class="{active: active, dirty: dirty, changed: changed}" buffer="buffer" ng-repeat="buffer in session.getBufferArray() | orderBy:&#39;filename&#39;">
+  <ul class="participants">
+    <!-- ngRepeat: (id, participant) in buffer.participants -->
+  </ul>
+  <a class="filename ng-binding" ng-click="activateBuffer(buffer)" ng-dblclick="promptFileRename(buffer) | trackEvent:&#39;File&#39;:&#39;Rename&#39;:&#39;Sidebar&#39;">style.css</a>
+  <ul class="file-ops">
+    <li class="delete">
+      <button ng-click="promptFileDelete(buffer) | trackEvent:&#39;File&#39;:&#39;Delete&#39;:&#39;Sidebar&#39;" class="btn btn-mini ng-scope" tooltip="Delete this file" tooltip-placement="right">
+        <i class="icon-remove"></i>
+      </button>
+    </li>
+  </ul>
+</li><li class="file ng-scope" ng-class="{active: active, dirty: dirty, changed: changed}" buffer="buffer" ng-repeat="buffer in session.getBufferArray() | orderBy:&#39;filename&#39;">
+  <ul class="participants">
+    <!-- ngRepeat: (id, participant) in buffer.participants -->
+  </ul>
+  <a class="filename ng-binding" ng-click="activateBuffer(buffer)" ng-dblclick="promptFileRename(buffer) | trackEvent:&#39;File&#39;:&#39;Rename&#39;:&#39;Sidebar&#39;">systemjs.config.js</a>
+  <ul class="file-ops">
+    <li class="delete">
+      <button ng-click="promptFileDelete(buffer) | trackEvent:&#39;File&#39;:&#39;Delete&#39;:&#39;Sidebar&#39;" class="btn btn-mini ng-scope" tooltip="Delete this file" tooltip-placement="right">
+        <i class="icon-remove"></i>
+      </button>
+    </li>
+  </ul>
+</li><li class="file ng-scope active" ng-class="{active: active, dirty: dirty, changed: changed}" buffer="buffer" ng-repeat="buffer in session.getBufferArray() | orderBy:&#39;filename&#39;">
+  <ul class="participants">
+    <!-- ngRepeat: (id, participant) in buffer.participants -->
+  </ul>
+  <a class="filename ng-binding" ng-click="activateBuffer(buffer)" ng-dblclick="promptFileRename(buffer) | trackEvent:&#39;File&#39;:&#39;Rename&#39;:&#39;Sidebar&#39;">templates/app.html</a>
+  <ul class="file-ops">
+    <li class="delete">
+      <button ng-click="promptFileDelete(buffer) | trackEvent:&#39;File&#39;:&#39;Delete&#39;:&#39;Sidebar&#39;" class="btn btn-mini ng-scope" tooltip="Delete this file" tooltip-placement="right">
+        <i class="icon-remove"></i>
+      </button>
+    </li>
+  </ul>
+</li><li class="file ng-scope" ng-class="{active: active, dirty: dirty, changed: changed}" buffer="buffer" ng-repeat="buffer in session.getBufferArray() | orderBy:&#39;filename&#39;">
+  <ul class="participants">
+    <!-- ngRepeat: (id, participant) in buffer.participants -->
+  </ul>
+  <a class="filename ng-binding" ng-click="activateBuffer(buffer)" ng-dblclick="promptFileRename(buffer) | trackEvent:&#39;File&#39;:&#39;Rename&#39;:&#39;Sidebar&#39;">tsconfig.json</a>
+  <ul class="file-ops">
+    <li class="delete">
+      <button ng-click="promptFileDelete(buffer) | trackEvent:&#39;File&#39;:&#39;Delete&#39;:&#39;Sidebar&#39;" class="btn btn-mini ng-scope" tooltip="Delete this file" tooltip-placement="right">
+        <i class="icon-remove"></i>
+      </button>
+    </li>
+  </ul>
+</li>
+      <li class="newfile">
+        <a ng-click="promptFileAdd() | trackEvent:&#39;File&#39;:&#39;Add&#39;:&#39;Sidebar&#39;">
+          <i class="icon-file"></i> New file
+        </a>
+      </li>
+    </ul>
+  </details>
+  <details ng-show="session.isSaved()">
+    <summary class="header">Versions <span class="label ng-binding" ng-bind="session.plunk.history.length | number">20</span></summary>
+    <ul class="plunker-filelist nav nav-list">
+      <!-- ngRepeat: event in session.plunk.history | orderBy:'-created_at' --><li ng-class="{active: $index==session.currentRevisionIndex, frozen: $index==session.plunk.frozen_version}" ng-repeat="event in session.plunk.history | orderBy:&#39;-created_at&#39;" class="ng-scope active">
+        <a ng-click="revertTo($index) | trackEvent:&#39;Plunk&#39;:&#39;Revert&#39;:&#39;Sidebar&#39;">
+          <i ng-class="event.event | eventIcon" class="icon-save"></i>
+          <span ng-bind="event.event | eventName" class="ng-binding">Updated</span>
+          <abbr timeago="2017-04-13T16:02:48.000Z" title="Apr 13, 2017 1:02:48 PM">about a month ago</abbr>
+          <i class="icon-lock ng-scope" ng-show="session.plunk.frozen_at &amp;&amp; $index==session.plunk.history.length - 1 - session.plunk.frozen_version" tooltip="The plunk is currently frozen at this version" tooltip-placement="right"></i>
+        </a>
+      </li><li ng-class="{active: $index==session.currentRevisionIndex, frozen: $index==session.plunk.frozen_version}" ng-repeat="event in session.plunk.history | orderBy:&#39;-created_at&#39;" class="ng-scope">
+        <a ng-click="revertTo($index) | trackEvent:&#39;Plunk&#39;:&#39;Revert&#39;:&#39;Sidebar&#39;">
+          <i ng-class="event.event | eventIcon" class="icon-save"></i>
+          <span ng-bind="event.event | eventName" class="ng-binding">Updated</span>
+          <abbr timeago="2017-04-13T16:01:50.000Z" title="Apr 13, 2017 1:01:50 PM">about a month ago</abbr>
+          <i class="icon-lock ng-scope" ng-show="session.plunk.frozen_at &amp;&amp; $index==session.plunk.history.length - 1 - session.plunk.frozen_version" tooltip="The plunk is currently frozen at this version" tooltip-placement="right" style="display: none;"></i>
+        </a>
+      </li><li ng-class="{active: $index==session.currentRevisionIndex, frozen: $index==session.plunk.frozen_version}" ng-repeat="event in session.plunk.history | orderBy:&#39;-created_at&#39;" class="ng-scope">
+        <a ng-click="revertTo($index) | trackEvent:&#39;Plunk&#39;:&#39;Revert&#39;:&#39;Sidebar&#39;">
+          <i ng-class="event.event | eventIcon" class="icon-save"></i>
+          <span ng-bind="event.event | eventName" class="ng-binding">Updated</span>
+          <abbr timeago="2017-04-13T16:01:05.000Z" title="Apr 13, 2017 1:01:05 PM">about a month ago</abbr>
+          <i class="icon-lock ng-scope" ng-show="session.plunk.frozen_at &amp;&amp; $index==session.plunk.history.length - 1 - session.plunk.frozen_version" tooltip="The plunk is currently frozen at this version" tooltip-placement="right" style="display: none;"></i>
+        </a>
+      </li><li ng-class="{active: $index==session.currentRevisionIndex, frozen: $index==session.plunk.frozen_version}" ng-repeat="event in session.plunk.history | orderBy:&#39;-created_at&#39;" class="ng-scope">
+        <a ng-click="revertTo($index) | trackEvent:&#39;Plunk&#39;:&#39;Revert&#39;:&#39;Sidebar&#39;">
+          <i ng-class="event.event | eventIcon" class="icon-save"></i>
+          <span ng-bind="event.event | eventName" class="ng-binding">Updated</span>
+          <abbr timeago="2017-04-13T16:00:31.000Z" title="Apr 13, 2017 1:00:31 PM">about a month ago</abbr>
+          <i class="icon-lock ng-scope" ng-show="session.plunk.frozen_at &amp;&amp; $index==session.plunk.history.length - 1 - session.plunk.frozen_version" tooltip="The plunk is currently frozen at this version" tooltip-placement="right" style="display: none;"></i>
+        </a>
+      </li><li ng-class="{active: $index==session.currentRevisionIndex, frozen: $index==session.plunk.frozen_version}" ng-repeat="event in session.plunk.history | orderBy:&#39;-created_at&#39;" class="ng-scope">
+        <a ng-click="revertTo($index) | trackEvent:&#39;Plunk&#39;:&#39;Revert&#39;:&#39;Sidebar&#39;">
+          <i ng-class="event.event | eventIcon" class="icon-save"></i>
+          <span ng-bind="event.event | eventName" class="ng-binding">Updated</span>
+          <abbr timeago="2017-04-13T16:00:23.000Z" title="Apr 13, 2017 1:00:23 PM">about a month ago</abbr>
+          <i class="icon-lock ng-scope" ng-show="session.plunk.frozen_at &amp;&amp; $index==session.plunk.history.length - 1 - session.plunk.frozen_version" tooltip="The plunk is currently frozen at this version" tooltip-placement="right" style="display: none;"></i>
+        </a>
+      </li><li ng-class="{active: $index==session.currentRevisionIndex, frozen: $index==session.plunk.frozen_version}" ng-repeat="event in session.plunk.history | orderBy:&#39;-created_at&#39;" class="ng-scope">
+        <a ng-click="revertTo($index) | trackEvent:&#39;Plunk&#39;:&#39;Revert&#39;:&#39;Sidebar&#39;">
+          <i ng-class="event.event | eventIcon" class="icon-save"></i>
+          <span ng-bind="event.event | eventName" class="ng-binding">Updated</span>
+          <abbr timeago="2017-04-13T15:50:47.000Z" title="Apr 13, 2017 12:50:47 PM">about a month ago</abbr>
+          <i class="icon-lock ng-scope" ng-show="session.plunk.frozen_at &amp;&amp; $index==session.plunk.history.length - 1 - session.plunk.frozen_version" tooltip="The plunk is currently frozen at this version" tooltip-placement="right" style="display: none;"></i>
+        </a>
+      </li><li ng-class="{active: $index==session.currentRevisionIndex, frozen: $index==session.plunk.frozen_version}" ng-repeat="event in session.plunk.history | orderBy:&#39;-created_at&#39;" class="ng-scope">
+        <a ng-click="revertTo($index) | trackEvent:&#39;Plunk&#39;:&#39;Revert&#39;:&#39;Sidebar&#39;">
+          <i ng-class="event.event | eventIcon" class="icon-save"></i>
+          <span ng-bind="event.event | eventName" class="ng-binding">Updated</span>
+          <abbr timeago="2017-04-13T15:47:38.000Z" title="Apr 13, 2017 12:47:38 PM">about a month ago</abbr>
+          <i class="icon-lock ng-scope" ng-show="session.plunk.frozen_at &amp;&amp; $index==session.plunk.history.length - 1 - session.plunk.frozen_version" tooltip="The plunk is currently frozen at this version" tooltip-placement="right" style="display: none;"></i>
+        </a>
+      </li><li ng-class="{active: $index==session.currentRevisionIndex, frozen: $index==session.plunk.frozen_version}" ng-repeat="event in session.plunk.history | orderBy:&#39;-created_at&#39;" class="ng-scope">
+        <a ng-click="revertTo($index) | trackEvent:&#39;Plunk&#39;:&#39;Revert&#39;:&#39;Sidebar&#39;">
+          <i ng-class="event.event | eventIcon" class="icon-save"></i>
+          <span ng-bind="event.event | eventName" class="ng-binding">Updated</span>
+          <abbr timeago="2017-04-12T21:54:25.000Z" title="Apr 12, 2017 6:54:25 PM">2 months ago</abbr>
+          <i class="icon-lock ng-scope" ng-show="session.plunk.frozen_at &amp;&amp; $index==session.plunk.history.length - 1 - session.plunk.frozen_version" tooltip="The plunk is currently frozen at this version" tooltip-placement="right" style="display: none;"></i>
+        </a>
+      </li><li ng-class="{active: $index==session.currentRevisionIndex, frozen: $index==session.plunk.frozen_version}" ng-repeat="event in session.plunk.history | orderBy:&#39;-created_at&#39;" class="ng-scope">
+        <a ng-click="revertTo($index) | trackEvent:&#39;Plunk&#39;:&#39;Revert&#39;:&#39;Sidebar&#39;">
+          <i ng-class="event.event | eventIcon" class="icon-git-fork"></i>
+          <span ng-bind="event.event | eventName" class="ng-binding">Forked</span>
+          <abbr timeago="2017-04-12T21:43:45.000Z" title="Apr 12, 2017 6:43:45 PM">2 months ago</abbr>
+          <i class="icon-lock ng-scope" ng-show="session.plunk.frozen_at &amp;&amp; $index==session.plunk.history.length - 1 - session.plunk.frozen_version" tooltip="The plunk is currently frozen at this version" tooltip-placement="right" style="display: none;"></i>
+        </a>
+      </li><li ng-class="{active: $index==session.currentRevisionIndex, frozen: $index==session.plunk.frozen_version}" ng-repeat="event in session.plunk.history | orderBy:&#39;-created_at&#39;" class="ng-scope">
+        <a ng-click="revertTo($index) | trackEvent:&#39;Plunk&#39;:&#39;Revert&#39;:&#39;Sidebar&#39;">
+          <i ng-class="event.event | eventIcon" class="icon-save"></i>
+          <span ng-bind="event.event | eventName" class="ng-binding">Updated</span>
+          <abbr timeago="2017-04-04T16:22:44.000Z" title="Apr 4, 2017 1:22:44 PM">2 months ago</abbr>
+          <i class="icon-lock ng-scope" ng-show="session.plunk.frozen_at &amp;&amp; $index==session.plunk.history.length - 1 - session.plunk.frozen_version" tooltip="The plunk is currently frozen at this version" tooltip-placement="right" style="display: none;"></i>
+        </a>
+      </li><li ng-class="{active: $index==session.currentRevisionIndex, frozen: $index==session.plunk.frozen_version}" ng-repeat="event in session.plunk.history | orderBy:&#39;-created_at&#39;" class="ng-scope">
+        <a ng-click="revertTo($index) | trackEvent:&#39;Plunk&#39;:&#39;Revert&#39;:&#39;Sidebar&#39;">
+          <i ng-class="event.event | eventIcon" class="icon-save"></i>
+          <span ng-bind="event.event | eventName" class="ng-binding">Updated</span>
+          <abbr timeago="2017-04-04T16:16:32.000Z" title="Apr 4, 2017 1:16:32 PM">2 months ago</abbr>
+          <i class="icon-lock ng-scope" ng-show="session.plunk.frozen_at &amp;&amp; $index==session.plunk.history.length - 1 - session.plunk.frozen_version" tooltip="The plunk is currently frozen at this version" tooltip-placement="right" style="display: none;"></i>
+        </a>
+      </li><li ng-class="{active: $index==session.currentRevisionIndex, frozen: $index==session.plunk.frozen_version}" ng-repeat="event in session.plunk.history | orderBy:&#39;-created_at&#39;" class="ng-scope">
+        <a ng-click="revertTo($index) | trackEvent:&#39;Plunk&#39;:&#39;Revert&#39;:&#39;Sidebar&#39;">
+          <i ng-class="event.event | eventIcon" class="icon-save"></i>
+          <span ng-bind="event.event | eventName" class="ng-binding">Updated</span>
+          <abbr timeago="2017-04-04T16:13:34.000Z" title="Apr 4, 2017 1:13:34 PM">2 months ago</abbr>
+          <i class="icon-lock ng-scope" ng-show="session.plunk.frozen_at &amp;&amp; $index==session.plunk.history.length - 1 - session.plunk.frozen_version" tooltip="The plunk is currently frozen at this version" tooltip-placement="right" style="display: none;"></i>
+        </a>
+      </li><li ng-class="{active: $index==session.currentRevisionIndex, frozen: $index==session.plunk.frozen_version}" ng-repeat="event in session.plunk.history | orderBy:&#39;-created_at&#39;" class="ng-scope">
+        <a ng-click="revertTo($index) | trackEvent:&#39;Plunk&#39;:&#39;Revert&#39;:&#39;Sidebar&#39;">
+          <i ng-class="event.event | eventIcon" class="icon-save"></i>
+          <span ng-bind="event.event | eventName" class="ng-binding">Updated</span>
+          <abbr timeago="2017-04-04T16:11:35.000Z" title="Apr 4, 2017 1:11:35 PM">2 months ago</abbr>
+          <i class="icon-lock ng-scope" ng-show="session.plunk.frozen_at &amp;&amp; $index==session.plunk.history.length - 1 - session.plunk.frozen_version" tooltip="The plunk is currently frozen at this version" tooltip-placement="right" style="display: none;"></i>
+        </a>
+      </li><li ng-class="{active: $index==session.currentRevisionIndex, frozen: $index==session.plunk.frozen_version}" ng-repeat="event in session.plunk.history | orderBy:&#39;-created_at&#39;" class="ng-scope">
+        <a ng-click="revertTo($index) | trackEvent:&#39;Plunk&#39;:&#39;Revert&#39;:&#39;Sidebar&#39;">
+          <i ng-class="event.event | eventIcon" class="icon-save"></i>
+          <span ng-bind="event.event | eventName" class="ng-binding">Updated</span>
+          <abbr timeago="2017-04-04T16:07:32.000Z" title="Apr 4, 2017 1:07:32 PM">2 months ago</abbr>
+          <i class="icon-lock ng-scope" ng-show="session.plunk.frozen_at &amp;&amp; $index==session.plunk.history.length - 1 - session.plunk.frozen_version" tooltip="The plunk is currently frozen at this version" tooltip-placement="right" style="display: none;"></i>
+        </a>
+      </li><li ng-class="{active: $index==session.currentRevisionIndex, frozen: $index==session.plunk.frozen_version}" ng-repeat="event in session.plunk.history | orderBy:&#39;-created_at&#39;" class="ng-scope">
+        <a ng-click="revertTo($index) | trackEvent:&#39;Plunk&#39;:&#39;Revert&#39;:&#39;Sidebar&#39;">
+          <i ng-class="event.event | eventIcon" class="icon-save"></i>
+          <span ng-bind="event.event | eventName" class="ng-binding">Updated</span>
+          <abbr timeago="2017-04-04T13:09:35.000Z" title="Apr 4, 2017 10:09:35 AM">2 months ago</abbr>
+          <i class="icon-lock ng-scope" ng-show="session.plunk.frozen_at &amp;&amp; $index==session.plunk.history.length - 1 - session.plunk.frozen_version" tooltip="The plunk is currently frozen at this version" tooltip-placement="right" style="display: none;"></i>
+        </a>
+      </li><li ng-class="{active: $index==session.currentRevisionIndex, frozen: $index==session.plunk.frozen_version}" ng-repeat="event in session.plunk.history | orderBy:&#39;-created_at&#39;" class="ng-scope">
+        <a ng-click="revertTo($index) | trackEvent:&#39;Plunk&#39;:&#39;Revert&#39;:&#39;Sidebar&#39;">
+          <i ng-class="event.event | eventIcon" class="icon-git-fork"></i>
+          <span ng-bind="event.event | eventName" class="ng-binding">Forked</span>
+          <abbr timeago="2017-04-04T12:11:17.000Z" title="Apr 4, 2017 9:11:17 AM">2 months ago</abbr>
+          <i class="icon-lock ng-scope" ng-show="session.plunk.frozen_at &amp;&amp; $index==session.plunk.history.length - 1 - session.plunk.frozen_version" tooltip="The plunk is currently frozen at this version" tooltip-placement="right" style="display: none;"></i>
+        </a>
+      </li><li ng-class="{active: $index==session.currentRevisionIndex, frozen: $index==session.plunk.frozen_version}" ng-repeat="event in session.plunk.history | orderBy:&#39;-created_at&#39;" class="ng-scope">
+        <a ng-click="revertTo($index) | trackEvent:&#39;Plunk&#39;:&#39;Revert&#39;:&#39;Sidebar&#39;">
+          <i ng-class="event.event | eventIcon" class="icon-git-fork"></i>
+          <span ng-bind="event.event | eventName" class="ng-binding">Forked</span>
+          <abbr timeago="2016-11-22T04:29:17.000Z" title="Nov 22, 2016 2:29:17 AM">6 months ago</abbr>
+          <i class="icon-lock ng-scope" ng-show="session.plunk.frozen_at &amp;&amp; $index==session.plunk.history.length - 1 - session.plunk.frozen_version" tooltip="The plunk is currently frozen at this version" tooltip-placement="right" style="display: none;"></i>
+        </a>
+      </li><li ng-class="{active: $index==session.currentRevisionIndex, frozen: $index==session.plunk.frozen_version}" ng-repeat="event in session.plunk.history | orderBy:&#39;-created_at&#39;" class="ng-scope">
+        <a ng-click="revertTo($index) | trackEvent:&#39;Plunk&#39;:&#39;Revert&#39;:&#39;Sidebar&#39;">
+          <i ng-class="event.event | eventIcon" class="icon-save"></i>
+          <span ng-bind="event.event | eventName" class="ng-binding">Updated</span>
+          <abbr timeago="2016-11-22T04:29:10.000Z" title="Nov 22, 2016 2:29:10 AM">6 months ago</abbr>
+          <i class="icon-lock ng-scope" ng-show="session.plunk.frozen_at &amp;&amp; $index==session.plunk.history.length - 1 - session.plunk.frozen_version" tooltip="The plunk is currently frozen at this version" tooltip-placement="right" style="display: none;"></i>
+        </a>
+      </li><li ng-class="{active: $index==session.currentRevisionIndex, frozen: $index==session.plunk.frozen_version}" ng-repeat="event in session.plunk.history | orderBy:&#39;-created_at&#39;" class="ng-scope">
+        <a ng-click="revertTo($index) | trackEvent:&#39;Plunk&#39;:&#39;Revert&#39;:&#39;Sidebar&#39;">
+          <i ng-class="event.event | eventIcon" class="icon-save"></i>
+          <span ng-bind="event.event | eventName" class="ng-binding">Updated</span>
+          <abbr timeago="2016-11-22T04:28:58.000Z" title="Nov 22, 2016 2:28:58 AM">6 months ago</abbr>
+          <i class="icon-lock ng-scope" ng-show="session.plunk.frozen_at &amp;&amp; $index==session.plunk.history.length - 1 - session.plunk.frozen_version" tooltip="The plunk is currently frozen at this version" tooltip-placement="right" style="display: none;"></i>
+        </a>
+      </li><li ng-class="{active: $index==session.currentRevisionIndex, frozen: $index==session.plunk.frozen_version}" ng-repeat="event in session.plunk.history | orderBy:&#39;-created_at&#39;" class="ng-scope  frozen">
+        <a ng-click="revertTo($index) | trackEvent:&#39;Plunk&#39;:&#39;Revert&#39;:&#39;Sidebar&#39;">
+          <i ng-class="event.event | eventIcon" class="icon-file"></i>
+          <span ng-bind="event.event | eventName" class="ng-binding">Created</span>
+          <abbr timeago="2016-11-22T03:28:21.000Z" title="Nov 22, 2016 1:28:21 AM">6 months ago</abbr>
+          <i class="icon-lock ng-scope" ng-show="session.plunk.frozen_at &amp;&amp; $index==session.plunk.history.length - 1 - session.plunk.frozen_version" tooltip="The plunk is currently frozen at this version" tooltip-placement="right" style="display: none;"></i>
+        </a>
+      </li>
+    </ul>
+  </details>
+  <details open="">
+    <summary class="header">Plunk</summary>
+    <form class="ng-pristine ng-valid">
+      <div>
+        <label for="plunk-description">
+          <div>Description:</div>
+          <textarea id="plunk-description" rows="2" ng-model="session.description" class="ng-pristine ng-valid" style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 50px;"></textarea>
+        </label>
+        <label for="plunk-tags">
+          <div>Tags:</div>
+          <div class="select2-container select2-container-multi ng-pristine ng-valid" id="s2id_plunker-tags" style="width: 100%;">    <ul class="select2-choices">  <li class="select2-search-choice">    <div>angular2</div>    <a href="https://plnkr.co/edit/#" onclick="return false;" class="select2-search-choice-close" tabindex="-1"></a></li><li class="select2-search-choice">    <div>long2know</div>    <a href="https://plnkr.co/edit/#" onclick="return false;" class="select2-search-choice-close" tabindex="-1"></a></li><li class="select2-search-field">    <input type="text" autocomplete="off" class="select2-input select2-default" id="s2id_autogen1" style="width: 10px;">  </li></ul><div class="select2-drop select2-drop-multi" style="display:none;">   <ul class="select2-results">   </ul></div></div><input type="hidden" ng-list="" id="plunker-tags" ng-model="session.tags" class="ng-pristine ng-valid select2-offscreen" tabindex="-1" value="angular2,long2know"></label>
+        <div ng-show="session.isSaved()">
+          <div>User:</div>
+          <span class="inline-user registered" ng-class="{registered: !!user}" ng-switch="" on="!!user" user="session.plunk.user">
+  <!-- ngSwitchWhen: true -->
+  
+  <!-- ngSwitchWhen: false -->
+<a ng-href="/users/long2know" ng-switch-when="true" class="ng-scope ng-binding" href="https://plnkr.co/users/long2know">
+    <img class="gravatar" ng-src="https://www.gravatar.com/avatar/?s=18&amp;d=mm" src="./Plunker_files/saved_resource">
+    long2know
+  </a></span>
+        </div>
+        <div ng-hide="session.isSaved() || !visitor.isMember()" style="display: none;">
+          <div>Privacy:</div>
+          <label>
+            <span tooltip="Only users who know the url of the plunk will be able to view it" tooltip-placement="right" class="ng-scope">
+              <input type="checkbox" ng-model="session.private" class="ng-pristine ng-valid">
+              private plunk
+            </span>
+          </label>
+        </div>
+        <div ng-show="session.isSaved()">
+          <div>Privacy:</div>
+          <abbr ng-show="session.plunk.private" tooltip-placement="right" tooltip="Only users who know the url of the plunk will be able to view it" class="ng-scope" style="display: none;"><i class="icon-lock"></i> private plunk</abbr>
+          <abbr ng-hide="session.plunk.private" tooltip-placement="right" tooltip="Everyone can see this plunk" class="ng-scope"><i class="icon-unlock"></i> public plunk</abbr>
+        </div>
+      </div>
+    </form>
+  </details>
+</div>
+  </div>
+  <div class="ui-layout-center ui-layout-pane ui-layout-pane-center ui-layout-container" style="position: absolute; margin: 0px; left: 204px; right: 42px; top: 0px; bottom: 0px; height: 601px; width: 1034px; z-index: 0; display: block; visibility: visible; overflow: hidden;">
+    <div class="ui-layout-center ui-layout-pane ui-layout-pane-center" style="position: absolute; margin: 0px; left: 0px; right: 519px; top: 0px; bottom: 0px; height: 601px; width: 515px; z-index: 0; display: block; visibility: visible;">
+      <div class="plunker-ace">
+  <!-- ngRepeat: (id, buffer) in session.buffers --><div class="plunker-edit-session ng-scope ng-pristine ng-valid" ng-model="buffer.content" buffer="buffer" ng-repeat="(id, buffer) in session.buffers">
+</div><div class="plunker-edit-session ng-scope ng-pristine ng-valid" ng-model="buffer.content" buffer="buffer" ng-repeat="(id, buffer) in session.buffers">
+</div><div class="plunker-edit-session ng-scope ng-pristine ng-valid" ng-model="buffer.content" buffer="buffer" ng-repeat="(id, buffer) in session.buffers">
+</div><div class="plunker-edit-session ng-scope ng-pristine ng-valid" ng-model="buffer.content" buffer="buffer" ng-repeat="(id, buffer) in session.buffers">
+</div><div class="plunker-edit-session ng-scope ng-pristine ng-valid" ng-model="buffer.content" buffer="buffer" ng-repeat="(id, buffer) in session.buffers">
+</div><div class="plunker-edit-session ng-scope ng-pristine ng-valid" ng-model="buffer.content" buffer="buffer" ng-repeat="(id, buffer) in session.buffers">
+</div><div class="plunker-edit-session ng-scope ng-pristine ng-valid" ng-model="buffer.content" buffer="buffer" ng-repeat="(id, buffer) in session.buffers">
+</div><div class="plunker-edit-session ng-scope ng-pristine ng-valid" ng-model="buffer.content" buffer="buffer" ng-repeat="(id, buffer) in session.buffers">
+</div><div class="plunker-edit-session ng-scope ng-pristine ng-valid" ng-model="buffer.content" buffer="buffer" ng-repeat="(id, buffer) in session.buffers">
+</div><div class="plunker-edit-session ng-scope ng-pristine ng-valid" ng-model="buffer.content" buffer="buffer" ng-repeat="(id, buffer) in session.buffers">
+</div>
+  <!-- ngRepeat: (id, participant) in participants -->
+  <div class="plunker-ace-canvas ace_editor ace-tm"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 16px; width: 7.20125px; left: 52px; top: 112px;"></textarea><div class="ace_gutter"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 618px; width: 48px;"><div class="ace_gutter-cell  ace_info" style="height: 16px;">1<span class="ace_fold-widget ace_start ace_open" style="height: 16px;"></span></div><div class="ace_gutter-cell " style="height: 16px;">2</div><div class="ace_gutter-cell " style="height: 16px;">3<span class="ace_fold-widget ace_start ace_open" style="height: 16px;"></span></div><div class="ace_gutter-cell " style="height: 16px;">4</div><div class="ace_gutter-cell " style="height: 16px;">5</div><div class="ace_gutter-cell " style="height: 16px;">6</div><div class="ace_gutter-cell " style="height: 16px;">7</div><div class="ace_gutter-cell " style="height: 16px;">8<span class="ace_fold-widget ace_start ace_open" style="height: 16px;"></span></div><div class="ace_gutter-cell " style="height: 16px;">9<span class="ace_fold-widget ace_start ace_open" style="height: 16px;"></span></div><div class="ace_gutter-cell " style="height: 16px;">10<span class="ace_fold-widget ace_start ace_open" style="height: 16px;"></span></div><div class="ace_gutter-cell " style="height: 16px;">11</div><div class="ace_gutter-cell " style="height: 16px;">12</div><div class="ace_gutter-cell " style="height: 16px;">13</div><div class="ace_gutter-cell " style="height: 16px;">14</div><div class="ace_gutter-cell " style="height: 16px;">15</div><div class="ace_gutter-cell " style="height: 16px;">16</div><div class="ace_gutter-cell " style="height: 16px;">17</div><div class="ace_gutter-cell " style="height: 16px;">18<span class="ace_fold-widget ace_start ace_open" style="height: 16px;"></span></div><div class="ace_gutter-cell " style="height: 16px;">19</div><div class="ace_gutter-cell " style="height: 16px;">20</div><div class="ace_gutter-cell " style="height: 16px;">21</div></div><div class="ace_gutter-active-line" style="top: 112px; height: 16px;"></div></div><div class="ace_scroller" style="left: 48px; right: 0px; bottom: 15px;"><div class="ace_content" style="margin-top: 0px; width: 1671px; height: 618px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 580.1px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_selection ace_start" style="height:16px;right:0;top:112px;left:4px;"></div><div class="ace_selection" style="height:16px;width:57.61px;top:208px;left:4px;"></div><div class="ace_selection" style="height:80px;right:0;top:128px;left:4px;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:16px"><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">div</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">class</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"container-fluid"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:16px"><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">hr</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:16px"><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">p</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:16px"><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  This demo plnkr illustrates custom filter pipes in Angular filtering on multiple properies with and/or conditions. Visit </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_anchor ace_tag-name ace_xml">a</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">href</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"https://long2know.com/"</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">target</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"_blank"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">https://long2know.com</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_anchor ace_tag-name ace_xml">a</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml"> for more demos and discussion..</span></div><div class="ace_line" style="height:16px"><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">p</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:16px"><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">hr</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:16px"></div><div class="ace_line" style="height:16px"><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">div</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">class</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"form form-inline"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:16px"><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">div</span><span class="ace_text ace_tag-whitespace ace_xml"> </span>*<span class="ace_entity ace_other ace_attribute-name ace_xml">ngFor</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"let filterItem of filterItems; let i = index;"</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">class</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"form-check"</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">style</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"padding-right:20px;"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:16px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_form ace_tag-name ace_xml">label</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">class</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"form-check-label"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:16px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_form ace_tag-name ace_xml">input</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">type</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"checkbox"</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">class</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"form-check-input"</span><span class="ace_text ace_tag-whitespace ace_xml"> </span>[(<span class="ace_entity ace_other ace_attribute-name ace_xml">ngModel</span>)]<span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"filterItem.checked"</span><span class="ace_text ace_tag-whitespace ace_xml"> </span>[<span class="ace_entity ace_other ace_attribute-name ace_xml">value</span>]<span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"filterItem.value"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml"> Value {{ i + 1 }}</span></div><div class="ace_line" style="height:16px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_form ace_tag-name ace_xml">label</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:16px"><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">div</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:16px"><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">div</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:16px"></div><div class="ace_line" style="height:16px"><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">pre</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">Selected items: </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">span</span><span class="ace_text ace_tag-whitespace ace_xml"> </span>*<span class="ace_entity ace_other ace_attribute-name ace_xml">ngFor</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"let filterItem of checked()"</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">style</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"padding-right:10px;"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">{{ filterItem.value }}</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">span</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">pre</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:16px"></div><div class="ace_line" style="height:16px"><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">ul</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:16px"><span class="ace_indent-guide">  </span><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">li</span><span class="ace_text ace_tag-whitespace ace_xml"> </span>*<span class="ace_entity ace_other ace_attribute-name ace_xml">ngFor</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"let item of items | filter: { property: ''} : checked() : false"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">{{ item.name }} - {{ item.property }}</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">li</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:16px"><span class="ace_text ace_xml">  </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">ul</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:16px"><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">div</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 112px; width: 7.20125px; height: 16px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="width: 20px; bottom: 15px; display: none;"><div class="ace_scrollbar-inner" style="width: 20px; height: 336px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="height: 20px; left: 48px; right: 0px;"><div class="ace_scrollbar-inner" style="height: 20px; width: 1671px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+</div>
+    </div>
+    <div class="ui-layout-east plunker-multipane ui-layout-pane ui-layout-pane-east" style="position: absolute; margin: 0px; left: auto; right: 0px; top: 0px; bottom: 0px; height: 601px; z-index: 0; width: 515px; display: block; visibility: visible;">
+  <!-- ngRepeat: pane in panes.panes --><div class="plunker-pane ng-scope" ng-show="pane==panes.active" use-pane="pane" ng-repeat="pane in panes.panes" style="display: none;"><div class="plunker-catalogue ng-scope">
+  <form class="plunker-searchbar ng-pristine ng-valid markup" ng-class="{markup: updater}" ng-submit="search()">
+    <div ng-show="updater" class="pull-right">
+      <a ng-hide="dirty" class="label updates ng-binding" ng-class="{&#39;label-important&#39;: markup.obsolete.length}" ng-click="openPackages()" ng-bind="markup.dependencies.length | number">0</a>
+      <a ng-show="dirty" class="label updates" ng-click="refreshDependencies()" style="display: none;"><i class="icon-refresh"></i></a>
+    </div>
+    <a class="btn pull-left" ng-click="goHome()"><i class="icon-home"></i></a>
+    <div class="plunker-searchbox input-append">
+      <div class="input-wrapper">
+        <input class="ng-pristine ng-valid" type="text" ng-model="searchTerm" placeholder="Search packages...">
+      </div>
+      <button class="btn"><i class="icon-search"></i></button>
+    </div>
+  </form>
+  <div ng-switch="" on="state.view">
+    <!-- ngSwitchWhen: dependencies -->
+    <!-- ngSwitchWhen: popular -->
+    <!-- ngSwitchWhen: search -->
+    <!-- ngSwitchWhen: package.version -->
+    <!-- ngSwitchWhen: package.edit -->
+    <!-- ngSwitchWhen: package.version.edit -->
+  <div ng-switch-when="popular" class="ng-scope">
+      <div class="sub-header">
+        <h3>
+          <small ng-show="visitor.user.login" class="pull-right" style="display: none;"><a ng-click="createPackage()">Add new...</a></small>
+          Popular packages
+        </h3>
+      </div>
+      <!-- ngRepeat: package in popular -->
+      <div class="plunker-pager pagination" ng-switch="" on="nolink" nolink="true" collection="popular" nav="popular.refresh(url)">
+  <!-- ngSwitchWhen: false -->
+  <!-- ngSwitchWhen: true -->
+<ul ng-switch-when="true" class="ng-scope">
+    <!-- ngRepeat: link in pages -->
+  </ul></div>
+    </div></div>
+</div></div><div class="plunker-pane ng-scope" ng-show="pane==panes.active" use-pane="pane" ng-repeat="pane in panes.panes" style="display: none;"><div class="plunker-chat gitter-chat-embed ng-scope">
+  Loading Gitter...
+</div></div><div class="plunker-pane ng-scope" ng-show="pane==panes.active" use-pane="pane" ng-repeat="pane in panes.panes" style="display: none;"><div class="plunker-info ng-scope">
+  <h3 class="ng-binding">
+    <a class="permalink pull-right" ng-href="//run.plnkr.co/plunks/L8g6p9/" target="_blank" href="https://run.plnkr.co/plunks/L8g6p9/"><i class="icon icon-link"></i></a>
+    Filter Checkboxes
+  </h3>
+  <div class="info-creation">
+    <ul class="pull-right plunk-info" plunk="session.plunk">
+  <!--<li class="comments" tooltip="Comments and replunks">
+    <span><i class="icon-comments"></i>{{plunk.comments.length || 0}}</span>
+  </li>-->
+  <li class="forks ng-scope" tooltip="Forks of this plunk">
+    <span class="ng-binding"><i class="icon-git-fork"></i>3</span>
+  </li>
+  <li class="stars ng-scope" tooltip="Star this plunk">
+    <span class="ng-binding"><i class="icon-star"></i>1</span>
+  </li>
+  <li class="views ng-scope" tooltip="Views of this plunk">
+    <span class="ng-binding"><i class="icon-eye-open"></i>538</span>
+  </li>
+</ul>
+    <span class="inline-user registered" ng-class="{registered: !!user}" ng-switch="" on="!!user" user="session.plunk.user">
+  <!-- ngSwitchWhen: true -->
+  
+  <!-- ngSwitchWhen: false -->
+<a ng-href="/users/long2know" ng-switch-when="true" class="ng-scope ng-binding" href="https://plnkr.co/users/long2know">
+    <img class="gravatar" ng-src="https://www.gravatar.com/avatar/?s=18&amp;d=mm" src="./Plunker_files/saved_resource">
+    long2know
+  </a></span>
+    <abbr class="timeago updated_at" title="Apr 13, 2017 1:02:48 PM" timeago="Apr 13, 2017 1:02:48 PM">about a month ago</abbr>
+  </div>
+  <ul class="plunker-taglist" tags="session.plunk.tags" ng-show="tags.length">
+  <!-- ngRepeat: tag in tags --><li ng-repeat="tag in tags" class="ng-scope">
+    <a ng-href="/tags/angular2" class="ng-binding" href="https://plnkr.co/tags/angular2">angular2</a>
+  </li><li ng-repeat="tag in tags" class="ng-scope">
+    <a ng-href="/tags/long2know" class="ng-binding" href="https://plnkr.co/tags/long2know">long2know</a>
+  </li>
+</ul>
+  <p></p>
+  <div class="info-ad" ng-show="adcode">
+    <div id="carbonads-container">
+      <div class="carbonad">
+        <div id="azcarbon"><span><span class="carbonad-image"><a href="https://srv.buysellads.com/ads/click/x/GTND4237CWAI6K37CKB4YKQWF6BIE2QMCKBDCZ3JCEAIKK3WCAYD6KJKC6BDL2Q7CV7DVK3EHJNCLSIZZRLCP7I35MNFV?segment=placement:plnkrco;&amp;encredirect=https%3A%2F%2Fad.doubleclick.net%2Fddm%2Fjump%2FN233401.1676840CARBONADS.COM%2FB9758237.132241163%3Bsz%3D130x100%3Bord%3D%5Btimestamp%5D%3F" target="_blank"><img width="130" height="100" border="0" src="./Plunker_files/B9758237.132241163" class="carbonad-image carbonad-img" style="max-width:130px;"></a></span><span class="carbonad-text"><a href="https://srv.buysellads.com/ads/click/x/GTND4237CWAI6K37CKB4YKQWF6BIE2QMCKBDCZ3JCEAIKK3WCAYD6KJKC6BDL2Q7CV7DVK3EHJNCLSIZZRLCP7I35MNFV?segment=placement:plnkrco;&amp;encredirect=https%3A%2F%2Fad.doubleclick.net%2Fddm%2Fjump%2FN233401.1676840CARBONADS.COM%2FB9758237.132241163%3Bsz%3D130x100%3Bord%3D%5Btimestamp%5D%3F">Do You Want a Transparent Cloud Environment? Our Experts Can Help!</a></span><span class="carbonad-tag">ads via <a href="http://carbonads.net/?utm_source=plnkrco&amp;utm_medium=ad_via_link&amp;utm_campaign=in_unit&amp;utm_term=carbon">Carbon</a></span></span></div>
+      </div>
+    </div>
+  </div>
+  <div class="info-readme" ng-show="session.plunk.getReadme()" markdown="session.plunk.getReadme()"><p>This demo plnkr illustrates custom filter pipes uses checkbox inputs</p>
+<p>Visit my site for more demos and discussion.</p>
+<p>[Links]
+<a href="https://long2know.com/">https://long2know.com</a> for more demos and discussion..</p>
+</div>
+  <div class="alert alert-info" ng-hide="session.plunk.getReadme()" style="display: none;">
+    <h4>Describe your plunks in Markdown</h4>
+    <p>You can give your plunks long-form descriptions now by creating a README.md
+      file. The first two paragraphs of the readme (including title) will be shown
+      on the plunk 'cards' on the front page. The readme will also be available in its
+      full form here and at other relevant places in the Plunker ecosystem.
+    </p>
+  </div>
+  <div style="display: none">
+    <ul class="plunker-comment-list">
+      <!-- ngRepeat: comment in session.plunk.comments -->
+    </ul>
+    <div class="plunker-comment-box">
+      <textarea ng-keypress="onKeyPress()" ng-model="draft" class="ng-pristine ng-valid" style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 42px;"></textarea>
+    </div>
+  </div>
+</div></div><div class="plunker-pane ng-scope" ng-show="pane==panes.active" use-pane="pane" ng-repeat="pane in panes.panes" style="display: none;"><div class="plunker-linter ng-scope">
+  <div class="note-filters">
+    <div class="btn-group">
+      <button type="button" ng-click="filters.error = !filters.error" ng-class="{active: filters.error}" class="btn btn-danger active">Errors</button>
+      <button type="button" ng-click="filters.warning = !filters.warning" ng-class="{active: filters.warning}" class="btn btn-warning">Warnings</button>
+      <button type="button" ng-click="filters.info = !filters.info" ng-class="{active: filters.info}" class="btn btn-info">Information</button>
+    </div>
+  </div>
+  <!-- ngRepeat: (buffId, notes) in annotations --><section ng-repeat="(buffId, notes) in annotations" class="ng-scope">
+    <h4 class="ng-binding">app/app.module.ts</h4>
+    <ul class="notes-list">
+      <li ng-hide="relevantNotes(notes, filters).length" class="alert alert-success">
+        No matching notes
+      </li>
+      <!-- ngRepeat: note in relevantNotes(notes, filters) -->
+    </ul>
+  </section><section ng-repeat="(buffId, notes) in annotations" class="ng-scope">
+    <h4 class="ng-binding">systemjs.config.js</h4>
+    <ul class="notes-list">
+      <li ng-hide="relevantNotes(notes, filters).length" class="alert alert-success">
+        No matching notes
+      </li>
+      <!-- ngRepeat: note in relevantNotes(notes, filters) -->
+    </ul>
+  </section><section ng-repeat="(buffId, notes) in annotations" class="ng-scope">
+    <h4 class="ng-binding">lorem-ipsum.js</h4>
+    <ul class="notes-list">
+      <li ng-hide="relevantNotes(notes, filters).length" class="alert alert-success">
+        No matching notes
+      </li>
+      <!-- ngRepeat: note in relevantNotes(notes, filters) -->
+    </ul>
+  </section><section ng-repeat="(buffId, notes) in annotations" class="ng-scope">
+    <h4 class="ng-binding">style.css</h4>
+    <ul class="notes-list">
+      <li ng-hide="relevantNotes(notes, filters).length" class="alert alert-success">
+        No matching notes
+      </li>
+      <!-- ngRepeat: note in relevantNotes(notes, filters) -->
+    </ul>
+  </section><section ng-repeat="(buffId, notes) in annotations" class="ng-scope">
+    <h4 class="ng-binding">app/app.component.ts</h4>
+    <ul class="notes-list">
+      <li ng-hide="relevantNotes(notes, filters).length" class="alert alert-success">
+        No matching notes
+      </li>
+      <!-- ngRepeat: note in relevantNotes(notes, filters) -->
+    </ul>
+  </section><section ng-repeat="(buffId, notes) in annotations" class="ng-scope">
+    <h4 class="ng-binding">tsconfig.json</h4>
+    <ul class="notes-list">
+      <li ng-hide="relevantNotes(notes, filters).length" class="alert alert-success">
+        No matching notes
+      </li>
+      <!-- ngRepeat: note in relevantNotes(notes, filters) -->
+    </ul>
+  </section><section ng-repeat="(buffId, notes) in annotations" class="ng-scope">
+    <h4 class="ng-binding">templates/app.html</h4>
+    <ul class="notes-list">
+      <li ng-hide="relevantNotes(notes, filters).length" class="alert alert-success">
+        No matching notes
+      </li>
+      <!-- ngRepeat: note in relevantNotes(notes, filters) -->
+    </ul>
+  </section><section ng-repeat="(buffId, notes) in annotations" class="ng-scope">
+    <h4 class="ng-binding">app/main.ts</h4>
+    <ul class="notes-list">
+      <li ng-hide="relevantNotes(notes, filters).length" class="alert alert-success">
+        No matching notes
+      </li>
+      <!-- ngRepeat: note in relevantNotes(notes, filters) -->
+    </ul>
+  </section><section ng-repeat="(buffId, notes) in annotations" class="ng-scope">
+    <h4 class="ng-binding">index.html</h4>
+    <ul class="notes-list">
+      <li ng-hide="relevantNotes(notes, filters).length" class="alert alert-success">
+        No matching notes
+      </li>
+      <!-- ngRepeat: note in relevantNotes(notes, filters) -->
+    </ul>
+  </section><section ng-repeat="(buffId, notes) in annotations" class="ng-scope">
+    <h4 class="ng-binding">README.md</h4>
+    <ul class="notes-list">
+      <li ng-hide="relevantNotes(notes, filters).length" class="alert alert-success">
+        No matching notes
+      </li>
+      <!-- ngRepeat: note in relevantNotes(notes, filters) -->
+    </ul>
+  </section>
+</div></div><div class="plunker-pane ng-scope" ng-show="pane==panes.active" use-pane="pane" ng-repeat="pane in panes.panes" style="display: none;"><div class="plunker-options ng-scope">
+  <form class="ng-pristine ng-valid">
+    <fieldset>
+      <legend>Editor</legend>
+      <label>Theme:
+        <select class="input-medium ng-pristine ng-valid" id="opts-editor-theme" ng-model="settings.editor.theme" ng-options="theme for theme in themes"><option value="0">ambiance</option><option value="1">chrome</option><option value="2">clouds</option><option value="3">clouds_midnight</option><option value="4">crimson_editor</option><option value="5">dawn</option><option value="6">dreamweaver</option><option value="7">eclipse</option><option value="8">github</option><option value="9">idle_fingers</option><option value="10">kr_theme</option><option value="11">merbivore</option><option value="12">merbivore_soft</option><option value="13">monokai</option><option value="14">pastel_on_dark</option><option value="15">solarized_dark</option><option value="16">solarized_light</option><option value="17" selected="selected">textmate</option><option value="18">tomorrow</option><option value="19">tomorrow_night</option><option value="20">tomorrow_night_blue</option><option value="21">tomorrow_night_bright</option><option value="22">twilight</option><option value="23">vibrant_ink</option><option value="24">xcode</option></select>
+      </label>
+      <label>Key Binding:
+        <select class="input-medium ng-pristine ng-valid" id="opts-editor-keyboard-handler" ng-model="settings.editor.keyboard_handler" ng-options="kh for kh in keyboard_handlers"><option value="0" selected="selected">ace</option><option value="1">emacs</option><option value="2">vim</option></select>
+      </label>
+      <label>Tab size:
+        <input class="input-mini ng-pristine ng-valid ng-valid-number" id="opts-editor-tabSize" ng-model="settings.editor.tab_size" type="number">
+      </label>
+      <label>Font size:
+        <input class="input-mini ng-pristine ng-valid ng-valid-number ng-valid-min" id="opts-editor-fontSize" ng-model="settings.editor.font_size" type="number" min="8">
+      </label>
+      <label class="checkbox">
+        <input class="input-mini ng-pristine ng-valid" id="opts-editor-lineWrap" ng-model="settings.editor.wrap.enabled" type="checkbox">
+        Line wrapping
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>Previewer</legend>
+      <label>Refresh interval:
+        <input class="input-small ng-pristine ng-valid ng-valid-number" id="opts-previewer-delay" ng-model="settings.previewer.delay" ng-disabled="!settings.previewer.auto_refresh" type="number">
+      </label>
+      <label class="checkbox">
+        <input type="checkbox" ng-model="settings.previewer.auto_refresh" class="ng-pristine ng-valid">
+        Auto refresh
+      </label>
+    </fieldset>
+  </form>
+</div></div><div class="plunker-pane ng-scope" ng-show="pane==panes.active" use-pane="pane" ng-repeat="pane in panes.panes"><div class="plunker-previewer ng-scope" ng-switch="" on="mode">
+  <!-- ngSwitchWhen: embedded -->
+  <!-- ngSwitchWhen: windowed -->
+<div ng-switch-when="embedded" class="ng-scope">
+    <div class="plunker-previewer-ops">
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <button id="refresh-preview" ng-click="refresh()" class="btn btn-mini btn-success" title="Manually trigger a refresh of the preview"><i class="icon-refresh icon-white"></i></button>
+          <button id="expand-preview" ng-click="expand()" class="btn btn-mini btn-primary" title="Launch the preview in a separate window"><i class="icon-fullscreen icon-white"></i></button>
+        </div>
+      </div>
+    </div>
+    <iframe name="plunkerPreviewTarget" src="./Plunker_files/saved_resource.html" class="plunker-previewer-iframe" frameborder="0" width="100%" height="100%" scrolling="auto"></iframe>
+  </div></div></div><div class="plunker-pane ng-scope" ng-show="pane==panes.active" use-pane="pane" ng-repeat="pane in panes.panes" style="display: none;"><div class="plunker-recorder ng-scope">
+  <button class="btn btn-success" ng-click="startRecording()" ng-show="!recording &amp;&amp; !events.length">
+    <i class="icon-play-circle"></i>
+    Start recording
+  </button>
+  <button class="btn btn-success" ng-click="stopRecording()" ng-show="recording" style="display: none;">
+    <i class="icon-stop"></i>
+    Finish recording
+  </button>
+  <button class="btn btn-primary" ng-click="promptSave()" ng-show="!recording &amp;&amp; events.length" style="display: none;">
+    <i class="icon-save"></i>
+    Save
+  </button>
+  <button class="btn btn-danger" ng-click="promptReset()" ng-show="!recording &amp;&amp; events.length" style="display: none;">
+    <i class="icon-eject"></i>
+    Reset
+  </button>
+  <div class="plunker-player" events="events" ng-show="events.length &amp;&amp; !recording" style="display: none;">
+  <div class="btn-toolbar">
+    <div class="btn-group">
+      <button class="btn btn-small" ng-click="seekStart()" title="Return to the start of the recorded session" ng-disabled="currentEvent==0" disabled="disabled"><i class="icon-fast-backward"></i></button>
+      <button class="btn btn-small" ng-click="addSpeed(-1)" title="Decrease the playback speed to 0x" ng-disabled="!events.length || speed&lt;=0" disabled="disabled"><i class="icon-backward"></i></button>
+      <button class="btn btn-small" ng-click="play()" ng-hide="playing" ng-disabled="currentEvent==events.length" disabled="disabled"><i class="icon-play"></i></button>
+      <button class="btn btn-small" ng-click="pause()" ng-show="playing" style="display: none;"><i class="icon-pause"></i></button>
+      <button class="btn btn-small" ng-click="stepForward()" ng-disabled="playing || currentEvent==events.length" disabled="disabled"><i class="icon-step-forward"></i></button>
+      <button class="btn btn-small" ng-click="addSpeed(1)" ng-disabled="!events.length" disabled="disabled"><i class="icon-forward"></i></button>
+      <button class="btn btn-small" ng-click="seekEnd()" ng-disabled="currentEvent==events.length" disabled="disabled"><i class="icon-fast-forward"></i></button>
+    </div>
+  </div>
+  <ul class="nav nav-list">
+    <!-- ngRepeat: event in events -->
+  </ul>
+</div>
+</div></div><div class="plunker-pane ng-scope" ng-show="pane==panes.active" use-pane="pane" ng-repeat="pane in panes.panes" style="display: none;"><div class="plunker-streamer ng-scope" ng-switch="stream.streaming">
+  <!-- ngSwitchWhen: streaming -->
+  <!-- ngSwitchDefault:  -->
+<div ng-switch-default="" class="ng-scope">
+    <h3>Streaming</h3>
+    <p>
+      Streaming enables real-time collaboraboration on Plunker. When you
+      join a stream, the contents of your editor are kept in sync with the
+      stream and reflect changes made by others in the same stream.
+    </p>
+    <form ng-submit="startStream(stream)" class="ng-pristine ng-valid">
+      <input class="mediumtext ng-pristine ng-valid" ng-model="stream.id" size="32">
+      <button class="btn btn-primary" type="submit">Stream</button>
+      <div>
+        <label class="radio inline" title="By default, anyone can make changes">
+          <input type="radio" value="public" ng-model="stream.type" class="ng-pristine ng-valid" name="03Q">
+          Public
+        </label>
+        <label class="radio inline" title="By default, only the stream&#39;s creator can make changes">
+          <input type="radio" value="presenter" ng-model="stream.type" class="ng-pristine ng-valid" name="03R">
+          Presenter
+        </label>
+      </div>
+    </form>
+    <h4>What happens if I hit save?</h4>
+    <p>
+      The current contents of your plunk will be saved as if you had
+      made all the changes to the files yourstream. No one else in the stream
+      will be affected at all by saving your state.
+    </p>
+    <h4>What happens if I load a template?</h4>
+    <p>
+      If you load a template, the resulting files will be sent to
+      everyone else in the stream as if you had made the changes yourself.
+      This is usually not what you want to do.
+    </p>
+  </div></div></div><div class="plunker-pane ng-scope" ng-show="pane==panes.active" use-pane="pane" ng-repeat="pane in panes.panes" style="display: none;"><div class="plunker-templates ng-scope">
+  <ul class="nav nav-tabs">
+    <li ng-class="{active: filter==&#39;forked&#39;}">
+      <a ng-click="filter=&#39;forked&#39;">Most popular</a>
+    </li>
+    <li ng-show="visitor.isMember()" ng-class="{active: filter==&#39;own&#39;}" style="display: none;">
+      <a ng-click="filter=&#39;own&#39;">Saved templates</a>
+    </li>
+  </ul>
+  <div class="alert alert-block" ng-show="filter==&#39;own&#39; &amp;&amp; templates.length == 0 &amp;&amp; !templates.$$refreshing" style="display: none;">
+    <h4>You do not have any saved templates</h4>
+    <p>To add saved templates, load up a Plunk or gist/template in the editor and hit the briefcase icon at
+      the right end of the toolbar.
+    </p>
+  </div>
+  <ul class="nav nav-list">
+    <!-- ngRepeat: plunk in templates -->
+  </ul>
+  <div class="pagination-right plunker-pager pagination" ng-switch="" on="nolink" collection="templates" nav="moveTo(url)">
+  <!-- ngSwitchWhen: false -->
+  <!-- ngSwitchWhen: true -->
+<ul ng-switch-when="false" class="ng-scope">
+    <!-- ngRepeat: link in pages -->
+  </ul></div>
+
+</div></div>
+</div>
+  <div id="" class="ui-layout-resizer ui-layout-resizer-east ui-layout-resizer-open ui-layout-resizer-east-open" title="Resize" aria-disabled="false" style="position: absolute; padding: 0px; margin: 0px; font-size: 1px; text-align: left; overflow: hidden; z-index: 2; cursor: e-resize; right: 515px; height: 601px; width: 4px; top: 0px; display: block;"><div id="" class="ui-layout-toggler ui-layout-toggler-east ui-layout-toggler-open ui-layout-toggler-east-open" title="Close" style="position: absolute; display: block; padding: 0px; margin: 0px; overflow: hidden; text-align: center; font-size: 1px; cursor: pointer; z-index: 1; visibility: visible; height: 48px; width: 4px; top: 275px; left: 0px;"></div></div></div>
+  <div class="ui-layout-east plunker-paneselector ui-layout-pane ui-layout-pane-east" style="position: absolute; margin: 0px; left: auto; right: 0px; top: 0px; bottom: 0px; height: 601px; z-index: 0; width: 41px; display: block; visibility: visible;">
+  <ul>
+    <!-- ngRepeat: pane in panes.panes | orderBy:'order' --><li tooltip="Live Preview" tooltip-placement="left" ng-repeat="pane in panes.panes | orderBy:&#39;order&#39;" class="plunker-pane-preview active" ng-hide="pane.hidden" ng-class="{active:pane==panes.active}">
+      <a ng-click="panes.toggle(pane) | trackEvent:&#39;Multipane&#39;:(panes.active==pane&amp;&amp;&#39;Show &#39;||&#39;Hide &#39;) + pane.title:&#39;Paneselector&#39;">
+        <i class="icon-eye-open"></i>
+      </a>
+    </li><li tooltip="Find and external libraries" tooltip-placement="left" ng-repeat="pane in panes.panes | orderBy:&#39;order&#39;" class=" plunker-pane-catalogue" ng-hide="pane.hidden" ng-class="{active:pane==panes.active}">
+      <a ng-click="panes.toggle(pane) | trackEvent:&#39;Multipane&#39;:(panes.active==pane&amp;&amp;&#39;Show &#39;||&#39;Hide &#39;) + pane.title:&#39;Paneselector&#39;">
+        <i class="icon-book"></i>
+      </a>
+    </li><li tooltip="Templates" tooltip-placement="left" ng-repeat="pane in panes.panes | orderBy:&#39;order&#39;" class=" plunker-pane-templates" ng-hide="pane.hidden" ng-class="{active:pane==panes.active}">
+      <a ng-click="panes.toggle(pane) | trackEvent:&#39;Multipane&#39;:(panes.active==pane&amp;&amp;&#39;Show &#39;||&#39;Hide &#39;) + pane.title:&#39;Paneselector&#39;">
+        <i class="icon-briefcase"></i>
+      </a>
+    </li><li tooltip="Session Recorder" tooltip-placement="left" ng-repeat="pane in panes.panes | orderBy:&#39;order&#39;" class=" plunker-pane-recorder" ng-hide="pane.hidden" ng-class="{active:pane==panes.active}" style="display: none;">
+      <a ng-click="panes.toggle(pane) | trackEvent:&#39;Multipane&#39;:(panes.active==pane&amp;&amp;&#39;Show &#39;||&#39;Hide &#39;) + pane.title:&#39;Paneselector&#39;">
+        <i class="icon-facetime-video"></i>
+      </a>
+    </li><li tooltip="Chat" tooltip-placement="left" ng-repeat="pane in panes.panes | orderBy:&#39;order&#39;" class=" plunker-pane-gitter" ng-hide="pane.hidden" ng-class="{active:pane==panes.active}">
+      <a ng-click="panes.toggle(pane) | trackEvent:&#39;Multipane&#39;:(panes.active==pane&amp;&amp;&#39;Show &#39;||&#39;Hide &#39;) + pane.title:&#39;Paneselector&#39;">
+        <i class="icon-comments"></i>
+      </a>
+    </li><li tooltip="Info" tooltip-placement="left" ng-repeat="pane in panes.panes | orderBy:&#39;order&#39;" class="plunker-pane-info" ng-hide="pane.hidden" ng-class="{active:pane==panes.active}">
+      <a ng-click="panes.toggle(pane) | trackEvent:&#39;Multipane&#39;:(panes.active==pane&amp;&amp;&#39;Show &#39;||&#39;Hide &#39;) + pane.title:&#39;Paneselector&#39;">
+        <i class="icon-dashboard"></i>
+      </a>
+    </li><li tooltip="Code Linting" tooltip-placement="left" ng-repeat="pane in panes.panes | orderBy:&#39;order&#39;" class=" plunker-pane-linter" ng-hide="pane.hidden" ng-class="{active:pane==panes.active}">
+      <a ng-click="panes.toggle(pane) | trackEvent:&#39;Multipane&#39;:(panes.active==pane&amp;&amp;&#39;Show &#39;||&#39;Hide &#39;) + pane.title:&#39;Paneselector&#39;">
+        <i class="icon-check"></i>
+      </a>
+    </li><li tooltip="Collaboration" tooltip-placement="left" ng-repeat="pane in panes.panes | orderBy:&#39;order&#39;" class=" plunker-pane-streamer" ng-hide="pane.hidden" ng-class="{active:pane==panes.active}">
+      <a ng-click="panes.toggle(pane) | trackEvent:&#39;Multipane&#39;:(panes.active==pane&amp;&amp;&#39;Show &#39;||&#39;Hide &#39;) + pane.title:&#39;Paneselector&#39;">
+        <i class="icon-retweet"></i>
+      </a>
+    </li><li tooltip="Editor Options" tooltip-placement="left" ng-repeat="pane in panes.panes | orderBy:&#39;order&#39;" class=" plunker-pane-options" ng-hide="pane.hidden" ng-class="{active:pane==panes.active}">
+      <a ng-click="panes.toggle(pane) | trackEvent:&#39;Multipane&#39;:(panes.active==pane&amp;&amp;&#39;Show &#39;||&#39;Hide &#39;) + pane.title:&#39;Paneselector&#39;">
+        <i class="icon-cog"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+<div id="" class="ui-layout-resizer ui-layout-resizer-west ui-layout-resizer-open ui-layout-resizer-west-open" title="Resize" aria-disabled="false" style="position: absolute; padding: 0px; margin: 0px; font-size: 1px; text-align: left; overflow: hidden; z-index: 2; cursor: w-resize; left: 200px; height: 601px; width: 4px; top: 0px;"><div id="" class="ui-layout-toggler ui-layout-toggler-west ui-layout-toggler-open ui-layout-toggler-west-open" title="Close" style="position: absolute; display: block; padding: 0px; margin: 0px; overflow: hidden; text-align: center; font-size: 1px; cursor: pointer; z-index: 1; visibility: visible; height: 48px; width: 4px; top: 275px; left: 0px;"></div></div><div id="" class="ui-layout-resizer ui-layout-resizer-east ui-layout-resizer-open ui-layout-resizer-east-open" style="position: absolute; padding: 0px; margin: 0px; font-size: 1px; text-align: left; overflow: hidden; z-index: 2; right: 41px; cursor: default; height: 601px; width: 1px; top: 0px;"></div></div>
+<ng-view><div class="ng-scope"></div></ng-view><noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-T6RZMX" height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript><script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T6RZMX');</script><textarea tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px; box-sizing: content-box; word-wrap: break-word; overflow: hidden; height: 0px !important; min-height: 0px !important; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-indent: 0px; line-height: 20px; width: 141px;" class="autosizejs"></textarea><iframe name="xdomain-11829542" id="xdomain-11829542" src="./Plunker_files/proxy.html" style="display:none;"></iframe><div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; top: -9999px; z-index: 100000;"><iframe id="_atssh355" title="AddThis utility frame" src="./Plunker_files/sh.886bb8b2fb82aeab6a228151.html" style="height: 1px; width: 1px; position: absolute; top: 0px; z-index: 100000; border: 0px; left: 0px;"></iframe></div><style id="service-icons-0"></style>
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","417778941754366");fbq("track","PageView");</script>
+<noscript>&lt;img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=417778941754366&amp;amp;ev=PageView&amp;amp;noscript=1"&gt;</noscript>
+<script type="text/javascript" id="" src="./Plunker_files/oct.js"></script>
+<script type="text/javascript" id="">twttr.conversion.trackPid("nu4jt",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript>
+&lt;img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=nu4jt&amp;amp;p_id=Twitter&amp;amp;tw_sale_amount=0&amp;amp;tw_order_quantity=0"&gt;
+&lt;img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=nu4jt&amp;amp;p_id=Twitter&amp;amp;tw_sale_amount=0&amp;amp;tw_order_quantity=0"&gt;
+</noscript><script src="./Plunker_files/adsct" type="text/javascript"></script></body></html>

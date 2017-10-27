@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://localhost:3000/cadastroPrestador -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!--<base href="/">--><base href=".">
+        <title>Alurapic</title>
+        
+        <meta name="viewport" content="width=device-width">
+        
+        <link rel="stylesheet" href="./Alurapic_files/bootstrap.min.css">
+        <link rel="stylesheet" href="./Alurapic_files/bootstrap-theme.min.css">
+        
+        <script src="./Alurapic_files/jquery.min.js"></script>
+        <script src="./Alurapic_files/shim.min.js"></script>
+
+        <script src="./Alurapic_files/zone.js"></script>
+        <script src="./Alurapic_files/Reflect.js"></script>
+        <script src="./Alurapic_files/system.src.js"></script>
+        
+        <script src="./Alurapic_files/systemjs.config.js"></script>
+        <script>
+            System.import('app').catch(function(err){ console.error(err); });
+        </script>
+    <style>.efeito[_ngcontent-xaa-4] {
+    box-shadow: 2px 2px 15px;
+}</style></head>
+    <body><app><nav class="navbar navbr-default">
+    <ul class="nav navbar-nav navbar-left " style="padding-left:80px; padding-top:10px;">
+           <h2 class="text-center"><a style="color:#000" ng-reflect-router-link="" ng-reflect-href="/" href="http://localhost:3000/">ServicoAki</a></h2>
+    </ul>
+    <ul class="nav navbar-nav navbar-right " style="padding-right:100px; padding-top:22px;">
+        <li><a ng-reflect-router-link="cadastre" ng-reflect-href="/cadastre" href="http://localhost:3000/cadastre">Cadastre-se</a></li>
+        <li><a ng-reflect-router-link="cadastro" ng-reflect-href="/cadastro" href="http://localhost:3000/cadastro">Login</a></li>
+    </ul>
+</nav>
+<hr style="height:2px; border:none; color:#000; background-color:#000; margin-top: 0px; margin-bottom: 0px;">
+
+<router-outlet></router-outlet><cadastro-prestador><h4 style="padding-left:120px;">Cadastro Prestador</h4>
+<div class="container">
+
+    <painel class="col-md-8" style="margin: auto;width: 100%;padding-top: 10px;" _nghost-xaa-4=""><div _ngcontent-xaa-4="" class="panel panel-default efeito">
+    <div _ngcontent-xaa-4="" class="panel-heading">
+        <h3 _ngcontent-xaa-4="" class="panel-title text-center"></h3>
+    </div>
+    <div _ngcontent-xaa-4="" class="panel-body">
+        
+        <div class="container">
+
+            <form class="row ng-untouched ng-pristine ng-valid" ng-reflect-form="[object Object]">
+                <div style="padding-left:15px;">
+                    <div class="col-md-10">
+                        <label style="color:darkorange; padding-bottom:10px;">Empresa</label>
+                        <table class="table table-hover">
+
+
+                            <tbody><tr>
+                                <td style="width:15%">
+                                    <label>Nome Completo</label>
+                                </td>
+                                <td>
+                                    <input autocomplete="off" class="form-control ng-untouched ng-pristine ng-valid" formcontrolname="nomeCompleto" name="nomeCompleto" ng-reflect-name="nomeCompleto">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="width:15%">
+                                    <label>Nome Empresa</label>
+                                </td>
+                                <td>
+                                    <input autocomplete="off" class="form-control input-sm ng-untouched ng-pristine ng-valid" formcontrolname="nomeEmpresa" name="nomeEmpresa" ng-reflect-name="nomeEmpresa">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="width:15%">
+                                    <label>Email</label>
+                                </td>
+                                <td>
+                                    <input autocomplete="off" class="form-control input-sm ng-untouched ng-pristine ng-valid" formcontrolname="email" name="email" ng-reflect-name="email">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="width:15%">
+                                    <label>Endereco</label>
+                                </td>
+                                <td>
+                                    <input autocomplete="off" class="form-control input-sm ng-untouched ng-pristine ng-valid" formcontrolname="endereco" name="endereco" ng-reflect-name="endereco">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="width:15%">
+                                    <label>Numero</label>
+                                </td>
+                                <td>
+                                    <input autocomplete="off" class="form-control input-sm ng-untouched ng-pristine ng-valid" formcontrolname="numero" name="numero" ng-reflect-name="numero">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="width:15%">
+                                    <label>Cidade</label>
+                                </td>
+                                <td>
+                                    <input autocomplete="off" class="form-control input-sm ng-untouched ng-pristine ng-valid" formcontrolname="cidade" name="cidade" ng-reflect-name="cidade">
+                                </td>
+                            </tr>
+                        </tbody></table>
+
+                        <table class="table table-hover">
+                            <tbody><tr>
+                                <td style="width:15%">
+                                    <label>Estado</label>
+                                </td>
+                                <td style="width:15%">
+                                    <select autocomplete="off" class="form-control input-sm ng-untouched ng-pristine ng-valid" formcontrolname="estado" name="estado" ng-reflect-name="estado">
+                                        <option value="estado" ng-reflect-value="estado">Selecione o Estado</option> 
+                                        <option value="ac" ng-reflect-value="ac">Acre</option> 
+                                        <option value="al" ng-reflect-value="al">Alagoas</option> 
+                                        <option value="am" ng-reflect-value="am">Amazonas</option> 
+                                        <option value="ap" ng-reflect-value="ap">Amapá</option> 
+                                        <option value="ba" ng-reflect-value="ba">Bahia</option> 
+                                        <option value="ce" ng-reflect-value="ce">Ceará</option> 
+                                        <option value="df" ng-reflect-value="df">Distrito Federal</option> 
+                                        <option value="es" ng-reflect-value="es">Espírito Santo</option> 
+                                        <option value="go" ng-reflect-value="go">Goiás</option> 
+                                        <option value="ma" ng-reflect-value="ma">Maranhão</option> 
+                                        <option value="mt" ng-reflect-value="mt">Mato Grosso</option> 
+                                        <option value="ms" ng-reflect-value="ms">Mato Grosso do Sul</option> 
+                                        <option value="mg" ng-reflect-value="mg">Minas Gerais</option> 
+                                        <option value="pa" ng-reflect-value="pa">Pará</option> 
+                                        <option value="pb" ng-reflect-value="pb">Paraíba</option> 
+                                        <option value="pr" ng-reflect-value="pr">Paraná</option> 
+                                        <option value="pe" ng-reflect-value="pe">Pernambuco</option> 
+                                        <option value="pi" ng-reflect-value="pi">Piauí</option> 
+                                        <option value="rj" ng-reflect-value="rj">Rio de Janeiro</option> 
+                                        <option value="rn" ng-reflect-value="rn">Rio Grande do Norte</option> 
+                                        <option value="ro" ng-reflect-value="ro">Rondônia</option> 
+                                        <option value="rs" ng-reflect-value="rs">Rio Grande do Sul</option> 
+                                        <option value="rr" ng-reflect-value="rr">Roraima</option> 
+                                        <option value="sc" ng-reflect-value="sc">Santa Catarina</option> 
+                                        <option value="se" ng-reflect-value="se">Sergipe</option> 
+                                        <option value="sp" ng-reflect-value="sp">São Paulo</option> 
+                                        <option value="to" ng-reflect-value="to">Tocantins</option> 
+                                </select>
+                                </td>
+                                <td style="width:15%;text-align:center;">
+                                    <label>CNPJ</label>
+                                </td>
+                                <td>
+                                    <input autocomplete="off" class="form-control input-sm ng-untouched ng-pristine ng-valid" formcontrolname="cnpj" name="cnpj" ng-reflect-name="cnpj">
+                                </td>
+                            </tr>
+                        </tbody></table>
+
+                        <table class="table table-hover">
+                            <tbody><tr>
+                                <td style="width:15%">
+                                    <label>Senha</label>
+                                </td>
+                                <td>
+                                    <input autocomplete="off" class="form-control input-sm ng-untouched ng-pristine ng-valid" formcontrolname="senha" name="senha" type="password" ng-reflect-name="senha">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="width:15%">
+                                    <label>Confirmar Senha</label>
+                                </td>
+                                <td>
+                                    <input autocomplete="off" class="form-control input-sm ng-untouched ng-pristine ng-valid" formcontrolname="confirmarSenha" name="confirmarSenha" type="password" ng-reflect-name="confirmarSenha">
+                                </td>
+                            </tr>
+                        </tbody></table>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    
+    </div>
+</div>
+</painel>
+
+    <painel class="col-md-10" style="margin: auto;width: 100%;padding-top: 10px;" _nghost-xaa-4=""><div _ngcontent-xaa-4="" class="panel panel-default efeito">
+    <div _ngcontent-xaa-4="" class="panel-heading">
+        <h3 _ngcontent-xaa-4="" class="panel-title text-center"></h3>
+    </div>
+    <div _ngcontent-xaa-4="" class="panel-body">
+        
+
+        
+        <form class="row ng-untouched ng-pristine ng-valid" ng-reflect-form="[object Object]">
+            <div style="padding-left:15px;">
+                <div class="col-md-10">
+                    <label style="color:darkorange; padding-bottom:10px;">Atividade</label>
+                    <div style="float:right">
+                        <button class="btn btn-primary" type="submit">Salvar</button>
+                    </div>
+
+                    <table class="table table-hover">
+
+                        <tbody><tr>
+                            <td style="width:15%">
+                                <label>Endereco</label>
+                            </td>
+                            <td style="width:35%">
+                                <select autocomplete="off" class="form-control input-sm ng-untouched ng-pristine ng-valid" formcontrolname="categoria" name="categoria" ng-reflect-name="categoria">
+                                    <option value="construcao" ng-reflect-value="construcao">Construcao</option>
+                                    <option value="informatica" ng-reflect-value="informatica">Informatica</option>    
+                                    <option value="transporte" ng-reflect-value="transporte">Transporte</option>        
+                                </select>
+                            </td>
+                            <td style="width:50%">
+                                <label>Servicos Selecionados</label>
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="width:15%">Tipos</td>
+
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="thumbnail">
+                                        <div class="caption">
+                                            <table>
+                                                <tbody><tr>
+                                                    <td style="width:99%"><b>Manutencão</b></td>
+                                                    <td><input name="checkAll" type="checkbox" value="all"></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><b>Desenvolvimento</b></td>
+                                                    <td><input name="checkAll" type="checkbox" value="all"></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><b>Redes</b></td>
+                                                    <td><input name="checkAll" type="checkbox" value="all"></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><b>Impressora</b></td>
+                                                    <td><input name="checkAll" type="checkbox" value="all"></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><b>Monitoramento</b></td>
+                                                    <td><input name="checkAll" type="checkbox" value="all"></td>
+                                                </tr>
+
+                                            </tbody></table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <td style="width:42.5%">
+                                <textarea cols="70" id="tipos" name="tipos" rows="5">12345
+                                </textarea>
+                            </td>
+                        </tr>
+                    </tbody></table>
+
+                    <table class="table table-hover">
+                        <tbody><tr>
+                            <td style="width:15%">Servicos</td>
+
+                            
+                            <td style="width:85%">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="thumbnail">
+                                            <div class="caption">
+                                                <table>
+                                                    <tbody><tr>
+                                                        <td style="width:99%"><b>Manutencão/Notebook</b></td>
+                                                        <td><input name="checkAll" type="checkbox" value="all"></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td><b>Manutencão/Impressora</b></td>
+                                                        <td><input name="checkAll" type="checkbox" value="all"></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td><b>Manutencão/Computador</b></td>
+                                                        <td><input name="checkAll" type="checkbox" value="all"></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td><b>Redes/Cabeamento</b></td>
+                                                        <td><input name="checkAll" type="checkbox" value="all"></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td><b>Redes/InstalacaoRoteador</b></td>
+                                                        <td><input name="checkAll" type="checkbox" value="all"></td>
+                                                    </tr>
+
+                                                </tbody></table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            
+
+                        </tr>
+
+                    </tbody></table>
+
+                </div>
+            </div>
+        </form>
+
+    
+    </div>
+</div>
+</painel>
+
+</div></cadastro-prestador></app>
+
+</body></html>
